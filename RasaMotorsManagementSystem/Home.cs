@@ -1,4 +1,5 @@
-﻿using System;
+using RasaMotorsManagementSystem.Supplier;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +20,12 @@ namespace RasaMotorsManagementSystem
             InitializeComponent();
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            suppliers supplier = new suppliers();
+            supplier.ShowDialog();
+        }
+        
         private void btnInventory_Click(object sender, EventArgs e)
         {
             InventoryView inventoryView = new InventoryView();
