@@ -149,11 +149,11 @@ namespace RasaMotorsManagementSystem.Supplier
             Clear();
         }
 
-        static string myconnstring = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
+        static string myconnstring = Common.Utils.ConnectionString;
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             suppliers order = new suppliers();
             order.ShowDialog();
 
@@ -162,7 +162,7 @@ namespace RasaMotorsManagementSystem.Supplier
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             orderInsert order = new orderInsert();
             order.ShowDialog();
         }

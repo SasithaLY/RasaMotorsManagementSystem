@@ -165,7 +165,7 @@ namespace RasaMotorsManagementSystem.Supplier
             }
         }
 
-        static string connectionString = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
+        static string connectionString = Common.Utils.ConnectionString;
 
 
         private void btnBack_Click(object sender, EventArgs e)

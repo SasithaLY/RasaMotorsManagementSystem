@@ -199,7 +199,7 @@ namespace RasaMotorsManagementSystem.Supplier
 
         }
 
-        static string connectionString = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
+        static string connectionString = Common.Utils.ConnectionString;
 
         private void supplierView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

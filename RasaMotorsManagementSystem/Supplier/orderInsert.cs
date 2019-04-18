@@ -46,7 +46,7 @@ namespace RasaMotorsManagementSystem.Supplier
         }
 
 
-        static string connectionString = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
+        static string connectionString = Common.Utils.ConnectionString;
         private void txtSearch_TextChanged_1(object sender, EventArgs e)
         {
             //search the data

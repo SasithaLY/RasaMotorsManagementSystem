@@ -51,12 +51,9 @@ namespace RasaMotorsManagementSystem.Supplier
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             supplieInsert supplier = new supplieInsert();
             supplier.ShowDialog();
-
-
-
 
         }
 
@@ -69,7 +66,7 @@ namespace RasaMotorsManagementSystem.Supplier
             supplierView.DataSource = dt;
         }
 
-        static string connectionString = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
+        static string connectionString = Common.Utils.ConnectionString;
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
@@ -95,7 +92,7 @@ namespace RasaMotorsManagementSystem.Supplier
 
         private void btnRepotr_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             reportViewSup supplier = new reportViewSup();
             supplier.ShowDialog();
 
@@ -109,9 +106,7 @@ namespace RasaMotorsManagementSystem.Supplier
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Home supplier = new Home();
-            supplier.ShowDialog();
+            this.Close();
         }
 
         private void supSearch_Click(object sender, EventArgs e)

@@ -17,10 +17,7 @@ namespace RasaMotorsManagementSystem.Supplier.ordersClass
         public string inventoryType { get; set; }
         public string amount { get; set; }
 
-        //static string myconnstring = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
-        //static string myconnstring = @"Data Source=DESKTOP-5MEEE4B\SQLEXPRESS;Initial Catalog=rasaMotors;Integrated Security=True";
-
-        static string connectionString = "Data Source=DESKTOP-5MEEE4B;Initial Catalog=ServiceCenterManagementDB;Integrated Security=True";
+        static string connectionString = Common.Utils.ConnectionString;
 
         //Data from DataBase
 
