@@ -91,6 +91,44 @@
     <Compile Include="Inventory\ItemUpdateForm.Designer.cs">
       <DependentUpon>ItemUpdateForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="JobCard\assignJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobCard\assignJob.Designer.cs">
+      <DependentUpon>assignJob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobCard\createJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobCard\createJob.Designer.cs">
+      <DependentUpon>createJob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobCard\jobCardClasses\assignJobclass.cs" />
+    <Compile Include="JobCard\jobCardClasses\jobCard.cs" />
+    <Compile Include="JobCard\JobReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobCard\JobReport.Designer.cs">
+      <DependentUpon>JobReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobCard\ReceiptPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobCard\ReceiptPrint.Designer.cs">
+      <DependentUpon>ReceiptPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobCard\searchJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobCard\searchJob.Designer.cs">
+      <DependentUpon>searchJob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobCard\updateStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobCard\updateStatus.Designer.cs">
+      <DependentUpon>updateStatus.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Employees\employee.resx">
@@ -113,6 +151,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory\ItemUpdateForm.resx">
       <DependentUpon>ItemUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobCard\assignJob.resx">
+      <DependentUpon>assignJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobCard\createJob.resx">
+      <DependentUpon>createJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobCard\JobReport.resx">
+      <DependentUpon>JobReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobCard\ReceiptPrint.resx">
+      <DependentUpon>ReceiptPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobCard\searchJob.resx">
+      <DependentUpon>searchJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobCard\updateStatus.resx">
+      <DependentUpon>updateStatus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

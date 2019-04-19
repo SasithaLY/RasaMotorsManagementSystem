@@ -324,6 +324,7 @@
             this.jobBtn.TabIndex = 4;
             this.jobBtn.Text = "Job";
             this.jobBtn.UseVisualStyleBackColor = true;
+            this.jobBtn.Click += new System.EventHandler(this.jobBtn_Click);
             // 
             // Home
             // 

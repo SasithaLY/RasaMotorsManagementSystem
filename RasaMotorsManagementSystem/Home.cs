@@ -30,5 +30,10 @@ namespace RasaMotorsManagementSystem
             ViewEmployee viewEmp = new ViewEmployee();
             viewEmp.Show();
         }
+
+        private void jobBtn_Click(object sender, EventArgs e)
+        {
+            new JobCard.searchJob().Show();
+        }
     }
 }
