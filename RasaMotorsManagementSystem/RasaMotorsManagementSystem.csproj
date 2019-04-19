@@ -47,16 +47,72 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\Utils.cs" />
+    <Compile Include="Employees\employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees\employee.Designer.cs">
+      <DependentUpon>employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employees\EmployeeClasses\EmployeeClass.cs" />
+    <Compile Include="Employees\employeeUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees\employeeUpdate.Designer.cs">
+      <DependentUpon>employeeUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employees\ViewEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees\ViewEmployee.Designer.cs">
+      <DependentUpon>ViewEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inventory\inventoryClasses\Item.cs" />
+    <Compile Include="Inventory\InventoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\InventoryForm.Designer.cs">
+      <DependentUpon>InventoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\InventoryView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\InventoryView.Designer.cs">
+      <DependentUpon>InventoryView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\ItemUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\ItemUpdateForm.Designer.cs">
+      <DependentUpon>ItemUpdateForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Employees\employee.resx">
+      <DependentUpon>employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees\employeeUpdate.resx">
+      <DependentUpon>employeeUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees\ViewEmployee.resx">
+      <DependentUpon>ViewEmployee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryForm.resx">
+      <DependentUpon>InventoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryView.resx">
+      <DependentUpon>InventoryView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\ItemUpdateForm.resx">
+      <DependentUpon>ItemUpdateForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
