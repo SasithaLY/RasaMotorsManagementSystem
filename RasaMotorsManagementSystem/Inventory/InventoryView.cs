@@ -185,5 +185,10 @@ namespace RasaMotorsManagementSystem.Inventory
             instance = null;
         }
 
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            InventoryReport iReport = new InventoryReport();
+            iReport.Show();
+        }
     }
 }

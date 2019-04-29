@@ -70,6 +70,7 @@
             this.btnReport.TabIndex = 67;
             this.btnReport.Text = "Generate Report";
             this.btnReport.UseVisualStyleBackColor = false;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // btnUpdate
             // 
