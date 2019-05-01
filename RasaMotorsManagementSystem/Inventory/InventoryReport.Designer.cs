@@ -30,18 +30,31 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.inventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.InventoryData = new RasaMotorsManagementSystem.Inventory.InventoryData();
             this.btnLoad = new System.Windows.Forms.Button();
             this.lblTo = new System.Windows.Forms.Label();
             this.lblFrom = new System.Windows.Forms.Label();
             this.dtpTo = new System.Windows.Forms.DateTimePicker();
             this.dtpFrom = new System.Windows.Forms.DateTimePicker();
-            this.InventoryData = new RasaMotorsManagementSystem.Inventory.InventoryData();
-            this.inventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.inventoryTableAdapter = new RasaMotorsManagementSystem.Inventory.InventoryDataTableAdapters.inventoryTableAdapter();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            ((System.ComponentModel.ISupportInitialize)(this.InventoryData)).BeginInit();
+            this.lblReport = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // inventoryBindingSource
+            // 
+            this.inventoryBindingSource.DataMember = "inventory";
+            this.inventoryBindingSource.DataSource = this.InventoryData;
+            // 
+            // InventoryData
+            // 
+            this.InventoryData.DataSetName = "InventoryData";
+            this.InventoryData.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnLoad
             // 
@@ -98,22 +111,15 @@
             this.dtpFrom.Size = new System.Drawing.Size(200, 26);
             this.dtpFrom.TabIndex = 11;
             // 
-            // InventoryData
-            // 
-            this.InventoryData.DataSetName = "InventoryData";
-            this.InventoryData.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // inventoryBindingSource
-            // 
-            this.inventoryBindingSource.DataMember = "inventory";
-            this.inventoryBindingSource.DataSource = this.InventoryData;
-            // 
             // inventoryTableAdapter
             // 
             this.inventoryTableAdapter.ClearBeforeFill = true;
             // 
             // reportViewer1
             // 
+            this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             reportDataSource1.Name = "InventoryDataSet";
             reportDataSource1.Value = this.inventoryBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
@@ -123,12 +129,36 @@
             this.reportViewer1.Size = new System.Drawing.Size(1042, 323);
             this.reportViewer1.TabIndex = 16;
             // 
+            // lblReport
+            // 
+            this.lblReport.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblReport.Font = new System.Drawing.Font("Rockwell", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReport.ForeColor = System.Drawing.Color.White;
+            this.lblReport.Location = new System.Drawing.Point(0, 0);
+            this.lblReport.Name = "lblReport";
+            this.lblReport.Size = new System.Drawing.Size(1222, 105);
+            this.lblReport.TabIndex = 17;
+            this.lblReport.Text = "Inventory Report";
+            this.lblReport.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::RasaMotorsManagementSystem.Properties.Resources.Rasa_Motors_Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(69, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(203, 84);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
+            // 
             // InventoryReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(66)))));
             this.ClientSize = new System.Drawing.Size(1222, 593);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lblReport);
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.lblTo);
@@ -138,8 +168,9 @@
             this.Name = "InventoryReport";
             this.Text = "InventoryReport";
             this.Load += new System.EventHandler(this.InventoryReport_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.InventoryData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -156,5 +187,7 @@
         private InventoryData InventoryData;
         private InventoryDataTableAdapters.inventoryTableAdapter inventoryTableAdapter;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.Label lblReport;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

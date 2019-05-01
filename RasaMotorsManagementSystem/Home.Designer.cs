@@ -28,10 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.panel3 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lblNotifications = new System.Windows.Forms.Label();
+            this.btnNotifications = new System.Windows.Forms.Button();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.listNotifications = new System.Windows.Forms.ListBox();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
@@ -48,6 +55,8 @@
             this.jobBtn = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.pnlHeader.SuspendLayout();
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -89,6 +98,11 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.lblNotifications);
+            this.panel1.Controls.Add(this.btnNotifications);
+            this.panel1.Controls.Add(this.toolStrip1);
+            this.panel1.Controls.Add(this.listNotifications);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.pnlHeader);
             this.panel1.Controls.Add(this.panel2);
@@ -96,6 +110,89 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1090, 750);
             this.panel1.TabIndex = 18;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(995, 137);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(49, 36);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 23;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // lblNotifications
+            // 
+            this.lblNotifications.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblNotifications.AutoSize = true;
+            this.lblNotifications.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNotifications.ForeColor = System.Drawing.Color.Red;
+            this.lblNotifications.Location = new System.Drawing.Point(1050, 142);
+            this.lblNotifications.Name = "lblNotifications";
+            this.lblNotifications.Size = new System.Drawing.Size(26, 29);
+            this.lblNotifications.TabIndex = 20;
+            this.lblNotifications.Text = "0";
+            // 
+            // btnNotifications
+            // 
+            this.btnNotifications.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNotifications.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNotifications.Location = new System.Drawing.Point(495, 142);
+            this.btnNotifications.Name = "btnNotifications";
+            this.btnNotifications.Size = new System.Drawing.Size(120, 31);
+            this.btnNotifications.TabIndex = 19;
+            this.btnNotifications.Text = "Notifications";
+            this.btnNotifications.UseVisualStyleBackColor = true;
+            this.btnNotifications.Visible = false;
+            this.btnNotifications.Click += new System.EventHandler(this.btnNotifications_Click);
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.toolStrip1.BackColor = System.Drawing.Color.Transparent;
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripDropDownButton1});
+            this.toolStrip1.Location = new System.Drawing.Point(944, 137);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.ShowItemToolTips = false;
+            this.toolStrip1.Size = new System.Drawing.Size(48, 39);
+            this.toolStrip1.TabIndex = 22;
+            this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.Visible = false;
+            // 
+            // toolStripDropDownButton1
+            // 
+            this.toolStripDropDownButton1.AutoSize = false;
+            this.toolStripDropDownButton1.AutoToolTip = false;
+            this.toolStripDropDownButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButton1.ForeColor = System.Drawing.Color.Black;
+            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Black;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.ShowDropDownArrow = false;
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(45, 36);
+            // 
+            // listNotifications
+            // 
+            this.listNotifications.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.listNotifications.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.listNotifications.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listNotifications.FormattingEnabled = true;
+            this.listNotifications.ItemHeight = 24;
+            this.listNotifications.Location = new System.Drawing.Point(366, 170);
+            this.listNotifications.Name = "listNotifications";
+            this.listNotifications.Size = new System.Drawing.Size(249, 340);
+            this.listNotifications.TabIndex = 18;
+            this.listNotifications.Visible = false;
+            this.listNotifications.SelectedIndexChanged += new System.EventHandler(this.listNotifications_SelectedIndexChanged);
             // 
             // pnlHeader
             // 
@@ -172,7 +269,7 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Image = global::RasaMotorsManagementSystem.Properties.Resources.sal_2;
+            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.Location = new System.Drawing.Point(12, 686);
             this.button6.Name = "button6";
@@ -184,7 +281,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::RasaMotorsManagementSystem.Properties.Resources.Rasa_Motors_Logo;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(12, 42);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(250, 121);
@@ -202,7 +299,7 @@
             this.btnFinance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFinance.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFinance.ForeColor = System.Drawing.Color.White;
-            this.btnFinance.Image = global::RasaMotorsManagementSystem.Properties.Resources.finance;
+            this.btnFinance.Image = ((System.Drawing.Image)(resources.GetObject("btnFinance.Image")));
             this.btnFinance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFinance.Location = new System.Drawing.Point(12, 633);
             this.btnFinance.Name = "btnFinance";
@@ -221,7 +318,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = global::RasaMotorsManagementSystem.Properties.Resources.Employee;
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.Location = new System.Drawing.Point(12, 575);
             this.button4.Name = "button4";
@@ -241,7 +338,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = global::RasaMotorsManagementSystem.Properties.Resources.Suppliers;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(12, 517);
             this.button3.Name = "button3";
@@ -261,7 +358,7 @@
             this.btnInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInventory.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInventory.ForeColor = System.Drawing.Color.White;
-            this.btnInventory.Image = global::RasaMotorsManagementSystem.Properties.Resources.Inventory_icon;
+            this.btnInventory.Image = ((System.Drawing.Image)(resources.GetObject("btnInventory.Image")));
             this.btnInventory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInventory.Location = new System.Drawing.Point(12, 459);
             this.btnInventory.Name = "btnInventory";
@@ -281,7 +378,7 @@
             this.payBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.payBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.payBtn.ForeColor = System.Drawing.Color.White;
-            this.payBtn.Image = global::RasaMotorsManagementSystem.Properties.Resources.Payment;
+            this.payBtn.Image = ((System.Drawing.Image)(resources.GetObject("payBtn.Image")));
             this.payBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.payBtn.Location = new System.Drawing.Point(12, 401);
             this.payBtn.Name = "payBtn";
@@ -300,7 +397,7 @@
             this.cusBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cusBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cusBtn.ForeColor = System.Drawing.Color.White;
-            this.cusBtn.Image = global::RasaMotorsManagementSystem.Properties.Resources.Customers;
+            this.cusBtn.Image = ((System.Drawing.Image)(resources.GetObject("cusBtn.Image")));
             this.cusBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cusBtn.Location = new System.Drawing.Point(12, 344);
             this.cusBtn.Name = "cusBtn";
@@ -317,7 +414,7 @@
             this.jobBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.jobBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.jobBtn.ForeColor = System.Drawing.Color.White;
-            this.jobBtn.Image = global::RasaMotorsManagementSystem.Properties.Resources.job;
+            this.jobBtn.Image = ((System.Drawing.Image)(resources.GetObject("jobBtn.Image")));
             this.jobBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.jobBtn.Location = new System.Drawing.Point(12, 287);
             this.jobBtn.Name = "jobBtn";
@@ -338,8 +435,13 @@
             this.Name = "Home";
             this.Text = "Home";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Activated += new System.EventHandler(this.Home_Activated);
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
             this.pnlMenu.ResumeLayout(false);
@@ -368,6 +470,12 @@
         private System.Windows.Forms.Button cusBtn;
         private System.Windows.Forms.Button jobBtn;
         private System.Windows.Forms.Panel pnlMenu;
+        private System.Windows.Forms.Label lblNotifications;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnNotifications;
+        private System.Windows.Forms.ListBox listNotifications;
     }
 }
 

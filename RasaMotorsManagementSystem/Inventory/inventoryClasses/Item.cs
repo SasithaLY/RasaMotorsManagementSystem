@@ -221,5 +221,7 @@ namespace RasaMotorsManagementSystem.Inventory.inventoryClasses
 
             return isSuccess;
         }
+
+      
     }
 }
