@@ -23,8 +23,6 @@ namespace RasaMotorsManagementSystem
 
         string connString = Common.Utils.ConnectionString;
 
-        //bool activate = true;
-        bool click = false;
         private void button3_Click(object sender, EventArgs e)
         {
             suppliers supplier = new suppliers();
@@ -50,18 +48,7 @@ namespace RasaMotorsManagementSystem
 
         private void btnNotifications_Click(object sender, EventArgs e)
         {
-            if(click == false)
-            {
-                //notify();
-                //listNotifications.Visible = true;
-                click = true;
-            }
-            else
-            {
-                //listNotifications.Visible = false;
-                click = false;
-            }
-
+     
         }
 
 
@@ -86,9 +73,8 @@ namespace RasaMotorsManagementSystem
                 {
                     string id = reader.GetValue(0).ToString();
                     string itemName = reader.GetString(1);
-                    string quantity = reader.GetValue(2).ToString();
-                    //listNotifications.Items.Add(itemName + " is Low on quantity");
-                    toolStripDropDownButton1.DropDownItems.Add(itemName + " is Low on quantity");
+                    string quantity = reader.GetValue(2).ToString();   
+                    toolStripDropDownButton1.DropDownItems.Add(itemName + " - Low Quantity : "+quantity);
                     count++;
                 }
                 lblNotifications.Text = count.ToString();
@@ -101,7 +87,6 @@ namespace RasaMotorsManagementSystem
 
         private void Home_Activated(object sender, EventArgs e)
         {
-            //listNotifications.Items.Clear();
             toolStripDropDownButton1.DropDownItems.Clear();
             notify();
         }
@@ -112,10 +97,8 @@ namespace RasaMotorsManagementSystem
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
-        {
-             
+        {  
             toolStripDropDownButton1.ShowDropDown();
-           
         }
     }
 }

@@ -35,10 +35,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblNotifications = new System.Windows.Forms.Label();
-            this.btnNotifications = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.listNotifications = new System.Windows.Forms.ListBox();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
@@ -100,9 +98,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.lblNotifications);
-            this.panel1.Controls.Add(this.btnNotifications);
             this.panel1.Controls.Add(this.toolStrip1);
-            this.panel1.Controls.Add(this.listNotifications);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.pnlHeader);
             this.panel1.Controls.Add(this.panel2);
@@ -130,24 +126,11 @@
             this.lblNotifications.AutoSize = true;
             this.lblNotifications.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNotifications.ForeColor = System.Drawing.Color.Red;
-            this.lblNotifications.Location = new System.Drawing.Point(1050, 142);
+            this.lblNotifications.Location = new System.Drawing.Point(1047, 142);
             this.lblNotifications.Name = "lblNotifications";
             this.lblNotifications.Size = new System.Drawing.Size(26, 29);
             this.lblNotifications.TabIndex = 20;
             this.lblNotifications.Text = "0";
-            // 
-            // btnNotifications
-            // 
-            this.btnNotifications.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNotifications.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNotifications.Location = new System.Drawing.Point(495, 142);
-            this.btnNotifications.Name = "btnNotifications";
-            this.btnNotifications.Size = new System.Drawing.Size(120, 31);
-            this.btnNotifications.TabIndex = 19;
-            this.btnNotifications.Text = "Notifications";
-            this.btnNotifications.UseVisualStyleBackColor = true;
-            this.btnNotifications.Visible = false;
-            this.btnNotifications.Click += new System.EventHandler(this.btnNotifications_Click);
             // 
             // toolStrip1
             // 
@@ -173,26 +156,13 @@
             this.toolStripDropDownButton1.AutoToolTip = false;
             this.toolStripDropDownButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButton1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripDropDownButton1.ForeColor = System.Drawing.Color.Black;
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Black;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
             this.toolStripDropDownButton1.ShowDropDownArrow = false;
             this.toolStripDropDownButton1.Size = new System.Drawing.Size(45, 36);
-            // 
-            // listNotifications
-            // 
-            this.listNotifications.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.listNotifications.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.listNotifications.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listNotifications.FormattingEnabled = true;
-            this.listNotifications.ItemHeight = 24;
-            this.listNotifications.Location = new System.Drawing.Point(366, 170);
-            this.listNotifications.Name = "listNotifications";
-            this.listNotifications.Size = new System.Drawing.Size(249, 340);
-            this.listNotifications.TabIndex = 18;
-            this.listNotifications.Visible = false;
-            this.listNotifications.SelectedIndexChanged += new System.EventHandler(this.listNotifications_SelectedIndexChanged);
             // 
             // pnlHeader
             // 
@@ -474,8 +444,6 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button btnNotifications;
-        private System.Windows.Forms.ListBox listNotifications;
     }
 }
 

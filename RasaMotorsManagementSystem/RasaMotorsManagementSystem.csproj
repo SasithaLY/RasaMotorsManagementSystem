@@ -212,6 +212,11 @@
     <Compile Include="Supplier\supplieInsert.Designer.cs">
       <DependentUpon>supplieInsert.cs</DependentUpon>
     </Compile>
+    <Compile Include="Supplier\supplierDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>supplierDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Supplier\suppliersClass\supplierClass.cs" />
     <Compile Include="Supplier\updateDeleteOrder.cs">
       <SubType>Form</SubType>
@@ -293,6 +298,7 @@
     <EmbeddedResource Include="Supplier\supplieInsert.resx">
       <DependentUpon>supplieInsert.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Supplier\supplierReport.rdlc" />
     <EmbeddedResource Include="Supplier\updateDeleteOrder.resx">
       <DependentUpon>updateDeleteOrder.cs</DependentUpon>
     </EmbeddedResource>
@@ -320,6 +326,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Supplier\supplierDataSet.xsc">
+      <DependentUpon>supplierDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Supplier\supplierDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>supplierDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Supplier\supplierDataSet.xss">
+      <DependentUpon>supplierDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
