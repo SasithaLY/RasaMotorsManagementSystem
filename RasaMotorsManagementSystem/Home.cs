@@ -100,5 +100,10 @@ namespace RasaMotorsManagementSystem
         {  
             toolStripDropDownButton1.ShowDropDown();
         }
+
+        private void btnFinance_Click(object sender, EventArgs e)
+        {
+            new Finance.calculation().Show();
+        }
     }
 }
