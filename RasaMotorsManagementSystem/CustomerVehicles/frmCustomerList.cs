@@ -61,7 +61,8 @@ namespace RasaMotorsManagementSystem.CustomerVehicles
 
         private void ViewGridCustomers_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            String customerID = ViewGridCustomers.SelectedRows[0].Cells[0].Value.ToString();
+
+            String customerID = this.ViewGridCustomers.SelectedRows[0].Cells[0].Value.ToString();
 
             frmVehicleList v1 = new frmVehicleList(customerID);
             v1.ShowDialog();
