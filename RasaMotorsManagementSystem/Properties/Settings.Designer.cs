@@ -33,5 +33,16 @@ namespace RasaMotorsManagementSystem.Properties {
                 return ((string)(this["ServiceCenterManagementDBConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-A6OVS3L;Initial Catalog=ServiceCenterManagementDB;Integrated " +
+            "Security=True")]
+        public string ServiceCenterManagementDBConnectionString1 {
+            get {
+                return ((string)(this["ServiceCenterManagementDBConnectionString1"]));
+            }
+        }
     }
 }

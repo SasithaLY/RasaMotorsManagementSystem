@@ -64,10 +64,10 @@
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+      <HintPath>E:\service_center\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -115,6 +115,25 @@
     <Compile Include="Employees\ViewEmployee.Designer.cs">
       <DependentUpon>ViewEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Finance\calculation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\calculation.Designer.cs">
+      <DependentUpon>calculation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\financeUpDel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\financeUpDel.Designer.cs">
+      <DependentUpon>financeUpDel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\financialView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\financialView.Designer.cs">
+      <DependentUpon>financialView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\serviceCenterClasses\netProfit.cs" />
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -220,6 +239,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceCenterManagementDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ServiceCenterManagementDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceCenterManagementDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ServiceCenterManagementDBDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Supplier\orderAdd.cs">
       <SubType>Form</SubType>
@@ -282,6 +311,15 @@
     <EmbeddedResource Include="Employees\EmpReport.rdlc" />
     <EmbeddedResource Include="Employees\ViewEmployee.resx">
       <DependentUpon>ViewEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\calculation.resx">
+      <DependentUpon>calculation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\financeUpDel.resx">
+      <DependentUpon>financeUpDel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\financialView.resx">
+      <DependentUpon>financialView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
@@ -405,6 +443,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="ServiceCenterManagementDBDataSet.xsc">
+      <DependentUpon>ServiceCenterManagementDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ServiceCenterManagementDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ServiceCenterManagementDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ServiceCenterManagementDBDataSet.xss">
+      <DependentUpon>ServiceCenterManagementDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ServiceCenterManagementDBDataSet1.xsc">
+      <DependentUpon>ServiceCenterManagementDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ServiceCenterManagementDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ServiceCenterManagementDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ServiceCenterManagementDBDataSet1.xss">
+      <DependentUpon>ServiceCenterManagementDBDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Supplier\supplierDataSet.xsc">
       <DependentUpon>supplierDataSet.xsd</DependentUpon>
     </None>
@@ -477,5 +537,6 @@
     </Content>
     <Content Include="Supplier\SupplierReadme.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
