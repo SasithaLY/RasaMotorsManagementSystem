@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using RasaMotorsManagementSystem.Finance.serviceCenterClasses;
 
 namespace RasaMotorsManagementSystem.Finance
 {
@@ -16,6 +17,8 @@ namespace RasaMotorsManagementSystem.Finance
         {
             InitializeComponent();
         }
+
+        netProfit f = new netProfit();
 
         private void btnBack_Click(object sender, EventArgs e)
         {
@@ -51,10 +54,12 @@ namespace RasaMotorsManagementSystem.Finance
 
         private void financialView_Load(object sender, EventArgs e)
         {
+            DataTable dt = f.Select();
+            dgvFinancial.DataSource = dt;
             // TODO: This line of code loads data into the 'serviceCenterManagementDBDataSet1.tbl_Profit' table. You can move, or remove it, as needed.
-           this.tbl_ProfitTableAdapter1.Fill(this.serviceCenterManagementDBDataSet1.tbl_Profit);
+            //this.tbl_ProfitTableAdapter1.Fill(this.serviceCenterManagementDBDataSet1.tbl_Profit);
             // TODO: This line of code loads data into the 'serviceCenterManagementDBDataSet.tbl_Profit' table. You can move, or remove it, as needed.
-           // this.tbl_ProfitTableAdapter.Fill(this.serviceCenterManagementDBDataSet.tbl_Profit);
+            // this.tbl_ProfitTableAdapter.Fill(this.serviceCenterManagementDBDataSet.tbl_Profit);
 
         }
     }

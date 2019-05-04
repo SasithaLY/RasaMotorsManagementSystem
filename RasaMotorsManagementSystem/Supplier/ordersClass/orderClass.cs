@@ -15,7 +15,7 @@ namespace RasaMotorsManagementSystem.Supplier.ordersClass
         public string supplierName { get; set; }
         public string orderDate { get; set; }
         public string inventoryType { get; set; }
-        public string amount { get; set; }
+        public double amount { get; set; }
 
         static string connectionString = Common.Utils.ConnectionString;
 

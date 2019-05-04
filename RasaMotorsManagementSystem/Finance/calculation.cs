@@ -13,7 +13,7 @@ namespace RasaMotorsManagementSystem.Finance
 {
     public partial class calculation : Form
     {
-        public static SqlConnection conn = new SqlConnection("Data Source=DESKTOP-A6OVS3L;Initial Catalog=ServiceCenterManagementDB;Integrated Security=True");
+        public static SqlConnection conn = new SqlConnection("Data Source=DESKTOP-T0HOCLV;Initial Catalog=ServiceCenterManagementDB;Integrated Security=True");
 
         public calculation()
         {

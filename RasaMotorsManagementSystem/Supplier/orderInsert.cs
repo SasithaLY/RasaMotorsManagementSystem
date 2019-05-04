@@ -22,9 +22,6 @@ namespace RasaMotorsManagementSystem.Supplier
 
         orderClass c = new orderClass();
 
-
-
-
         private void orderView_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             //Get the data
@@ -56,7 +53,6 @@ namespace RasaMotorsManagementSystem.Supplier
             if (keyword == "ID OR Supplier Name")
             {
                 DataTable dt = c.Select();
-
                 orderView.DataSource = dt;
             }
 
@@ -71,15 +67,6 @@ namespace RasaMotorsManagementSystem.Supplier
             }
         }
 
-        private void orderInsert_Load(object sender, EventArgs e)
-        {
-
-            //Lord data dgv
-            DataTable dt = c.Select();
-
-            orderView.DataSource = dt;
-
-        }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
@@ -117,5 +104,10 @@ namespace RasaMotorsManagementSystem.Supplier
             }
         }
 
+        private void orderInsert_Load(object sender, EventArgs e)
+        {
+            DataTable dt = c.Select();
+            orderView.DataSource = dt;
+        }
     }
 }
