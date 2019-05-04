@@ -277,9 +277,11 @@
             // 
             // txtBoxQnt
             // 
+            this.txtBoxQnt.Enabled = false;
             this.txtBoxQnt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxQnt.Location = new System.Drawing.Point(582, 438);
             this.txtBoxQnt.Name = "txtBoxQnt";
+            this.txtBoxQnt.ReadOnly = true;
             this.txtBoxQnt.Size = new System.Drawing.Size(257, 26);
             this.txtBoxQnt.TabIndex = 115;
             this.txtBoxQnt.TextChanged += new System.EventHandler(this.txtBoxQnt_TextChanged);
@@ -314,6 +316,7 @@
             // 
             // txtBoxItemID
             // 
+            this.txtBoxItemID.Enabled = false;
             this.txtBoxItemID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxItemID.Location = new System.Drawing.Point(582, 191);
             this.txtBoxItemID.Name = "txtBoxItemID";

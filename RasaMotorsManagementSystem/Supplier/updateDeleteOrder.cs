@@ -55,7 +55,7 @@ namespace RasaMotorsManagementSystem.Supplier
                 c.supplierName = txtSupName.Text;
                 c.orderDate = orderDate.Text;
                 c.inventoryType = cmbInType.Text;
-                c.amount = txtAmount.Text;
+                c.amount = Double.Parse(txtAmount.Text);
 
                 string supplierNamePattern = "^[a-zA-Z][a-zA-Z\\s]+$";
                 string amountPattern = "^[1 - 9]\\d * (\\.\\d +)?$";
@@ -63,7 +63,7 @@ namespace RasaMotorsManagementSystem.Supplier
                 bool isSupplierNamePattern = Regex.IsMatch(txtSupName.Text, supplierNamePattern);
                 bool isAmountPattern = Regex.IsMatch(txtAmount.Text, amountPattern);
 
-                if (c.supplierName == "" || c.orderDate == "" || c.inventoryType == "" || c.amount == "")
+                if (c.supplierName == "" || c.orderDate == "" || c.inventoryType == "" || c.amount.Equals(""))
                 {
                     MessageBox.Show("Please fill the Fields");
                 }
@@ -73,7 +73,7 @@ namespace RasaMotorsManagementSystem.Supplier
                     MessageBox.Show("Empty Fields or Invalid Supplier name");
                 }
 
-                else if (isAmountPattern || c.amount == "")
+                else if (isAmountPattern || c.amount.Equals(""))
                 {
                     MessageBox.Show("Empty Fields or Invalid Amount");
                 }

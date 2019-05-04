@@ -102,10 +102,17 @@ namespace RasaMotorsManagementSystem
             toolStripDropDownButton1.ShowDropDown();
         }
 
+
         private void cusBtn_Click(object sender, EventArgs e)
         {
             frmCustomerList nList = new frmCustomerList();
             nList.ShowDialog();
+        }
+        
+        private void btnFinance_Click(object sender, EventArgs e)
+        {
+            new Finance.calculation().Show();
+
         }
     }
 }

@@ -94,7 +94,7 @@
             // orderView
             // 
             this.orderView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.orderView.Location = new System.Drawing.Point(344, 212);
+            this.orderView.Location = new System.Drawing.Point(287, 213);
             this.orderView.Name = "orderView";
             this.orderView.Size = new System.Drawing.Size(530, 195);
             this.orderView.TabIndex = 69;
@@ -125,7 +125,7 @@
             // btnView
             // 
             this.btnView.BackColor = System.Drawing.Color.Maroon;
-            this.btnView.Font = new System.Drawing.Font("28 Days Later", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnView.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnView.ForeColor = System.Drawing.Color.White;
             this.btnView.Location = new System.Drawing.Point(660, 466);
             this.btnView.Name = "btnView";
@@ -138,7 +138,7 @@
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.Color.Maroon;
-            this.btnBack.Font = new System.Drawing.Font("28 Days Later", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.White;
             this.btnBack.Location = new System.Drawing.Point(809, 466);
             this.btnBack.Name = "btnBack";
@@ -164,6 +164,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "orderInsert";
             this.Text = "orderInsert";
+            this.Load += new System.EventHandler(this.orderInsert_Load);
             this.MouseLeave += new System.EventHandler(this.txtSearchLeave);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderView)).EndInit();

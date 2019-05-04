@@ -40,6 +40,8 @@
             this.dataGridItems = new System.Windows.Forms.DataGridView();
             this.lblInventory = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnRestock = new System.Windows.Forms.Button();
+            this.btnReturn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridItems)).BeginInit();
             this.panel1.SuspendLayout();
@@ -199,6 +201,38 @@
             this.panel1.Size = new System.Drawing.Size(1283, 100);
             this.panel1.TabIndex = 68;
             // 
+            // btnRestock
+            // 
+            this.btnRestock.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnRestock.BackColor = System.Drawing.Color.Maroon;
+            this.btnRestock.FlatAppearance.BorderSize = 0;
+            this.btnRestock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRestock.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRestock.ForeColor = System.Drawing.Color.White;
+            this.btnRestock.Location = new System.Drawing.Point(540, 703);
+            this.btnRestock.Name = "btnRestock";
+            this.btnRestock.Size = new System.Drawing.Size(103, 40);
+            this.btnRestock.TabIndex = 70;
+            this.btnRestock.Text = "Restock";
+            this.btnRestock.UseVisualStyleBackColor = false;
+            this.btnRestock.Click += new System.EventHandler(this.btnRestock_Click);
+            // 
+            // btnReturn
+            // 
+            this.btnReturn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnReturn.BackColor = System.Drawing.Color.Maroon;
+            this.btnReturn.FlatAppearance.BorderSize = 0;
+            this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReturn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReturn.ForeColor = System.Drawing.Color.White;
+            this.btnReturn.Location = new System.Drawing.Point(692, 703);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(103, 40);
+            this.btnReturn.TabIndex = 71;
+            this.btnReturn.Text = "Return";
+            this.btnReturn.UseVisualStyleBackColor = false;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -216,6 +250,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(66)))));
             this.ClientSize = new System.Drawing.Size(1283, 765);
+            this.Controls.Add(this.btnReturn);
+            this.Controls.Add(this.btnRestock);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnReport);
             this.Controls.Add(this.btnUpdate);
@@ -253,5 +289,7 @@
         private System.Windows.Forms.Label lblInventory;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnRestock;
+        private System.Windows.Forms.Button btnReturn;
     }
 }

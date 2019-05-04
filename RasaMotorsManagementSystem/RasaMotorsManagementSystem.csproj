@@ -64,7 +64,7 @@
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+      <HintPath>E:\service_center\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
@@ -130,6 +130,17 @@
       <DependentUpon>employee.cs</DependentUpon>
     </Compile>
     <Compile Include="Employees\EmployeeClasses\EmployeeClass.cs" />
+    <Compile Include="Employees\EmployeeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmployeeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Employees\EmployeeReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees\EmployeeReport.Designer.cs">
+      <DependentUpon>EmployeeReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Employees\employeeUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +153,25 @@
     <Compile Include="Employees\ViewEmployee.Designer.cs">
       <DependentUpon>ViewEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Finance\calculation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\calculation.Designer.cs">
+      <DependentUpon>calculation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\financeUpDel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\financeUpDel.Designer.cs">
+      <DependentUpon>financeUpDel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\financialView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\financialView.Designer.cs">
+      <DependentUpon>financialView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\serviceCenterClasses\netProfit.cs" />
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,11 +179,6 @@
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
     <Compile Include="Inventory\inventoryClasses\Item.cs" />
-    <Compile Include="Inventory\InventoryData.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>InventoryData.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Inventory\InventoryForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,11 +197,45 @@
     <Compile Include="Inventory\InventoryView.Designer.cs">
       <DependentUpon>InventoryView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inventory\Items.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Items.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\ItemsReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\ItemsReport.Designer.cs">
+      <DependentUpon>ItemsReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inventory\ItemUpdateForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Inventory\ItemUpdateForm.Designer.cs">
       <DependentUpon>ItemUpdateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\Restock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\Restock.Designer.cs">
+      <DependentUpon>Restock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\Returns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\Returns.Designer.cs">
+      <DependentUpon>Returns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\StockInDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockInDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\StockInReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\StockInReport.Designer.cs">
+      <DependentUpon>StockInReport.cs</DependentUpon>
     </Compile>
     <Compile Include="JobCard\assignJob.cs">
       <SubType>Form</SubType>
@@ -218,6 +277,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceCenterManagementDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ServiceCenterManagementDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceCenterManagementDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ServiceCenterManagementDBDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Supplier\orderAdd.cs">
       <SubType>Form</SubType>
@@ -289,11 +358,24 @@
     <EmbeddedResource Include="Employees\employee.resx">
       <DependentUpon>employee.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Employees\EmployeeReport.resx">
+      <DependentUpon>EmployeeReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Employees\employeeUpdate.resx">
       <DependentUpon>employeeUpdate.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Employees\EmpReport.rdlc" />
     <EmbeddedResource Include="Employees\ViewEmployee.resx">
       <DependentUpon>ViewEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\calculation.resx">
+      <DependentUpon>calculation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\financeUpDel.resx">
+      <DependentUpon>financeUpDel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\financialView.resx">
+      <DependentUpon>financialView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
@@ -301,15 +383,28 @@
     <EmbeddedResource Include="Inventory\InventoryForm.resx">
       <DependentUpon>InventoryForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inventory\InventoryReport.rdlc" />
     <EmbeddedResource Include="Inventory\InventoryReport.resx">
       <DependentUpon>InventoryReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory\InventoryView.resx">
       <DependentUpon>InventoryView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\Items.rdlc" />
+    <EmbeddedResource Include="Inventory\ItemsReport.resx">
+      <DependentUpon>ItemsReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inventory\ItemUpdateForm.resx">
       <DependentUpon>ItemUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\Restock.resx">
+      <DependentUpon>Restock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\Returns.resx">
+      <DependentUpon>Returns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\StockIn.rdlc" />
+    <EmbeddedResource Include="Inventory\StockInReport.resx">
+      <DependentUpon>StockInReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="JobCard\assignJob.resx">
       <DependentUpon>assignJob.cs</DependentUpon>
@@ -361,16 +456,38 @@
     <EmbeddedResource Include="Supplier\updateDeleteSup.resx">
       <DependentUpon>updateDeleteSup.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Inventory\InventoryData.xsc">
-      <DependentUpon>InventoryData.xsd</DependentUpon>
+    <None Include="Employees\EmployeeDataSet.xsc">
+      <DependentUpon>EmployeeDataSet.xsd</DependentUpon>
     </None>
-    <None Include="Inventory\InventoryData.xsd">
+    <None Include="Employees\EmployeeDataSet.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>InventoryData.Designer.cs</LastGenOutput>
+      <LastGenOutput>EmployeeDataSet.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Inventory\InventoryData.xss">
-      <DependentUpon>InventoryData.xsd</DependentUpon>
+    <None Include="Employees\EmployeeDataSet.xss">
+      <DependentUpon>EmployeeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory\Items.xsc">
+      <DependentUpon>Items.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory\Items.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Items.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Inventory\Items.xss">
+      <DependentUpon>Items.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory\StockInDataSet.xsc">
+      <DependentUpon>StockInDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory\StockInDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StockInDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Inventory\StockInDataSet.xss">
+      <DependentUpon>StockInDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -382,6 +499,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="ServiceCenterManagementDBDataSet.xsc">
+      <DependentUpon>ServiceCenterManagementDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ServiceCenterManagementDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ServiceCenterManagementDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ServiceCenterManagementDBDataSet.xss">
+      <DependentUpon>ServiceCenterManagementDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ServiceCenterManagementDBDataSet1.xsc">
+      <DependentUpon>ServiceCenterManagementDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ServiceCenterManagementDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ServiceCenterManagementDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ServiceCenterManagementDBDataSet1.xss">
+      <DependentUpon>ServiceCenterManagementDBDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Supplier\supplierDataSet.xsc">
       <DependentUpon>supplierDataSet.xsd</DependentUpon>
     </None>
@@ -454,5 +593,6 @@
     </Content>
     <Content Include="Supplier\SupplierReadme.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

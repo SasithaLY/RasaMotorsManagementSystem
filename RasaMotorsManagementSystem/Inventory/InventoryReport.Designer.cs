@@ -29,43 +29,34 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.inventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.InventoryData = new RasaMotorsManagementSystem.Inventory.InventoryData();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.btnLoad = new System.Windows.Forms.Button();
             this.lblTo = new System.Windows.Forms.Label();
             this.lblFrom = new System.Windows.Forms.Label();
-            this.dtpTo = new System.Windows.Forms.DateTimePicker();
-            this.dtpFrom = new System.Windows.Forms.DateTimePicker();
-            this.inventoryTableAdapter = new RasaMotorsManagementSystem.Inventory.InventoryDataTableAdapters.inventoryTableAdapter();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.dtpInventoryTo = new System.Windows.Forms.DateTimePicker();
+            this.dtpInventoryFrom = new System.Windows.Forms.DateTimePicker();
             this.lblReport = new System.Windows.Forms.Label();
+            this.btnStockIn = new System.Windows.Forms.Button();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.Items = new RasaMotorsManagementSystem.Inventory.Items();
+            this.inventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.inventoryTableAdapter = new RasaMotorsManagementSystem.Inventory.ItemsTableAdapters.inventoryTableAdapter();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.Items)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.InventoryData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // inventoryBindingSource
-            // 
-            this.inventoryBindingSource.DataMember = "inventory";
-            this.inventoryBindingSource.DataSource = this.InventoryData;
-            // 
-            // InventoryData
-            // 
-            this.InventoryData.DataSetName = "InventoryData";
-            this.InventoryData.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnLoad
             // 
             this.btnLoad.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoad.ForeColor = System.Drawing.Color.White;
-            this.btnLoad.Location = new System.Drawing.Point(874, 146);
+            this.btnLoad.Location = new System.Drawing.Point(778, 155);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(94, 36);
             this.btnLoad.TabIndex = 15;
-            this.btnLoad.Text = "Load";
+            this.btnLoad.Text = "Inventory";
             this.btnLoad.UseVisualStyleBackColor = false;
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
@@ -74,7 +65,7 @@
             this.lblTo.AutoSize = true;
             this.lblTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTo.ForeColor = System.Drawing.Color.White;
-            this.lblTo.Location = new System.Drawing.Point(557, 154);
+            this.lblTo.Location = new System.Drawing.Point(461, 163);
             this.lblTo.Name = "lblTo";
             this.lblTo.Size = new System.Drawing.Size(35, 20);
             this.lblTo.TabIndex = 14;
@@ -85,49 +76,31 @@
             this.lblFrom.AutoSize = true;
             this.lblFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFrom.ForeColor = System.Drawing.Color.White;
-            this.lblFrom.Location = new System.Drawing.Point(248, 155);
+            this.lblFrom.Location = new System.Drawing.Point(152, 164);
             this.lblFrom.Name = "lblFrom";
             this.lblFrom.Size = new System.Drawing.Size(54, 20);
             this.lblFrom.TabIndex = 13;
             this.lblFrom.Text = "From :";
             // 
-            // dtpTo
+            // dtpInventoryTo
             // 
-            this.dtpTo.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpTo.Location = new System.Drawing.Point(617, 149);
-            this.dtpTo.Name = "dtpTo";
-            this.dtpTo.Size = new System.Drawing.Size(200, 26);
-            this.dtpTo.TabIndex = 12;
+            this.dtpInventoryTo.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpInventoryTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpInventoryTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpInventoryTo.Location = new System.Drawing.Point(521, 158);
+            this.dtpInventoryTo.Name = "dtpInventoryTo";
+            this.dtpInventoryTo.Size = new System.Drawing.Size(200, 26);
+            this.dtpInventoryTo.TabIndex = 12;
             // 
-            // dtpFrom
+            // dtpInventoryFrom
             // 
-            this.dtpFrom.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFrom.Location = new System.Drawing.Point(321, 150);
-            this.dtpFrom.Name = "dtpFrom";
-            this.dtpFrom.Size = new System.Drawing.Size(200, 26);
-            this.dtpFrom.TabIndex = 11;
-            // 
-            // inventoryTableAdapter
-            // 
-            this.inventoryTableAdapter.ClearBeforeFill = true;
-            // 
-            // reportViewer1
-            // 
-            this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            reportDataSource1.Name = "InventoryDataSet";
-            reportDataSource1.Value = this.inventoryBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "RasaMotorsManagementSystem.Inventory.InventoryReport.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(69, 214);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(1042, 323);
-            this.reportViewer1.TabIndex = 16;
+            this.dtpInventoryFrom.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpInventoryFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpInventoryFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpInventoryFrom.Location = new System.Drawing.Point(225, 159);
+            this.dtpInventoryFrom.Name = "dtpInventoryFrom";
+            this.dtpInventoryFrom.Size = new System.Drawing.Size(200, 26);
+            this.dtpInventoryFrom.TabIndex = 11;
             // 
             // lblReport
             // 
@@ -140,6 +113,45 @@
             this.lblReport.TabIndex = 17;
             this.lblReport.Text = "Inventory Report";
             this.lblReport.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnStockIn
+            // 
+            this.btnStockIn.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnStockIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStockIn.ForeColor = System.Drawing.Color.White;
+            this.btnStockIn.Location = new System.Drawing.Point(921, 155);
+            this.btnStockIn.Name = "btnStockIn";
+            this.btnStockIn.Size = new System.Drawing.Size(94, 36);
+            this.btnStockIn.TabIndex = 19;
+            this.btnStockIn.Text = "Stock In";
+            this.btnStockIn.UseVisualStyleBackColor = false;
+            this.btnStockIn.Click += new System.EventHandler(this.btnStockIn_Click);
+            // 
+            // reportViewer1
+            // 
+            reportDataSource2.Name = "ItemDataSet";
+            reportDataSource2.Value = this.inventoryBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "RasaMotorsManagementSystem.Inventory.Items.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(47, 229);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(1135, 328);
+            this.reportViewer1.TabIndex = 20;
+            // 
+            // Items
+            // 
+            this.Items.DataSetName = "Items";
+            this.Items.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // inventoryBindingSource
+            // 
+            this.inventoryBindingSource.DataMember = "inventory";
+            this.inventoryBindingSource.DataSource = this.Items;
+            // 
+            // inventoryTableAdapter
+            // 
+            this.inventoryTableAdapter.ClearBeforeFill = true;
             // 
             // pictureBox1
             // 
@@ -157,19 +169,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(66)))));
             this.ClientSize = new System.Drawing.Size(1222, 593);
+            this.Controls.Add(this.reportViewer1);
+            this.Controls.Add(this.btnStockIn);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblReport);
-            this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.lblTo);
             this.Controls.Add(this.lblFrom);
-            this.Controls.Add(this.dtpTo);
-            this.Controls.Add(this.dtpFrom);
+            this.Controls.Add(this.dtpInventoryTo);
+            this.Controls.Add(this.dtpInventoryFrom);
             this.Name = "InventoryReport";
             this.Text = "InventoryReport";
             this.Load += new System.EventHandler(this.InventoryReport_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.Items)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.InventoryData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -179,15 +192,16 @@
         #endregion
 
         private System.Windows.Forms.Button btnLoad;
-        private System.Windows.Forms.Label lblTo;
         private System.Windows.Forms.Label lblFrom;
-        private System.Windows.Forms.DateTimePicker dtpTo;
-        private System.Windows.Forms.DateTimePicker dtpFrom;
-        private System.Windows.Forms.BindingSource inventoryBindingSource;
-        private InventoryData InventoryData;
-        private InventoryDataTableAdapters.inventoryTableAdapter inventoryTableAdapter;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.Label lblReport;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnStockIn;
+        public System.Windows.Forms.DateTimePicker dtpInventoryFrom;
+        public System.Windows.Forms.DateTimePicker dtpInventoryTo;
+        public System.Windows.Forms.Label lblTo;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource inventoryBindingSource;
+        private Items Items;
+        private ItemsTableAdapters.inventoryTableAdapter inventoryTableAdapter;
     }
 }

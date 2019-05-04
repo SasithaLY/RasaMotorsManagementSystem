@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Reporting.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,11 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using RasaMotorsManagementSystem.Inventory.StockInDataSetTableAdapters;
 
 namespace RasaMotorsManagementSystem.Inventory
 {
     public partial class InventoryReport : Form
     {
+        public static string from, to;
         public InventoryReport()
         {
             InitializeComponent();
@@ -19,25 +22,25 @@ namespace RasaMotorsManagementSystem.Inventory
 
         private void InventoryReport_Load(object sender, EventArgs e)
         {
-            
+          
         }
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
-            Microsoft.Reporting.WinForms.ReportParameter[] rParams = new Microsoft.Reporting.WinForms.ReportParameter[]
-          {
-                new Microsoft.Reporting.WinForms.ReportParameter("fromDate", dtpFrom.Value.Date.ToShortDateString()),
-                new Microsoft.Reporting.WinForms.ReportParameter("toDate", dtpTo.Value.Date.ToShortDateString())
-          };
+            from = dtpInventoryFrom.Text;
+            to = dtpInventoryTo.Text;
 
-            DateTime fromDate = DateTime.Parse(this.dtpFrom.Text);
-            DateTime toDate = DateTime.Parse(this.dtpTo.Text);
+            ItemsReport itemsReport = new ItemsReport();
+            itemsReport.Show();
+        }
 
-            reportViewer1.LocalReport.SetParameters(rParams);
-            // TODO: This line of code loads data into the 'InventoryData.inventory' table. You can move, or remove it, as needed.
-            this.inventoryTableAdapter.Fill(this.InventoryData.inventory, dtpFrom.Value, dtpTo.Value);
+        private void btnStockIn_Click(object sender, EventArgs e)
+        {
+            from = dtpInventoryFrom.Text;
+            to = dtpInventoryTo.Text;
 
-            this.reportViewer1.RefreshReport();
+            StockInReport stockInReport = new StockInReport();
+            stockInReport.Show();
         }
     }
 }
