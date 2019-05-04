@@ -93,5 +93,11 @@ namespace RasaMotorsManagementSystem.Employees
 
             emp1.ShowDialog();
         }
+
+        private void buttonReport_Click(object sender, EventArgs e)
+        {
+            EmployeeReport employeeReport = new EmployeeReport();
+            employeeReport.Show();
+        }
     }
 }

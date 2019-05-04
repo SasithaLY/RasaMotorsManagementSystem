@@ -187,8 +187,38 @@ namespace RasaMotorsManagementSystem.Inventory
 
         private void btnReport_Click(object sender, EventArgs e)
         {
-            InventoryReport iReport = new InventoryReport();
-            iReport.Show();
+            InventoryReport inventoryReport = new InventoryReport();
+            inventoryReport.Show();
+        }
+
+        private void btnRestock_Click(object sender, EventArgs e)
+        {
+            
+            
+            if (rowIndex.Equals(null))
+            {
+                MessageBox.Show("Item Not Selected!");
+            }
+            else
+            {
+                Restock restock = new Restock();
+
+                restock.checkInstance.labelID.Text = this.dataGridItems.Rows[rowIndex].Cells[0].Value.ToString();
+                restock.checkInstance.labelItem.Text = this.dataGridItems.Rows[rowIndex].Cells[1].Value.ToString();
+           
+                restock.checkInstance.Show();
+            }
+        }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            Returns returns = new Returns();
+
+            returns.checkInstance.labelID.Text = this.dataGridItems.Rows[rowIndex].Cells[0].Value.ToString();
+            returns.checkInstance.labelItem.Text = this.dataGridItems.Rows[rowIndex].Cells[1].Value.ToString();
+
+            returns.checkInstance.Show();
         }
     }
+    
 }

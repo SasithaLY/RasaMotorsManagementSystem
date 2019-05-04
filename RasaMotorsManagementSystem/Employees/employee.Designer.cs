@@ -213,7 +213,7 @@
             this.personaldetails.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.personaldetails.Name = "personaldetails";
             this.personaldetails.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.personaldetails.Size = new System.Drawing.Size(1925, 39);
+            this.personaldetails.Size = new System.Drawing.Size(1874, 39);
             this.personaldetails.TabIndex = 26;
             this.personaldetails.Text = "Personal Details";
             this.personaldetails.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -239,7 +239,7 @@
             this.heading.Location = new System.Drawing.Point(0, 0);
             this.heading.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.heading.Name = "heading";
-            this.heading.Size = new System.Drawing.Size(1907, 134);
+            this.heading.Size = new System.Drawing.Size(1924, 134);
             this.heading.TabIndex = 184;
             this.heading.Text = "Add New Employee";
             this.heading.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -422,7 +422,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 947);
             this.panel2.Margin = new System.Windows.Forms.Padding(5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1921, 38);
+            this.panel2.Size = new System.Drawing.Size(1870, 38);
             this.panel2.TabIndex = 168;
             // 
             // empSalary
@@ -458,7 +458,7 @@
             this.jobinformation.Location = new System.Drawing.Point(0, 615);
             this.jobinformation.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.jobinformation.Name = "jobinformation";
-            this.jobinformation.Size = new System.Drawing.Size(1925, 42);
+            this.jobinformation.Size = new System.Drawing.Size(1874, 42);
             this.jobinformation.TabIndex = 165;
             // 
             // jobinfo
@@ -470,7 +470,7 @@
             this.jobinfo.Location = new System.Drawing.Point(0, 0);
             this.jobinfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.jobinfo.Name = "jobinfo";
-            this.jobinfo.Size = new System.Drawing.Size(1925, 41);
+            this.jobinfo.Size = new System.Drawing.Size(1874, 41);
             this.jobinfo.TabIndex = 33;
             this.jobinfo.Text = "Job Information";
             this.jobinfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -539,7 +539,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 195);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1925, 40);
+            this.panel1.Size = new System.Drawing.Size(1874, 40);
             this.panel1.TabIndex = 160;
             // 
             // label10
@@ -768,7 +768,7 @@
             this.AutoScroll = true;
             this.AutoScrollMargin = new System.Drawing.Size(0, 25);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(66)))));
-            this.ClientSize = new System.Drawing.Size(1924, 1000);
+            this.ClientSize = new System.Drawing.Size(1941, 1000);
             this.Controls.Add(this.lblSalaryError);
             this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.lblErrorEmeName);

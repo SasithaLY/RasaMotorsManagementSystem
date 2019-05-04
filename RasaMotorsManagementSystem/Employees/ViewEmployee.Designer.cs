@@ -151,6 +151,7 @@
             this.buttonReport.TabIndex = 103;
             this.buttonReport.Text = "Report";
             this.buttonReport.UseVisualStyleBackColor = false;
+            this.buttonReport.Click += new System.EventHandler(this.buttonReport_Click);
             // 
             // pictureBox1
             // 

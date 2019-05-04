@@ -92,6 +92,17 @@
       <DependentUpon>employee.cs</DependentUpon>
     </Compile>
     <Compile Include="Employees\EmployeeClasses\EmployeeClass.cs" />
+    <Compile Include="Employees\EmployeeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmployeeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Employees\EmployeeReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees\EmployeeReport.Designer.cs">
+      <DependentUpon>EmployeeReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Employees\employeeUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,11 +122,6 @@
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
     <Compile Include="Inventory\inventoryClasses\Item.cs" />
-    <Compile Include="Inventory\InventoryData.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>InventoryData.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Inventory\InventoryForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,11 +140,45 @@
     <Compile Include="Inventory\InventoryView.Designer.cs">
       <DependentUpon>InventoryView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inventory\Items.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Items.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\ItemsReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\ItemsReport.Designer.cs">
+      <DependentUpon>ItemsReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inventory\ItemUpdateForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Inventory\ItemUpdateForm.Designer.cs">
       <DependentUpon>ItemUpdateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\Restock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\Restock.Designer.cs">
+      <DependentUpon>Restock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\Returns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\Returns.Designer.cs">
+      <DependentUpon>Returns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\StockInDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockInDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\StockInReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\StockInReport.Designer.cs">
+      <DependentUpon>StockInReport.cs</DependentUpon>
     </Compile>
     <Compile Include="JobCard\assignJob.cs">
       <SubType>Form</SubType>
@@ -233,9 +273,13 @@
     <EmbeddedResource Include="Employees\employee.resx">
       <DependentUpon>employee.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Employees\EmployeeReport.resx">
+      <DependentUpon>EmployeeReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Employees\employeeUpdate.resx">
       <DependentUpon>employeeUpdate.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Employees\EmpReport.rdlc" />
     <EmbeddedResource Include="Employees\ViewEmployee.resx">
       <DependentUpon>ViewEmployee.cs</DependentUpon>
     </EmbeddedResource>
@@ -245,15 +289,28 @@
     <EmbeddedResource Include="Inventory\InventoryForm.resx">
       <DependentUpon>InventoryForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inventory\InventoryReport.rdlc" />
     <EmbeddedResource Include="Inventory\InventoryReport.resx">
       <DependentUpon>InventoryReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory\InventoryView.resx">
       <DependentUpon>InventoryView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\Items.rdlc" />
+    <EmbeddedResource Include="Inventory\ItemsReport.resx">
+      <DependentUpon>ItemsReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inventory\ItemUpdateForm.resx">
       <DependentUpon>ItemUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\Restock.resx">
+      <DependentUpon>Restock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\Returns.resx">
+      <DependentUpon>Returns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\StockIn.rdlc" />
+    <EmbeddedResource Include="Inventory\StockInReport.resx">
+      <DependentUpon>StockInReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="JobCard\assignJob.resx">
       <DependentUpon>assignJob.cs</DependentUpon>
@@ -305,16 +362,38 @@
     <EmbeddedResource Include="Supplier\updateDeleteSup.resx">
       <DependentUpon>updateDeleteSup.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Inventory\InventoryData.xsc">
-      <DependentUpon>InventoryData.xsd</DependentUpon>
+    <None Include="Employees\EmployeeDataSet.xsc">
+      <DependentUpon>EmployeeDataSet.xsd</DependentUpon>
     </None>
-    <None Include="Inventory\InventoryData.xsd">
+    <None Include="Employees\EmployeeDataSet.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>InventoryData.Designer.cs</LastGenOutput>
+      <LastGenOutput>EmployeeDataSet.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Inventory\InventoryData.xss">
-      <DependentUpon>InventoryData.xsd</DependentUpon>
+    <None Include="Employees\EmployeeDataSet.xss">
+      <DependentUpon>EmployeeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory\Items.xsc">
+      <DependentUpon>Items.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory\Items.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Items.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Inventory\Items.xss">
+      <DependentUpon>Items.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory\StockInDataSet.xsc">
+      <DependentUpon>StockInDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory\StockInDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StockInDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Inventory\StockInDataSet.xss">
+      <DependentUpon>StockInDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

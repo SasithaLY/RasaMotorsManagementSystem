@@ -20,9 +20,9 @@ namespace RasaMotorsManagementSystem.Inventory {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("InventoryData")]
+    [global::System.Xml.Serialization.XmlRootAttribute("Items")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class InventoryData : global::System.Data.DataSet {
+    public partial class Items : global::System.Data.DataSet {
         
         private inventoryDataTable tableinventory;
         
@@ -30,7 +30,7 @@ namespace RasaMotorsManagementSystem.Inventory {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public InventoryData() {
+        public Items() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace RasaMotorsManagementSystem.Inventory {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected InventoryData(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected Items(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace RasaMotorsManagementSystem.Inventory {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            InventoryData cln = ((InventoryData)(base.Clone()));
+            Items cln = ((Items)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace RasaMotorsManagementSystem.Inventory {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "InventoryData";
+            this.DataSetName = "Items";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/InventoryData.xsd";
+            this.Namespace = "http://tempuri.org/Items.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableinventory = new inventoryDataTable();
@@ -225,7 +225,7 @@ namespace RasaMotorsManagementSystem.Inventory {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            InventoryData ds = new InventoryData();
+            Items ds = new Items();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -604,7 +604,7 @@ namespace RasaMotorsManagementSystem.Inventory {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                InventoryData ds = new InventoryData();
+                Items ds = new Items();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -976,7 +976,7 @@ namespace RasaMotorsManagementSystem.Inventory {
         }
     }
 }
-namespace RasaMotorsManagementSystem.Inventory.InventoryDataTableAdapters {
+namespace RasaMotorsManagementSystem.Inventory.ItemsTableAdapters {
     
     
     /// <summary>
@@ -1198,8 +1198,8 @@ SELECT itemID, itemName, itemType, buyingPrice, sellingPrice, availableQty, sold
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        itemID, itemName, itemType, buyingPrice, sellingPrice, availableQty" +
-                ", soldQty, addedDate, supplier, minQty\r\nFROM            inventory where addedDat" +
-                "e between @FROM AND @TO";
+                ", soldQty, addedDate, supplier, minQty\r\nFROM            inventory\r\nWHERE        " +
+                "(addedDate BETWEEN @FROM AND @TO)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FROM", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "addedDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TO", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "addedDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1209,7 +1209,7 @@ SELECT itemID, itemName, itemType, buyingPrice, sellingPrice, availableQty, sold
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(InventoryData.inventoryDataTable dataTable, global::System.Nullable<global::System.DateTime> FROM, global::System.Nullable<global::System.DateTime> TO) {
+        public virtual int Fill(Items.inventoryDataTable dataTable, global::System.Nullable<global::System.DateTime> FROM, global::System.Nullable<global::System.DateTime> TO) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((FROM.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(FROM.Value));
@@ -1234,7 +1234,7 @@ SELECT itemID, itemName, itemType, buyingPrice, sellingPrice, availableQty, sold
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual InventoryData.inventoryDataTable GetData(global::System.Nullable<global::System.DateTime> FROM, global::System.Nullable<global::System.DateTime> TO) {
+        public virtual Items.inventoryDataTable GetData(global::System.Nullable<global::System.DateTime> FROM, global::System.Nullable<global::System.DateTime> TO) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((FROM.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(FROM.Value));
@@ -1248,7 +1248,7 @@ SELECT itemID, itemName, itemType, buyingPrice, sellingPrice, availableQty, sold
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            InventoryData.inventoryDataTable dataTable = new InventoryData.inventoryDataTable();
+            Items.inventoryDataTable dataTable = new Items.inventoryDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1256,14 +1256,14 @@ SELECT itemID, itemName, itemType, buyingPrice, sellingPrice, availableQty, sold
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(InventoryData.inventoryDataTable dataTable) {
+        public virtual int Update(Items.inventoryDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(InventoryData dataSet) {
+        public virtual int Update(Items dataSet) {
             return this.Adapter.Update(dataSet, "inventory");
         }
         
@@ -1739,7 +1739,7 @@ SELECT itemID, itemName, itemType, buyingPrice, sellingPrice, availableQty, sold
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(InventoryData dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(Items dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._inventoryTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.inventory.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1758,7 +1758,7 @@ SELECT itemID, itemName, itemType, buyingPrice, sellingPrice, availableQty, sold
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(InventoryData dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(Items dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._inventoryTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.inventory.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1776,7 +1776,7 @@ SELECT itemID, itemName, itemType, buyingPrice, sellingPrice, availableQty, sold
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(InventoryData dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(Items dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._inventoryTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.inventory.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1818,7 +1818,7 @@ SELECT itemID, itemName, itemType, buyingPrice, sellingPrice, availableQty, sold
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(InventoryData dataSet) {
+        public virtual int UpdateAll(Items dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

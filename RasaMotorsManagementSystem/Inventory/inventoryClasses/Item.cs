@@ -18,7 +18,8 @@ namespace RasaMotorsManagementSystem.Inventory.inventoryClasses
         public double sellingPrice { get; set; }
         public int quantity { get; set; }
         public string supplier { get; set; }
-        public int minQty { get; set; }  
+        public int minQty { get; set; }
+        public string reason { get; set; }
 
 
         string connString = Common.Utils.ConnectionString;
@@ -58,7 +59,7 @@ namespace RasaMotorsManagementSystem.Inventory.inventoryClasses
         //Insert data to database
         public Boolean Insert(Item i)
         {
-            //defalt return value
+            //default return value
             Boolean isSuccess = false;
 
             //database connection
@@ -68,7 +69,7 @@ namespace RasaMotorsManagementSystem.Inventory.inventoryClasses
             {
                 //sql query
                 string sql = "INSERT INTO inventory (itemName, itemType, buyingPrice, sellingPrice, availableQty, addedDate, supplier, minQty) VALUES(@itemName, @itemType, @buyingPrice, @sellingPrice, @availableQty, @addedDate, @supplier, @minQty)";
-
+ 
                 SqlCommand cmd = new SqlCommand(sql, conn);
 
                 //parameters to add data
@@ -105,6 +106,104 @@ namespace RasaMotorsManagementSystem.Inventory.inventoryClasses
             }
             return isSuccess;
         }
+
+        //Restock Item 
+        public Boolean Restock(Item i) {
+            //defalt return value
+            Boolean isSuccess = false;
+
+            //database connection
+            SqlConnection conn = new SqlConnection(connString);
+
+            try
+            {
+                //sql query
+                string sql1 = "INSERT INTO restock (itemID, itemName, quantity, date, unitPrice) VALUES(@itemID, @itemName, @quantity, @date, @unitPrice)";
+                string sql2 = "UPDATE inventory SET availableQty = availableQty +'" + i.quantity + "', buyingPrice = '"+i.buyingPrice+"' where itemID = '" + i.itemID + "'";
+
+                SqlCommand cmd = new SqlCommand(sql1, conn);
+                SqlCommand cmd2 = new SqlCommand(sql2, conn);
+
+                //parameters to add data
+                cmd.Parameters.AddWithValue("@itemID", i.itemID);
+                cmd.Parameters.AddWithValue("@itemName", i.itemName);
+                cmd.Parameters.AddWithValue("@quantity", i.quantity);
+                cmd.Parameters.AddWithValue("@date", DateTime.Now);
+                cmd.Parameters.AddWithValue("@unitPrice", i.buyingPrice);
+   
+                conn.Open();
+                int rows = cmd.ExecuteNonQuery();
+                cmd2.ExecuteNonQuery();
+
+                if (rows > 0)
+                {
+                    isSuccess = true;
+                }
+                else
+                {
+                    isSuccess = false;
+                }
+            }
+            catch (System.Data.SqlClient.SqlException sqlExceptione)
+            {
+                System.Windows.Forms.MessageBox.Show(sqlExceptione.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return isSuccess;
+        }
+
+        //Return Item
+        public Boolean Return(Item i)
+        {
+            //defalt return value
+            Boolean isSuccess = false;
+
+            //database connection
+            SqlConnection conn = new SqlConnection(connString);
+
+            try
+            {
+                //sql queries
+                string sql1 = "INSERT INTO returnItems (itemID, itemName, quantity, returnDate, reason) VALUES(@itemID, @itemName, @quantity, @date, @reason)";
+                string sql2 = "UPDATE inventory SET availableQty = availableQty -'" + i.quantity + "' where itemID = '" + i.itemID + "'";
+
+                SqlCommand cmd = new SqlCommand(sql1, conn);
+                SqlCommand cmd2 = new SqlCommand(sql2, conn);
+
+                //parameters to add data
+                cmd.Parameters.AddWithValue("@itemID", i.itemID);
+                cmd.Parameters.AddWithValue("@itemName", i.itemName);
+                cmd.Parameters.AddWithValue("@quantity", i.quantity);
+                cmd.Parameters.AddWithValue("@date", DateTime.Now);
+                cmd.Parameters.AddWithValue("@reason", i.reason);
+
+                conn.Open();
+                int rows = cmd.ExecuteNonQuery();
+                cmd2.ExecuteNonQuery();
+
+                if (rows > 0)
+                {
+                    isSuccess = true;
+                }
+                else
+                {
+                    isSuccess = false;
+                }
+            }
+            catch (System.Data.SqlClient.SqlException sqlExceptione)
+            {
+                System.Windows.Forms.MessageBox.Show(sqlExceptione.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return isSuccess;
+        }
+
 
         //update data in database
         public Boolean Update(Item i)
