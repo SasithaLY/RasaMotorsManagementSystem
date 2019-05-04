@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using RasaMotorsManagementSystem.Inventory;
 using RasaMotorsManagementSystem.Employees;
 using System.Data.SqlClient;
+using RasaMotorsManagementSystem.CustomerVehicles;
 
 namespace RasaMotorsManagementSystem
 {
@@ -99,6 +100,12 @@ namespace RasaMotorsManagementSystem
         private void pictureBox2_Click(object sender, EventArgs e)
         {  
             toolStripDropDownButton1.ShowDropDown();
+        }
+
+        private void cusBtn_Click(object sender, EventArgs e)
+        {
+            frmCustomerList nList = new frmCustomerList();
+            nList.ShowDialog();
         }
     }
 }
