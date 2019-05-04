@@ -92,7 +92,7 @@ namespace RasaMotorsManagementSystem.Supplier
 
         private void btnRepotr_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             reportViewSup supplier = new reportViewSup();
             supplier.ShowDialog();
 

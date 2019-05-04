@@ -121,6 +121,9 @@
   <data name="Rasa Motors Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rasa Motors Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="sal 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sal 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Inventory icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Inventory icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -142,7 +145,7 @@
   <data name="finance" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\finance.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sal 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sal 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="notificationsIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\notificationsIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

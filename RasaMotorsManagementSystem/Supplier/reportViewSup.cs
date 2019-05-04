@@ -16,5 +16,25 @@ namespace RasaMotorsManagementSystem.Supplier
         {
             InitializeComponent();
         }
+
+        private void reportViewSup_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'supplierDataSet.supplierDetails' table. You can move, or remove it, as needed.
+            this.supplierDetailsTableAdapter.Fill(this.supplierDataSet.supplierDetails, dateFrom.Text, dateTo.Text);
+
+            this.reportViewer1.RefreshReport();
+        }
+
+        private void btnBackView_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            suppliers supplier = new suppliers();
+            supplier.ShowDialog();
+        }
     }
 }

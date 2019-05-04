@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(reportViewSup));
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnBackView = new System.Windows.Forms.Button();
@@ -37,7 +39,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dateTo = new System.Windows.Forms.DateTimePicker();
             this.dateFrom = new System.Windows.Forms.DateTimePicker();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.supplierDataSet = new RasaMotorsManagementSystem.Supplier.supplierDataSet();
+            this.supplierDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.supplierDetailsTableAdapter = new RasaMotorsManagementSystem.Supplier.supplierDataSetTableAdapters.supplierDetailsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.supplierDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.supplierDetailsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -67,7 +75,7 @@
             // btnBackView
             // 
             this.btnBackView.BackColor = System.Drawing.Color.Maroon;
-            this.btnBackView.Font = new System.Drawing.Font("28 Days Later", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBackView.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBackView.ForeColor = System.Drawing.Color.White;
             this.btnBackView.Location = new System.Drawing.Point(1049, 135);
             this.btnBackView.Name = "btnBackView";
@@ -75,11 +83,12 @@
             this.btnBackView.TabIndex = 68;
             this.btnBackView.Text = "Back";
             this.btnBackView.UseVisualStyleBackColor = false;
+            this.btnBackView.Click += new System.EventHandler(this.btnBackView_Click);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Maroon;
-            this.button1.Font = new System.Drawing.Font("28 Days Later", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(926, 135);
             this.button1.Name = "button1";
@@ -87,6 +96,7 @@
             this.button1.TabIndex = 67;
             this.button1.Text = "Search";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -129,12 +139,39 @@
             this.dateFrom.Size = new System.Drawing.Size(120, 20);
             this.dateFrom.TabIndex = 69;
             // 
+            // reportViewer1
+            // 
+            reportDataSource2.Name = "DataSet1";
+            reportDataSource2.Value = this.supplierDetailsBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "RasaMotorsManagementSystem.Supplier.supplierReport.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(87, 260);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(1050, 313);
+            this.reportViewer1.TabIndex = 73;
+            // 
+            // supplierDataSet
+            // 
+            this.supplierDataSet.DataSetName = "supplierDataSet";
+            this.supplierDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // supplierDetailsBindingSource
+            // 
+            this.supplierDetailsBindingSource.DataMember = "supplierDetails";
+            this.supplierDetailsBindingSource.DataSource = this.supplierDataSet;
+            // 
+            // supplierDetailsTableAdapter
+            // 
+            this.supplierDetailsTableAdapter.ClearBeforeFill = true;
+            // 
             // reportViewSup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1149, 679);
+            this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dateTo);
@@ -145,7 +182,10 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "reportViewSup";
             this.Text = "reportViewSup";
+            this.Load += new System.EventHandler(this.reportViewSup_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.supplierDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.supplierDetailsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,5 +201,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dateTo;
         private System.Windows.Forms.DateTimePicker dateFrom;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource supplierDetailsBindingSource;
+        private supplierDataSet supplierDataSet;
+        private supplierDataSetTableAdapters.supplierDetailsTableAdapter supplierDetailsTableAdapter;
     }
 }
