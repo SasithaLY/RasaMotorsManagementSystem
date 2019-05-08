@@ -10,16 +10,15 @@ using System.Windows.Forms;
 
 namespace RasaMotorsManagementSystem.Inventory
 {
-    public partial class StockInReport : Form
+    public partial class ReturnsReport : Form
     {
-        public StockInReport()
+        public ReturnsReport()
         {
             InitializeComponent();
         }
 
-        private void StockInReport_Load(object sender, EventArgs e)
+        private void ReturnsReport_Load(object sender, EventArgs e)
         {
-
             string from = InventoryReport.from;
             string to = InventoryReport.to;
 
@@ -32,12 +31,11 @@ namespace RasaMotorsManagementSystem.Inventory
             DateTime fromDate = DateTime.Parse(from);
             DateTime toDate = DateTime.Parse(to);
 
-            reportViewerStockIn.LocalReport.SetParameters(rParams);
+            reportViewerReturns.LocalReport.SetParameters(rParams);
+            // TODO: This line of code loads data into the 'ReturnsDataSet.returnItems' table. You can move, or remove it, as needed.
+            this.returnItemsTableAdapter.Fill(this.ReturnsDataSet.returnItems, fromDate, toDate);
 
-            // TODO: This line of code loads data into the 'StockInDataSet.restock' table. You can move, or remove it, as needed.
-            this.restockTableAdapter.Fill(this.StockInDataSet.restock, fromDate, toDate);
-            this.reportViewerStockIn.RefreshReport();
+            this.reportViewerReturns.RefreshReport();
         }
-
     }
 }

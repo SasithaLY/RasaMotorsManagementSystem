@@ -63,9 +63,7 @@
     <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>E:\service_center\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
-    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
@@ -87,6 +85,17 @@
     <Compile Include="Common\Utils.cs" />
     <Compile Include="CustomerVehicles\Classes\CustomerClass.cs" />
     <Compile Include="CustomerVehicles\Classes\VehicleClass.cs" />
+    <Compile Include="CustomerVehicles\CustomerVehicleDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerVehicleDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerVehicles\CusVehReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerVehicles\CusVehReportViewer.Designer.cs">
+      <DependentUpon>CusVehReportViewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerVehicles\frmAddNewCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,6 +235,17 @@
     <Compile Include="Inventory\Returns.Designer.cs">
       <DependentUpon>Returns.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inventory\ReturnsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReturnsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\ReturnsReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\ReturnsReport.Designer.cs">
+      <DependentUpon>ReturnsReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inventory\StockInDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -251,6 +271,11 @@
     </Compile>
     <Compile Include="JobCard\jobCardClasses\assignJobclass.cs" />
     <Compile Include="JobCard\jobCardClasses\jobCard.cs" />
+    <Compile Include="JobCard\jobData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>jobData.xsd</DependentUpon>
+    </Compile>
     <Compile Include="JobCard\JobReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -337,6 +362,10 @@
     <Compile Include="Supplier\updateDeleteSup.Designer.cs">
       <DependentUpon>updateDeleteSup.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CustomerVehicles\CustomerVehicleReport.rdlc" />
+    <EmbeddedResource Include="CustomerVehicles\CusVehReportViewer.resx">
+      <DependentUpon>CusVehReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomerVehicles\frmAddNewCustomer.resx">
       <DependentUpon>frmAddNewCustomer.cs</DependentUpon>
     </EmbeddedResource>
@@ -402,6 +431,10 @@
     <EmbeddedResource Include="Inventory\Returns.resx">
       <DependentUpon>Returns.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\ReturnsReport.rdlc" />
+    <EmbeddedResource Include="Inventory\ReturnsReport.resx">
+      <DependentUpon>ReturnsReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inventory\StockIn.rdlc" />
     <EmbeddedResource Include="Inventory\StockInReport.resx">
       <DependentUpon>StockInReport.cs</DependentUpon>
@@ -415,6 +448,7 @@
     <EmbeddedResource Include="JobCard\JobReport.resx">
       <DependentUpon>JobReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="JobCard\PredictJobReport.rdlc" />
     <EmbeddedResource Include="JobCard\ReceiptPrint.resx">
       <DependentUpon>ReceiptPrint.cs</DependentUpon>
     </EmbeddedResource>
@@ -456,6 +490,17 @@
     <EmbeddedResource Include="Supplier\updateDeleteSup.resx">
       <DependentUpon>updateDeleteSup.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="CustomerVehicles\CustomerVehicleDataSet.xsc">
+      <DependentUpon>CustomerVehicleDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CustomerVehicles\CustomerVehicleDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CustomerVehicleDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="CustomerVehicles\CustomerVehicleDataSet.xss">
+      <DependentUpon>CustomerVehicleDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Employees\EmployeeDataSet.xsc">
       <DependentUpon>EmployeeDataSet.xsd</DependentUpon>
     </None>
@@ -478,6 +523,17 @@
     <None Include="Inventory\Items.xss">
       <DependentUpon>Items.xsd</DependentUpon>
     </None>
+    <None Include="Inventory\ReturnsDataSet.xsc">
+      <DependentUpon>ReturnsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory\ReturnsDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReturnsDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Inventory\ReturnsDataSet.xss">
+      <DependentUpon>ReturnsDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Inventory\StockInDataSet.xsc">
       <DependentUpon>StockInDataSet.xsd</DependentUpon>
     </None>
@@ -488,6 +544,17 @@
     </None>
     <None Include="Inventory\StockInDataSet.xss">
       <DependentUpon>StockInDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="JobCard\jobData.xsc">
+      <DependentUpon>jobData.xsd</DependentUpon>
+    </None>
+    <None Include="JobCard\jobData.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>jobData.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="JobCard\jobData.xss">
+      <DependentUpon>jobData.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -2,18 +2,18 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="StockInDataSet">
+    <DataSource Name="ReturnsDataSet">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>edfb924d-bd50-423e-ba30-1f4634e484b5</rd:DataSourceID>
+      <rd:DataSourceID>88f3fb5b-ebc3-49a8-861f-2fa38f0b7e54</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="StocksDataSet">
+    <DataSet Name="DataSet">
       <Query>
-        <DataSourceName>StockInDataSet</DataSourceName>
+        <DataSourceName>ReturnsDataSet</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -29,22 +29,22 @@
           <DataField>quantity</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="date">
-          <DataField>date</DataField>
+        <Field Name="returnDate">
+          <DataField>returnDate</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
-        <Field Name="unitPrice">
-          <DataField>unitPrice</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
+        <Field Name="reason">
+          <DataField>reason</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>StockInDataSet</rd:DataSetName>
-        <rd:SchemaPath>E:\ITP\RasaMotorsManagementSystem\RasaMotorsManagementSystem\Inventory\StockInDataSet.xsd</rd:SchemaPath>
-        <rd:TableName>restock</rd:TableName>
+        <rd:DataSetName>ReturnsDataSet</rd:DataSetName>
+        <rd:SchemaPath>E:\ITP\RasaMotorsManagementSystem\RasaMotorsManagementSystem\Inventory\ReturnsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>returnItems</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>restockTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>returnItemsTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
@@ -56,28 +56,28 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>0.87587in</Width>
+                  <Width>0.94969in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.85403in</Width>
+                  <Width>1.67489in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.01364in</Width>
+                  <Width>0.97697in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.29564in</Width>
+                  <Width>2.5725in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.50198in</Width>
+                  <Width>1.47697in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>0.25in</Height>
+                  <Height>0.44792in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox2">
+                        <Textbox Name="Textbox3">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -96,7 +96,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox2</rd:DefaultName>
+                          <rd:DefaultName>Textbox3</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -112,7 +112,7 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox4">
+                        <Textbox Name="Textbox5">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -131,7 +131,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox4</rd:DefaultName>
+                          <rd:DefaultName>Textbox5</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -147,7 +147,7 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox6">
+                        <Textbox Name="Textbox7">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -166,7 +166,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox6</rd:DefaultName>
+                          <rd:DefaultName>Textbox7</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -182,14 +182,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox8">
+                        <Textbox Name="Textbox9">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Date &amp; Time</Value>
+                                  <Value>Reason</Value>
                                   <Style>
                                     <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -201,7 +201,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox8</rd:DefaultName>
+                          <rd:DefaultName>Textbox9</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -217,14 +217,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox10">
+                        <Textbox Name="Textbox11">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Unit Price</Value>
+                                  <Value>Returned Date &amp; Time</Value>
                                   <Style>
                                     <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -236,7 +236,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox10</rd:DefaultName>
+                          <rd:DefaultName>Textbox11</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -359,14 +359,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="date">
+                        <Textbox Name="reason">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!date.Value</Value>
+                                  <Value>=Fields!reason.Value</Value>
                                   <Style>
                                     <FontSize>12pt</FontSize>
                                   </Style>
@@ -377,7 +377,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>date</rd:DefaultName>
+                          <rd:DefaultName>reason</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -393,14 +393,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="unitPrice">
+                        <Textbox Name="returnDate">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!unitPrice.Value</Value>
+                                  <Value>=Fields!returnDate.Value</Value>
                                   <Style>
                                     <FontSize>12pt</FontSize>
                                   </Style>
@@ -411,7 +411,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>unitPrice</rd:DefaultName>
+                          <rd:DefaultName>returnDate</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -448,10 +448,10 @@
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
-            <DataSetName>StocksDataSet</DataSetName>
-            <Top>0.13889in</Top>
-            <Height>0.5in</Height>
-            <Width>7.54117in</Width>
+            <DataSetName>DataSet</DataSetName>
+            <Top>0.06944in</Top>
+            <Height>0.69792in</Height>
+            <Width>7.65103in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -459,13 +459,13 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>8.27in</Height>
+        <Height>5.4375in</Height>
         <Style />
       </Body>
-      <Width>7.54117in</Width>
+      <Width>7.65103in</Width>
       <Page>
         <PageHeader>
-          <Height>2.14583in</Height>
+          <Height>1.875in</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -476,7 +476,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Stock In Report</Value>
+                      <Value>Returns Report</Value>
                       <Style>
                         <FontSize>28pt</FontSize>
                         <FontWeight>Bold</FontWeight>
@@ -489,10 +489,10 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>0.55083in</Top>
-              <Left>2.59325in</Left>
-              <Height>0.48959in</Height>
-              <Width>3.23959in</Width>
+              <Top>0.39in</Top>
+              <Left>2.42405in</Left>
+              <Height>0.72917in</Height>
+              <Width>3.51042in</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -507,10 +507,10 @@
               <Source>Embedded</Source>
               <Value>RasaMotorsLogoblack</Value>
               <Sizing>FitProportional</Sizing>
-              <Top>0.23833in</Top>
-              <Left>0.30332in</Left>
-              <Height>1.04167in</Height>
-              <Width>2.00916in</Width>
+              <Top>0.14in</Top>
+              <Left>0.31155in</Left>
+              <Height>0.97917in</Height>
+              <Width>1.9188in</Width>
               <ZIndex>1</ZIndex>
               <Style>
                 <Border>
@@ -536,8 +536,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox22</rd:DefaultName>
-              <Top>1.70833in</Top>
-              <Left>0.30332in</Left>
+              <Top>1.37042in</Top>
+              <Left>0.68695in</Left>
               <Height>0.25in</Height>
               <Width>5.24752in</Width>
               <ZIndex>2</ZIndex>
@@ -570,7 +570,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>="Report Genarated On: "&amp;Globals!ExecutionTime</Value>
+                      <Value>="Report Genarated On: " &amp;Globals!ExecutionTime</Value>
                       <Style>
                         <FontSize>12pt</FontSize>
                       </Style>
@@ -580,8 +580,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>ExecutionTime</rd:DefaultName>
-              <Top>0.375in</Top>
-              <Left>0.18874in</Left>
+              <Top>0.40104in</Top>
+              <Left>0.56155in</Left>
               <Height>0.25in</Height>
               <Width>3.9066in</Width>
               <Style>
@@ -611,8 +611,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>PageNumber</rd:DefaultName>
-              <Top>0.375in</Top>
-              <Left>5.32242in</Left>
+              <Top>0.40104in</Top>
+              <Left>5.17405in</Left>
               <Height>0.25in</Height>
               <Width>1.40625in</Width>
               <ZIndex>1</ZIndex>
@@ -1065,5 +1065,5 @@ AAAAAAAAAAAAAAAgOQEEAAAAAAAAAAAAAAAAAAAAIDkBBAAAAAAAAAAAAAAAAAAAACA5AQQAAAAAAAAA
     </EmbeddedImage>
   </EmbeddedImages>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
-  <rd:ReportID>20306629-eca0-429c-ba6e-f911a4acf3ae</rd:ReportID>
+  <rd:ReportID>6cc97d09-b885-441a-b1e3-91c589feb38f</rd:ReportID>
 </Report>

@@ -69,25 +69,32 @@ namespace RasaMotorsManagementSystem.Finance
 
         private void btnCal_Click(object sender, EventArgs e)
         {
-            float totIn = Convert.ToInt32(txtTotIncome.Text);
-            float InvenSale = Convert.ToInt32(txtInvenSales.Text);
-            float order = Convert.ToInt32(txtOrder.Text);
-            float InvenPay = Convert.ToInt32(txtInvenPay.Text);
-            float Utility = Convert.ToInt32(txtUtilityPay.Text);
-            float salary = Convert.ToInt32(txtSal.Text);
-
-
-            float profit = (totIn + InvenSale) - (order + InvenPay + Utility + salary);
-            txtCal.Text = profit.ToString();
-
-            if (profit < 0)
+            try
             {
-                MessageBox.Show("This is a LOST!!!");
+                float totIn = Convert.ToInt32(txtTotIncome.Text);
+                float InvenSale = Convert.ToInt32(txtInvenSales.Text);
+                float order = Convert.ToInt32(txtOrder.Text);
+                float InvenPay = Convert.ToInt32(txtInvenPay.Text);
+                float Utility = Convert.ToInt32(txtUtilityPay.Text);
+                float salary = Convert.ToInt32(txtSal.Text);
+
+
+                float profit = (totIn + InvenSale) - (order + InvenPay + Utility + salary);
+                txtCal.Text = profit.ToString();
+
+                if (profit < 0)
+                {
+                    MessageBox.Show("This is a LOST!!!");
+                }
+                else
+                {
+                    MessageBox.Show("This month is PROFITABLE....");
+
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("This month is PROFITABLE....");
-
+                MessageBox.Show("Fields are Empty!");
             }
         }
        

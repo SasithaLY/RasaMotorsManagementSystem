@@ -63,6 +63,7 @@ namespace RasaMotorsManagementSystem.CustomerVehicles
         {
 
             String customerID = this.ViewGridCustomers.SelectedRows[0].Cells[0].Value.ToString();
+            Console.Write(customerID);
 
             frmVehicleList v1 = new frmVehicleList(customerID);
             v1.ShowDialog();
@@ -106,6 +107,12 @@ namespace RasaMotorsManagementSystem.CustomerVehicles
                 txtBoxSearchCus.Text = "Search by Name";
                 txtBoxSearchCus.ForeColor = Color.Gray;
             }
+        }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            CusVehReportViewer cusVehReport = new CusVehReportViewer();
+            cusVehReport.Show();
         }
     }
 }

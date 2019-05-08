@@ -61,7 +61,7 @@ namespace RasaMotorsManagementSystem.JobCard
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select V.VehicleId AS 'vid',V.Type AS 'vtyp',V.vehiNo as 'vno',C.Name as 'cnme' FROM VehDetails V, CusDetails C WHERE C.CustomerId=V.CustomerID";
+            cmd.CommandText = "select V.VehicleId AS 'vid',V.Type AS 'vtyp',V.VehicleNo as 'vno',C.Name as 'cnme' FROM VehDetails V, CusDetails C WHERE C.CustomerId=V.CustomerID";
             //cmd.CommandText = "select V.vehiId,V.vehiTyp,C.cusName FROM vehicles V,customer C WHERE C.cusId = V.custId";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
@@ -88,7 +88,7 @@ namespace RasaMotorsManagementSystem.JobCard
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
             //select V.vehiId,V.vehiTyp,C.cusName FROM vehicles V, customer C WHERE C.cusId = V.custId
-            cmd.CommandText = "select V.VehicleId AS 'vid',V.Type AS 'vtyp',V.vehiNo as 'vno',C.Name as 'cnme' FROM VehDetails V, CusDetails C WHERE C.CustomerId=V.CustomerID AND V.vehiNo='" + cmbVno.SelectedItem.ToString() + "'";
+            cmd.CommandText = "select V.VehicleId AS 'vid',V.Type AS 'vtyp',V.VehicleNo as 'vno',C.Name as 'cnme' FROM VehDetails V, CusDetails C WHERE C.CustomerId=V.CustomerID AND V.VehicleNo='" + cmbVno.SelectedItem.ToString() + "'";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
