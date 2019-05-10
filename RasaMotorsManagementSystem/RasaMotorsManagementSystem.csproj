@@ -51,6 +51,12 @@
     <Reference Include="DropDownButtonLib, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Dirkster.DropDownButtonLib.1.0.4.1\lib\net4\DropDownButtonLib.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
     </Reference>
@@ -63,15 +69,16 @@
     <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>E:\service_center\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
-    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -85,6 +92,55 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\Utils.cs" />
+    <Compile Include="CustomerVehicles\Classes\CustomerClass.cs" />
+    <Compile Include="CustomerVehicles\Classes\VehicleClass.cs" />
+    <Compile Include="CustomerVehicles\CustomerVehicleDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerVehicleDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerVehicles\CusVehReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerVehicles\CusVehReportViewer.Designer.cs">
+      <DependentUpon>CusVehReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerVehicles\frmAddNewCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerVehicles\frmAddNewCustomer.Designer.cs">
+      <DependentUpon>frmAddNewCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerVehicles\frmAddNewVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerVehicles\frmAddNewVehicle.Designer.cs">
+      <DependentUpon>frmAddNewVehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerVehicles\frmCustomerList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerVehicles\frmCustomerList.Designer.cs">
+      <DependentUpon>frmCustomerList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerVehicles\frmCusUpdateDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerVehicles\frmCusUpdateDelete.Designer.cs">
+      <DependentUpon>frmCusUpdateDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerVehicles\frmVehicleList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerVehicles\frmVehicleList.Designer.cs">
+      <DependentUpon>frmVehicleList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerVehicles\frmVehUpdateDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerVehicles\frmVehUpdateDelete.Designer.cs">
+      <DependentUpon>frmVehUpdateDelete.cs</DependentUpon>
+    </Compile>
     <Compile Include="Employees\employee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +188,17 @@
     </Compile>
     <Compile Include="Finance\financialView.Designer.cs">
       <DependentUpon>financialView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\profitData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>profitData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\reportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\reportViewer.Designer.cs">
+      <DependentUpon>reportViewer.cs</DependentUpon>
     </Compile>
     <Compile Include="Finance\serviceCenterClasses\netProfit.cs" />
     <Compile Include="Home.cs">
@@ -188,6 +255,17 @@
     <Compile Include="Inventory\Returns.Designer.cs">
       <DependentUpon>Returns.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inventory\ReturnsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReturnsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\ReturnsReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\ReturnsReport.Designer.cs">
+      <DependentUpon>ReturnsReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inventory\StockInDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -213,6 +291,11 @@
     </Compile>
     <Compile Include="JobCard\jobCardClasses\assignJobclass.cs" />
     <Compile Include="JobCard\jobCardClasses\jobCard.cs" />
+    <Compile Include="JobCard\jobData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>jobData.xsd</DependentUpon>
+    </Compile>
     <Compile Include="JobCard\JobReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -275,6 +358,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ServiceCenterManagementDBDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ServiceCenterManagementDBDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ServiceCenterManagementDBDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Supplier\orderAdd.cs">
       <SubType>Form</SubType>
@@ -325,6 +413,28 @@
     <Compile Include="Supplier\updateDeleteSup.Designer.cs">
       <DependentUpon>updateDeleteSup.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CustomerVehicles\CustomerVehicleReport.rdlc" />
+    <EmbeddedResource Include="CustomerVehicles\CusVehReportViewer.resx">
+      <DependentUpon>CusVehReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerVehicles\frmAddNewCustomer.resx">
+      <DependentUpon>frmAddNewCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerVehicles\frmAddNewVehicle.resx">
+      <DependentUpon>frmAddNewVehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerVehicles\frmCustomerList.resx">
+      <DependentUpon>frmCustomerList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerVehicles\frmCusUpdateDelete.resx">
+      <DependentUpon>frmCusUpdateDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerVehicles\frmVehicleList.resx">
+      <DependentUpon>frmVehicleList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerVehicles\frmVehUpdateDelete.resx">
+      <DependentUpon>frmVehUpdateDelete.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Employees\employee.resx">
       <DependentUpon>employee.cs</DependentUpon>
     </EmbeddedResource>
@@ -341,11 +451,15 @@
     <EmbeddedResource Include="Finance\calculation.resx">
       <DependentUpon>calculation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Finance\financeReport.rdlc" />
     <EmbeddedResource Include="Finance\financeUpDel.resx">
       <DependentUpon>financeUpDel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Finance\financialView.resx">
       <DependentUpon>financialView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\reportViewer.resx">
+      <DependentUpon>reportViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
@@ -372,6 +486,10 @@
     <EmbeddedResource Include="Inventory\Returns.resx">
       <DependentUpon>Returns.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\ReturnsReport.rdlc" />
+    <EmbeddedResource Include="Inventory\ReturnsReport.resx">
+      <DependentUpon>ReturnsReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inventory\StockIn.rdlc" />
     <EmbeddedResource Include="Inventory\StockInReport.resx">
       <DependentUpon>StockInReport.cs</DependentUpon>
@@ -385,6 +503,7 @@
     <EmbeddedResource Include="JobCard\JobReport.resx">
       <DependentUpon>JobReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="JobCard\PredictJobReport.rdlc" />
     <EmbeddedResource Include="JobCard\ReceiptPrint.resx">
       <DependentUpon>ReceiptPrint.cs</DependentUpon>
     </EmbeddedResource>
@@ -438,6 +557,17 @@
     <EmbeddedResource Include="Supplier\updateDeleteSup.resx">
       <DependentUpon>updateDeleteSup.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="CustomerVehicles\CustomerVehicleDataSet.xsc">
+      <DependentUpon>CustomerVehicleDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CustomerVehicles\CustomerVehicleDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CustomerVehicleDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="CustomerVehicles\CustomerVehicleDataSet.xss">
+      <DependentUpon>CustomerVehicleDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Employees\EmployeeDataSet.xsc">
       <DependentUpon>EmployeeDataSet.xsd</DependentUpon>
     </None>
@@ -448,6 +578,17 @@
     </None>
     <None Include="Employees\EmployeeDataSet.xss">
       <DependentUpon>EmployeeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Finance\profitData.xsc">
+      <DependentUpon>profitData.xsd</DependentUpon>
+    </None>
+    <None Include="Finance\profitData.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>profitData.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Finance\profitData.xss">
+      <DependentUpon>profitData.xsd</DependentUpon>
     </None>
     <None Include="Inventory\Items.xsc">
       <DependentUpon>Items.xsd</DependentUpon>
@@ -460,6 +601,17 @@
     <None Include="Inventory\Items.xss">
       <DependentUpon>Items.xsd</DependentUpon>
     </None>
+    <None Include="Inventory\ReturnsDataSet.xsc">
+      <DependentUpon>ReturnsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory\ReturnsDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReturnsDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Inventory\ReturnsDataSet.xss">
+      <DependentUpon>ReturnsDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Inventory\StockInDataSet.xsc">
       <DependentUpon>StockInDataSet.xsd</DependentUpon>
     </None>
@@ -471,7 +623,19 @@
     <None Include="Inventory\StockInDataSet.xss">
       <DependentUpon>StockInDataSet.xsd</DependentUpon>
     </None>
+    <None Include="JobCard\jobData.xsc">
+      <DependentUpon>jobData.xsd</DependentUpon>
+    </None>
+    <None Include="JobCard\jobData.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>jobData.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="JobCard\jobData.xss">
+      <DependentUpon>jobData.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\ServiceCenterManagementDBDataSet2.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -502,6 +666,17 @@
     </None>
     <None Include="ServiceCenterManagementDBDataSet1.xss">
       <DependentUpon>ServiceCenterManagementDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ServiceCenterManagementDBDataSet2.xsc">
+      <DependentUpon>ServiceCenterManagementDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ServiceCenterManagementDBDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ServiceCenterManagementDBDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ServiceCenterManagementDBDataSet2.xss">
+      <DependentUpon>ServiceCenterManagementDBDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Supplier\supplierDataSet.xsc">
       <DependentUpon>supplierDataSet.xsd</DependentUpon>
@@ -575,6 +750,8 @@
     </Content>
     <Content Include="Supplier\SupplierReadme.txt" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

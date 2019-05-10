@@ -59,6 +59,7 @@
             this.btnOrder = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnADD = new System.Windows.Forms.Button();
+            this.btnDemo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -91,11 +92,11 @@
             // 
             this.labCompany.AutoSize = true;
             this.labCompany.BackColor = System.Drawing.Color.Maroon;
-            this.labCompany.Font = new System.Drawing.Font("28 Days Later", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labCompany.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labCompany.ForeColor = System.Drawing.Color.White;
             this.labCompany.Location = new System.Drawing.Point(806, 467);
             this.labCompany.Name = "labCompany";
-            this.labCompany.Size = new System.Drawing.Size(123, 20);
+            this.labCompany.Size = new System.Drawing.Size(127, 25);
             this.labCompany.TabIndex = 107;
             this.labCompany.Text = "Invalid Input";
             this.labCompany.Visible = false;
@@ -104,11 +105,11 @@
             // 
             this.labEmail.AutoSize = true;
             this.labEmail.BackColor = System.Drawing.Color.Maroon;
-            this.labEmail.Font = new System.Drawing.Font("28 Days Later", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labEmail.ForeColor = System.Drawing.Color.White;
             this.labEmail.Location = new System.Drawing.Point(806, 419);
             this.labEmail.Name = "labEmail";
-            this.labEmail.Size = new System.Drawing.Size(123, 20);
+            this.labEmail.Size = new System.Drawing.Size(127, 25);
             this.labEmail.TabIndex = 106;
             this.labEmail.Text = "Invalid Input";
             this.labEmail.Visible = false;
@@ -117,11 +118,11 @@
             // 
             this.labCNum.AutoSize = true;
             this.labCNum.BackColor = System.Drawing.Color.Maroon;
-            this.labCNum.Font = new System.Drawing.Font("28 Days Later", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labCNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labCNum.ForeColor = System.Drawing.Color.White;
             this.labCNum.Location = new System.Drawing.Point(806, 310);
             this.labCNum.Name = "labCNum";
-            this.labCNum.Size = new System.Drawing.Size(123, 20);
+            this.labCNum.Size = new System.Drawing.Size(127, 25);
             this.labCNum.TabIndex = 105;
             this.labCNum.Text = "Invalid Input";
             this.labCNum.Visible = false;
@@ -130,11 +131,11 @@
             // 
             this.labNIC.AutoSize = true;
             this.labNIC.BackColor = System.Drawing.Color.Maroon;
-            this.labNIC.Font = new System.Drawing.Font("28 Days Later", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labNIC.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labNIC.ForeColor = System.Drawing.Color.White;
             this.labNIC.Location = new System.Drawing.Point(806, 159);
             this.labNIC.Name = "labNIC";
-            this.labNIC.Size = new System.Drawing.Size(123, 20);
+            this.labNIC.Size = new System.Drawing.Size(127, 25);
             this.labNIC.TabIndex = 104;
             this.labNIC.Text = "Invalid Input";
             this.labNIC.Visible = false;
@@ -143,11 +144,11 @@
             // 
             this.labLastName.AutoSize = true;
             this.labLastName.BackColor = System.Drawing.Color.Maroon;
-            this.labLastName.Font = new System.Drawing.Font("28 Days Later", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labLastName.ForeColor = System.Drawing.Color.White;
             this.labLastName.Location = new System.Drawing.Point(806, 256);
             this.labLastName.Name = "labLastName";
-            this.labLastName.Size = new System.Drawing.Size(123, 20);
+            this.labLastName.Size = new System.Drawing.Size(127, 25);
             this.labLastName.TabIndex = 103;
             this.labLastName.Text = "Invalid Input";
             this.labLastName.Visible = false;
@@ -156,11 +157,11 @@
             // 
             this.labFirstName.AutoSize = true;
             this.labFirstName.BackColor = System.Drawing.Color.Maroon;
-            this.labFirstName.Font = new System.Drawing.Font("28 Days Later", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labFirstName.ForeColor = System.Drawing.Color.White;
             this.labFirstName.Location = new System.Drawing.Point(806, 203);
             this.labFirstName.Name = "labFirstName";
-            this.labFirstName.Size = new System.Drawing.Size(123, 20);
+            this.labFirstName.Size = new System.Drawing.Size(127, 25);
             this.labFirstName.TabIndex = 102;
             this.labFirstName.Text = "Invalid Input";
             this.labFirstName.Visible = false;
@@ -374,7 +375,7 @@
             // btnClear
             // 
             this.btnClear.BackColor = System.Drawing.Color.Maroon;
-            this.btnClear.Font = new System.Drawing.Font("28 Days Later", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.Color.White;
             this.btnClear.Location = new System.Drawing.Point(435, 638);
             this.btnClear.Name = "btnClear";
@@ -387,7 +388,7 @@
             // btnOrder
             // 
             this.btnOrder.BackColor = System.Drawing.Color.Maroon;
-            this.btnOrder.Font = new System.Drawing.Font("28 Days Later", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrder.ForeColor = System.Drawing.Color.White;
             this.btnOrder.Location = new System.Drawing.Point(754, 635);
             this.btnOrder.Name = "btnOrder";
@@ -400,7 +401,7 @@
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.Color.Maroon;
-            this.btnBack.Font = new System.Drawing.Font("28 Days Later", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.White;
             this.btnBack.Location = new System.Drawing.Point(898, 635);
             this.btnBack.Name = "btnBack";
@@ -413,7 +414,7 @@
             // btnADD
             // 
             this.btnADD.BackColor = System.Drawing.Color.Maroon;
-            this.btnADD.Font = new System.Drawing.Font("28 Days Later", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnADD.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnADD.ForeColor = System.Drawing.Color.White;
             this.btnADD.Location = new System.Drawing.Point(332, 638);
             this.btnADD.Name = "btnADD";
@@ -423,12 +424,26 @@
             this.btnADD.UseVisualStyleBackColor = false;
             this.btnADD.Click += new System.EventHandler(this.btnADD_Click_1);
             // 
+            // btnDemo
+            // 
+            this.btnDemo.BackColor = System.Drawing.Color.Maroon;
+            this.btnDemo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDemo.ForeColor = System.Drawing.Color.White;
+            this.btnDemo.Location = new System.Drawing.Point(75, 638);
+            this.btnDemo.Name = "btnDemo";
+            this.btnDemo.Size = new System.Drawing.Size(125, 37);
+            this.btnDemo.TabIndex = 113;
+            this.btnDemo.Text = "Demo";
+            this.btnDemo.UseVisualStyleBackColor = false;
+            this.btnDemo.Click += new System.EventHandler(this.btnDemo_Click);
+            // 
             // supplieInsert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1062, 719);
+            this.Controls.Add(this.btnDemo);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnOrder);
             this.Controls.Add(this.btnBack);
@@ -500,5 +515,6 @@
         private System.Windows.Forms.Button btnOrder;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnADD;
+        private System.Windows.Forms.Button btnDemo;
     }
 }

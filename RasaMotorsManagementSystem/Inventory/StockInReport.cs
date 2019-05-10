@@ -38,5 +38,6 @@ namespace RasaMotorsManagementSystem.Inventory
             this.restockTableAdapter.Fill(this.StockInDataSet.restock, fromDate, toDate);
             this.reportViewerStockIn.RefreshReport();
         }
+
     }
 }

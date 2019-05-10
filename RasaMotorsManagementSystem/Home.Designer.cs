@@ -377,6 +377,7 @@
             this.cusBtn.TabIndex = 5;
             this.cusBtn.Text = "Customers";
             this.cusBtn.UseVisualStyleBackColor = true;
+            this.cusBtn.Click += new System.EventHandler(this.cusBtn_Click);
             // 
             // jobBtn
             // 

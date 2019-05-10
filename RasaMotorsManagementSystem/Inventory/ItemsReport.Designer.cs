@@ -47,7 +47,6 @@
             this.reportViewerItems.LocalReport.ReportEmbeddedResource = "RasaMotorsManagementSystem.Inventory.Items.rdlc";
             this.reportViewerItems.Location = new System.Drawing.Point(0, 0);
             this.reportViewerItems.Name = "reportViewerItems";
-            this.reportViewerItems.ServerReport.BearerToken = null;
             this.reportViewerItems.Size = new System.Drawing.Size(800, 450);
             this.reportViewerItems.TabIndex = 0;
             // 

@@ -56,19 +56,19 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>0.58629in</Width>
+                  <Width>0.87587in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.86976in</Width>
+                  <Width>2.85403in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.2124in</Width>
+                  <Width>1.01364in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.2124in</Width>
+                  <Width>1.29564in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.2124in</Width>
+                  <Width>1.50198in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -271,7 +271,7 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -305,7 +305,7 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -339,7 +339,7 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -373,7 +373,7 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -407,7 +407,7 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -451,7 +451,7 @@
             <DataSetName>StocksDataSet</DataSetName>
             <Top>0.13889in</Top>
             <Height>0.5in</Height>
-            <Width>6.09325in</Width>
+            <Width>7.54117in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -462,7 +462,7 @@
         <Height>8.27in</Height>
         <Style />
       </Body>
-      <Width>6.09325in</Width>
+      <Width>7.54117in</Width>
       <Page>
         <PageHeader>
           <Height>2.14583in</Height>
@@ -490,9 +490,9 @@
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
               <Top>0.55083in</Top>
-              <Left>1.91617in</Left>
-              <Height>0.72917in</Height>
-              <Width>3.51042in</Width>
+              <Left>2.59325in</Left>
+              <Height>0.48959in</Height>
+              <Width>3.23959in</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -507,10 +507,10 @@
               <Source>Embedded</Source>
               <Value>RasaMotorsLogoblack</Value>
               <Sizing>FitProportional</Sizing>
-              <Top>0.55083in</Top>
+              <Top>0.23833in</Top>
               <Left>0.30332in</Left>
-              <Height>0.72917in</Height>
-              <Width>1.32166in</Width>
+              <Height>1.04167in</Height>
+              <Width>2.00916in</Width>
               <ZIndex>1</ZIndex>
               <Style>
                 <Border>
@@ -612,7 +612,7 @@
               </Paragraphs>
               <rd:DefaultName>PageNumber</rd:DefaultName>
               <Top>0.375in</Top>
-              <Left>4.42659in</Left>
+              <Left>5.32242in</Left>
               <Height>0.25in</Height>
               <Width>1.40625in</Width>
               <ZIndex>1</ZIndex>
@@ -635,10 +635,10 @@
         </PageFooter>
         <PageHeight>11.69in</PageHeight>
         <PageWidth>8.27in</PageWidth>
-        <LeftMargin>1in</LeftMargin>
-        <RightMargin>1in</RightMargin>
-        <TopMargin>1in</TopMargin>
-        <BottomMargin>1in</BottomMargin>
+        <LeftMargin>0.25in</LeftMargin>
+        <RightMargin>0.25in</RightMargin>
+        <TopMargin>0.5in</TopMargin>
+        <BottomMargin>0.5in</BottomMargin>
         <Style />
       </Page>
     </ReportSection>
