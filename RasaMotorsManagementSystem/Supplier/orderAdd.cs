@@ -168,5 +168,12 @@ namespace RasaMotorsManagementSystem.Supplier
                 labAmount.Visible = false;
             }
         }
+
+        private void btnDemo_Click(object sender, EventArgs e)
+        {
+            txtSupName.Text = "Thilina";
+            cmbInType.Text = "Bumper";
+            txtAmount.Text = "2000";
+        }
     }
 }

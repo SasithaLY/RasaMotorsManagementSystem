@@ -285,5 +285,15 @@ namespace RasaMotorsManagementSystem.Supplier
             }
         }
 
+        private void btnDemo_Click(object sender, EventArgs e)
+        {
+            txtNIC.Text = "971220236V";
+            txtFName.Text = "Thilina";
+            txtLName.Text = "Dharmakeerthi";
+            txtCNum.Text = "0777463558";
+            txtEmail.Text = "thilina@gmail.com";
+            txtCName.Text = "Rasa Motors";
+            cmbGender.Text = "Male";
+        }
     }
 }

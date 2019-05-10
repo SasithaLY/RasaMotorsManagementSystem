@@ -24,6 +24,17 @@ namespace RasaMotorsManagementSystem.Employees
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
+            Microsoft.Reporting.WinForms.ReportParameter[] rParams = new Microsoft.Reporting.WinForms.ReportParameter[]
+            {
+                  new Microsoft.Reporting.WinForms.ReportParameter("fromDate", dateTimePickerFrom.Value.Date.ToShortDateString()),
+                  new Microsoft.Reporting.WinForms.ReportParameter("toDate", dateTimePickerTo.Value.Date.ToShortDateString())
+            };
+
+            DateTime fromDate = DateTime.Parse(dateTimePickerFrom.Text);
+            DateTime toDate = DateTime.Parse(dateTimePickerTo.Text);
+
+            reportViewerEmp.LocalReport.SetParameters(rParams);
+
             this.empTableAdapter.Fill(this.EmployeeDataSet.emp, dateTimePickerFrom.Text, dateTimePickerTo.Text);
 
             this.reportViewerEmp.RefreshReport();

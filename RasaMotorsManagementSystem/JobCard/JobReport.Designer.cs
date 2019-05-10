@@ -129,13 +129,16 @@
             // 
             // reportViewer1
             // 
+            this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             reportDataSource1.Name = "DataSet1";
             reportDataSource1.Value = this.jobPredBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "RasaMotorsManagementSystem.JobCard.PredictJobReport.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(59, 195);
+            this.reportViewer1.Location = new System.Drawing.Point(54, 213);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(913, 825);
+            this.reportViewer1.Size = new System.Drawing.Size(913, 461);
             this.reportViewer1.TabIndex = 17;
             // 
             // jobPredBindingSource
