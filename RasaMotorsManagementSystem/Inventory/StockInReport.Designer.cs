@@ -30,13 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewerStockIn = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.StockInDataSet = new RasaMotorsManagementSystem.Inventory.StockInDataSet();
             this.restockBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.StockInDataSet = new RasaMotorsManagementSystem.Inventory.StockInDataSet();
+            this.reportViewerStockIn = new Microsoft.Reporting.WinForms.ReportViewer();
             this.restockTableAdapter = new RasaMotorsManagementSystem.Inventory.StockInDataSetTableAdapters.restockTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.StockInDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.restockBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StockInDataSet)).BeginInit();
             this.SuspendLayout();
+            // 
+            // restockBindingSource
+            // 
+            this.restockBindingSource.DataMember = "restock";
+            this.restockBindingSource.DataSource = this.StockInDataSet;
+            // 
+            // StockInDataSet
+            // 
+            this.StockInDataSet.DataSetName = "StockInDataSet";
+            this.StockInDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewerStockIn
             // 
@@ -47,19 +57,8 @@
             this.reportViewerStockIn.LocalReport.ReportEmbeddedResource = "RasaMotorsManagementSystem.Inventory.StockIn.rdlc";
             this.reportViewerStockIn.Location = new System.Drawing.Point(0, 0);
             this.reportViewerStockIn.Name = "reportViewerStockIn";
-            this.reportViewerStockIn.ServerReport.BearerToken = null;
             this.reportViewerStockIn.Size = new System.Drawing.Size(800, 450);
             this.reportViewerStockIn.TabIndex = 0;
-            // 
-            // StockInDataSet
-            // 
-            this.StockInDataSet.DataSetName = "StockInDataSet";
-            this.StockInDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // restockBindingSource
-            // 
-            this.restockBindingSource.DataMember = "restock";
-            this.restockBindingSource.DataSource = this.StockInDataSet;
             // 
             // restockTableAdapter
             // 
@@ -75,8 +74,8 @@
             this.Text = "StockInReport";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.StockInReport_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.StockInDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.restockBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StockInDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }

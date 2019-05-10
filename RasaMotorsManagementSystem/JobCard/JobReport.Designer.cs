@@ -29,17 +29,22 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.btnLoad = new System.Windows.Forms.Button();
             this.dtTo = new System.Windows.Forms.DateTimePicker();
             this.dtFrm = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.jobPredBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.jobData = new RasaMotorsManagementSystem.JobCard.jobData();
+            this.jobPredTableAdapter = new RasaMotorsManagementSystem.JobCard.jobDataTableAdapters.jobPredTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jobPredBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jobData)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLoad
@@ -53,6 +58,7 @@
             this.btnLoad.TabIndex = 15;
             this.btnLoad.Text = "LOAD";
             this.btnLoad.UseVisualStyleBackColor = false;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // dtTo
             // 
@@ -100,16 +106,6 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "FROM";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::RasaMotorsManagementSystem.Properties.Resources.Rasa_Motors_Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(23, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(215, 93);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -121,9 +117,43 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "REPORT GENERATOR";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::RasaMotorsManagementSystem.Properties.Resources.Rasa_Motors_Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 7);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(220, 99);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.jobPredBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "RasaMotorsManagementSystem.JobCard.PredictJobReport.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(54, 213);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.Size = new System.Drawing.Size(913, 461);
+            this.reportViewer1.TabIndex = 17;
+            // 
             // jobPredBindingSource
             // 
             this.jobPredBindingSource.DataMember = "jobPred";
+            this.jobPredBindingSource.DataSource = this.jobData;
+            // 
+            // jobData
+            // 
+            this.jobData.DataSetName = "jobData";
+            this.jobData.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // jobPredTableAdapter
+            // 
+            this.jobPredTableAdapter.ClearBeforeFill = true;
             // 
             // JobReport
             // 
@@ -131,33 +161,38 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(66)))));
             this.ClientSize = new System.Drawing.Size(1030, 686);
+            this.Controls.Add(this.reportViewer1);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.dtTo);
             this.Controls.Add(this.dtFrm);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Name = "JobReport";
             this.Text = "JobReport";
+            this.Load += new System.EventHandler(this.JobReport_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jobPredBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jobData)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.BindingSource jobPredBindingSource;
         private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.DateTimePicker dtTo;
         private System.Windows.Forms.DateTimePicker dtFrm;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource jobPredBindingSource;
+        private jobData jobData;
+        private jobDataTableAdapters.jobPredTableAdapter jobPredTableAdapter;
     }
 }

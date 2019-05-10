@@ -87,27 +87,29 @@ namespace RasaMotorsManagementSystem.Supplier
 
                 else
                 {
-                    bool success = c.Update(c);
-
-                    if (success == true)
+                    if (DialogResult.Yes == MessageBox.Show("Are you sure you want to update this order?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Information))
                     {
-                        MessageBox.Show("Order successfully updated!");
+                        bool success = c.Update(c);
 
-                        //Lord data dgv
-                        DataTable dt = c.Select();
+                        if (success == true)
+                        {
+                            MessageBox.Show("Order successfully updated!");
 
-                        //orderView.DataSource = dt;
+                            //Lord data dgv
+                            DataTable dt = c.Select();
 
-                        //clear data
-                        Clear();
-                        this.Hide();
+                            //orderView.DataSource = dt;
 
+                            //clear data
+                            Clear();
+                            this.Hide();
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Faild to update Order, Try again!");
+                        }
                     }
-                    else
-                    {
-                        MessageBox.Show("Faild to update Order, Try again!");
-                    }
-
                 }
 
             }
@@ -130,38 +132,40 @@ namespace RasaMotorsManagementSystem.Supplier
         {
             try
             {
-                //delete data
-                c.orderID = Convert.ToInt32(txtOrdID.Text);
-
-                //deleting data
-
-                bool success = c.Delete(c);
-
-                if (success == true)
+                if (DialogResult.Yes == MessageBox.Show("Are you sure you want to remove this order?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Information))
                 {
-                    MessageBox.Show("Order successfully deleted!");
+                    //delete data
+                    c.orderID = Convert.ToInt32(txtOrdID.Text);
 
-                    //Lord data dgv
-                    DataTable dt = c.Select();
+                    //deleting data
 
-                    //orderView.DataSource = dt;
+                    bool success = c.Delete(c);
 
-                    //clear data
-                    Clear();
-                    this.Hide();
+                    if (success == true)
+                    {
+                        MessageBox.Show("Order successfully deleted!");
+
+                        //Lord data dgv
+                        DataTable dt = c.Select();
+
+                        //orderView.DataSource = dt;
+
+                        //clear data
+                        Clear();
+                        this.Hide();
 
 
+                    }
+                    else
+                    {
+                        MessageBox.Show("Faild to delete Order, Try again!");
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Faild to delete Order, Try again!");
-                }
-
             }
 
             catch (Exception ex)
             {
-                MessageBox.Show("Fields are empty");
+                MessageBox.Show("Order not selected");
             }
         }
 

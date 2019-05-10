@@ -47,6 +47,7 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.ordADD = new System.Windows.Forms.Button();
+            this.btnDemo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -191,11 +192,11 @@
             // 
             this.labAmount.AutoSize = true;
             this.labAmount.BackColor = System.Drawing.Color.Maroon;
-            this.labAmount.Font = new System.Drawing.Font("28 Days Later", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labAmount.ForeColor = System.Drawing.Color.White;
             this.labAmount.Location = new System.Drawing.Point(798, 360);
             this.labAmount.Name = "labAmount";
-            this.labAmount.Size = new System.Drawing.Size(123, 20);
+            this.labAmount.Size = new System.Drawing.Size(127, 25);
             this.labAmount.TabIndex = 89;
             this.labAmount.Text = "Invalid Input";
             this.labAmount.Visible = false;
@@ -204,11 +205,11 @@
             // 
             this.labSupName.AutoSize = true;
             this.labSupName.BackColor = System.Drawing.Color.Maroon;
-            this.labSupName.Font = new System.Drawing.Font("28 Days Later", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labSupName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labSupName.ForeColor = System.Drawing.Color.White;
             this.labSupName.Location = new System.Drawing.Point(798, 194);
             this.labSupName.Name = "labSupName";
-            this.labSupName.Size = new System.Drawing.Size(123, 20);
+            this.labSupName.Size = new System.Drawing.Size(127, 25);
             this.labSupName.TabIndex = 88;
             this.labSupName.Text = "Invalid Input";
             this.labSupName.Visible = false;
@@ -216,7 +217,7 @@
             // btnView
             // 
             this.btnView.BackColor = System.Drawing.Color.Maroon;
-            this.btnView.Font = new System.Drawing.Font("28 Days Later", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnView.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnView.ForeColor = System.Drawing.Color.White;
             this.btnView.Location = new System.Drawing.Point(725, 526);
             this.btnView.Name = "btnView";
@@ -229,7 +230,7 @@
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.Color.Maroon;
-            this.btnBack.Font = new System.Drawing.Font("28 Days Later", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.White;
             this.btnBack.Location = new System.Drawing.Point(865, 526);
             this.btnBack.Name = "btnBack";
@@ -242,7 +243,7 @@
             // btnClear
             // 
             this.btnClear.BackColor = System.Drawing.Color.Maroon;
-            this.btnClear.Font = new System.Drawing.Font("28 Days Later", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.Color.White;
             this.btnClear.Location = new System.Drawing.Point(488, 525);
             this.btnClear.Name = "btnClear";
@@ -255,7 +256,7 @@
             // ordADD
             // 
             this.ordADD.BackColor = System.Drawing.Color.Maroon;
-            this.ordADD.Font = new System.Drawing.Font("28 Days Later", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ordADD.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ordADD.ForeColor = System.Drawing.Color.White;
             this.ordADD.Location = new System.Drawing.Point(396, 525);
             this.ordADD.Name = "ordADD";
@@ -265,12 +266,26 @@
             this.ordADD.UseVisualStyleBackColor = false;
             this.ordADD.Click += new System.EventHandler(this.ordADD_Click);
             // 
+            // btnDemo
+            // 
+            this.btnDemo.BackColor = System.Drawing.Color.Maroon;
+            this.btnDemo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDemo.ForeColor = System.Drawing.Color.White;
+            this.btnDemo.Location = new System.Drawing.Point(81, 525);
+            this.btnDemo.Name = "btnDemo";
+            this.btnDemo.Size = new System.Drawing.Size(125, 37);
+            this.btnDemo.TabIndex = 94;
+            this.btnDemo.Text = "Demo";
+            this.btnDemo.UseVisualStyleBackColor = false;
+            this.btnDemo.Click += new System.EventHandler(this.btnDemo_Click);
+            // 
             // orderAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1021, 620);
+            this.Controls.Add(this.btnDemo);
             this.Controls.Add(this.btnView);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnClear);
@@ -320,5 +335,6 @@
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button ordADD;
+        private System.Windows.Forms.Button btnDemo;
     }
 }

@@ -57,6 +57,7 @@
             this.lblErrorMinQty = new System.Windows.Forms.Label();
             this.txtboxMinQty = new System.Windows.Forms.TextBox();
             this.lblMinQty = new System.Windows.Forms.Label();
+            this.btnDemo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rASADataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.supplierBindingSource)).BeginInit();
@@ -363,12 +364,28 @@
             this.lblMinQty.TabIndex = 137;
             this.lblMinQty.Text = "Min. Quantity";
             // 
+            // btnDemo
+            // 
+            this.btnDemo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnDemo.BackColor = System.Drawing.Color.Maroon;
+            this.btnDemo.FlatAppearance.BorderSize = 0;
+            this.btnDemo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDemo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDemo.ForeColor = System.Drawing.Color.White;
+            this.btnDemo.Location = new System.Drawing.Point(890, 660);
+            this.btnDemo.Name = "btnDemo";
+            this.btnDemo.Size = new System.Drawing.Size(103, 40);
+            this.btnDemo.TabIndex = 140;
+            this.btnDemo.Text = "DEMO";
+            this.btnDemo.UseVisualStyleBackColor = false;
+            // 
             // InventoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(66)))));
             this.ClientSize = new System.Drawing.Size(1264, 750);
+            this.Controls.Add(this.btnDemo);
             this.Controls.Add(this.lblErrorMinQty);
             this.Controls.Add(this.txtboxMinQty);
             this.Controls.Add(this.lblMinQty);
@@ -437,5 +454,6 @@
         private System.Windows.Forms.Label lblErrorMinQty;
         private System.Windows.Forms.TextBox txtboxMinQty;
         private System.Windows.Forms.Label lblMinQty;
+        private System.Windows.Forms.Button btnDemo;
     }
 }

@@ -60,30 +60,33 @@ namespace RasaMotorsManagementSystem.Supplier
         {
             try
             {
-                //delete data
-                c.supplierID = Convert.ToInt32(txtSupID.Text);
-
-                //deleting data
-
-                bool success = c.Delete(c);
-
-                if (success == true)
+                if (DialogResult.Yes == MessageBox.Show("Are you sure you want to remove this supplier details?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Information))
                 {
-                    MessageBox.Show("Supplier successfully deleted!");
+                    //delete data
+                    c.supplierID = Convert.ToInt32(txtSupID.Text);
 
-                    //Lord data dgv
-                    DataTable dt = c.Select();
+                    //deleting data
 
-                    //supplierView.DataSource = dt;
+                    bool success = c.Delete(c);
 
-                    //clear data
-                    Clear();
+                    if (success == true)
+                    {
+                        MessageBox.Show("Supplier successfully deleted!");
 
-                    this.Hide();
-                }
-                else
-                {
-                    MessageBox.Show("Faild to delete Supplier, Try again!");
+                        //Lord data dgv
+                        DataTable dt = c.Select();
+
+                        //supplierView.DataSource = dt;
+
+                        //clear data
+                        Clear();
+
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Faild to delete Supplier, Try again!");
+                    }
                 }
             }
 
@@ -166,27 +169,29 @@ namespace RasaMotorsManagementSystem.Supplier
                 //Update data
                 else
                 {
-                    bool success = c.Update(c);
-
-                    if (success == true)
+                    if (DialogResult.Yes == MessageBox.Show("Are you sure you want to update this supplier details?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Information))
                     {
-                        MessageBox.Show("Supplier successfully updated!");
+                        bool success = c.Update(c);
 
-                        //Lord data dgv
-                        DataTable dt = c.Select();
+                        if (success == true)
+                        {
+                            MessageBox.Show("Supplier successfully updated!");
 
-                        //supplierView.DataSource = dt;
+                            //Lord data dgv
+                            DataTable dt = c.Select();
 
-                        //clear data
-                        Clear();
+                            //supplierView.DataSource = dt;
 
-                        this.Hide();
+                            //clear data
+                            Clear();
+
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Faild to update Supplier, Try again!");
+                        }
                     }
-                    else
-                    {
-                        MessageBox.Show("Faild to update Supplier, Try again!");
-                    }
-
                 }
 
             }

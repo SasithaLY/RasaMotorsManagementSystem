@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,7 @@ namespace RasaMotorsManagementSystem.Finance
 {
     public partial class financialView : Form
     {
+        string connString = Common.Utils.ConnectionString;
         public financialView()
         {
             InitializeComponent();
@@ -29,9 +31,9 @@ namespace RasaMotorsManagementSystem.Finance
         private void btnReport_Click(object sender, EventArgs e)
         {
             this.Hide();
-          //  reportViewer manager = new reportViewer();
+            reportViewer manager = new reportViewer();
 
-         //  manager.ShowDialog();
+            manager.ShowDialog();
             this.Close();
         }
 
@@ -56,11 +58,29 @@ namespace RasaMotorsManagementSystem.Finance
         {
             DataTable dt = f.Select();
             dgvFinancial.DataSource = dt;
-            // TODO: This line of code loads data into the 'serviceCenterManagementDBDataSet1.tbl_Profit' table. You can move, or remove it, as needed.
-            //this.tbl_ProfitTableAdapter1.Fill(this.serviceCenterManagementDBDataSet1.tbl_Profit);
-            // TODO: This line of code loads data into the 'serviceCenterManagementDBDataSet.tbl_Profit' table. You can move, or remove it, as needed.
-            // this.tbl_ProfitTableAdapter.Fill(this.serviceCenterManagementDBDataSet.tbl_Profit);
+            
+        }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            string keyword = textBoxSearch.Text;
+
+            if (keyword == "Search by CustomerID , Date ")
+            {
+                DataTable dt = f.Select();
+                dgvFinancial.DataSource = dt;
+            }
+            else
+            {
+                SqlConnection conn = new SqlConnection(connString);
+
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM tbl_Profit " +
+                    "WHERE CustomerID LIKE '%" + keyword + "%' or Date LIKE '%"  + keyword + "%'", conn);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+
+                dgvFinancial.DataSource = dt;
+            }
         }
     }
 }

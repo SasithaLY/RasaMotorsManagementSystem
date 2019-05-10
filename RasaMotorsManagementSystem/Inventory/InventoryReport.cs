@@ -34,6 +34,15 @@ namespace RasaMotorsManagementSystem.Inventory
             itemsReport.Show();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            from = dtpInventoryFrom.Text;
+            to = dtpInventoryTo.Text;
+
+            ReturnsReport returnsReport = new ReturnsReport();
+            returnsReport.Show();
+        }
+
         private void btnStockIn_Click(object sender, EventArgs e)
         {
             from = dtpInventoryFrom.Text;

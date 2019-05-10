@@ -147,7 +147,6 @@
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "RasaMotorsManagementSystem.Supplier.supplierReport.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(87, 260);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(1050, 313);
             this.reportViewer1.TabIndex = 73;
             // 
