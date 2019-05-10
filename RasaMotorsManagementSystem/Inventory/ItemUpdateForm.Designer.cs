@@ -52,6 +52,9 @@
             this.txtBoxItemID = new System.Windows.Forms.TextBox();
             this.lblItemId = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblErrorMinQty = new System.Windows.Forms.Label();
+            this.txtboxMinQty = new System.Windows.Forms.TextBox();
+            this.lblMinQty = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,7 +111,7 @@
             this.btnAddSup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddSup.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddSup.ForeColor = System.Drawing.Color.White;
-            this.btnAddSup.Location = new System.Drawing.Point(867, 483);
+            this.btnAddSup.Location = new System.Drawing.Point(867, 534);
             this.btnAddSup.Name = "btnAddSup";
             this.btnAddSup.Size = new System.Drawing.Size(154, 32);
             this.btnAddSup.TabIndex = 129;
@@ -122,7 +125,7 @@
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(726, 578);
+            this.btnClear.Location = new System.Drawing.Point(726, 644);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(103, 40);
             this.btnClear.TabIndex = 128;
@@ -137,7 +140,7 @@
             this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemove.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemove.ForeColor = System.Drawing.Color.White;
-            this.btnRemove.Location = new System.Drawing.Point(585, 578);
+            this.btnRemove.Location = new System.Drawing.Point(585, 644);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(103, 40);
             this.btnRemove.TabIndex = 127;
@@ -152,7 +155,7 @@
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(446, 578);
+            this.btnUpdate.Location = new System.Drawing.Point(446, 644);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(103, 40);
             this.btnUpdate.TabIndex = 126;
@@ -177,7 +180,7 @@
             // 
             this.cmbBoxSupplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbBoxSupplier.FormattingEnabled = true;
-            this.cmbBoxSupplier.Location = new System.Drawing.Point(582, 487);
+            this.cmbBoxSupplier.Location = new System.Drawing.Point(582, 538);
             this.cmbBoxSupplier.Name = "cmbBoxSupplier";
             this.cmbBoxSupplier.Size = new System.Drawing.Size(257, 28);
             this.cmbBoxSupplier.TabIndex = 124;
@@ -274,9 +277,11 @@
             // 
             // txtBoxQnt
             // 
+            this.txtBoxQnt.Enabled = false;
             this.txtBoxQnt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxQnt.Location = new System.Drawing.Point(582, 438);
             this.txtBoxQnt.Name = "txtBoxQnt";
+            this.txtBoxQnt.ReadOnly = true;
             this.txtBoxQnt.Size = new System.Drawing.Size(257, 26);
             this.txtBoxQnt.TabIndex = 115;
             this.txtBoxQnt.TextChanged += new System.EventHandler(this.txtBoxQnt_TextChanged);
@@ -303,7 +308,7 @@
             this.lblSupplier.BackColor = System.Drawing.Color.Transparent;
             this.lblSupplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSupplier.ForeColor = System.Drawing.Color.White;
-            this.lblSupplier.Location = new System.Drawing.Point(428, 490);
+            this.lblSupplier.Location = new System.Drawing.Point(428, 541);
             this.lblSupplier.Name = "lblSupplier";
             this.lblSupplier.Size = new System.Drawing.Size(75, 20);
             this.lblSupplier.TabIndex = 113;
@@ -311,6 +316,7 @@
             // 
             // txtBoxItemID
             // 
+            this.txtBoxItemID.Enabled = false;
             this.txtBoxItemID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxItemID.Location = new System.Drawing.Point(582, 191);
             this.txtBoxItemID.Name = "txtBoxItemID";
@@ -343,12 +349,48 @@
             this.pictureBox1.TabIndex = 130;
             this.pictureBox1.TabStop = false;
             // 
+            // lblErrorMinQty
+            // 
+            this.lblErrorMinQty.AutoSize = true;
+            this.lblErrorMinQty.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorMinQty.ForeColor = System.Drawing.Color.Red;
+            this.lblErrorMinQty.Location = new System.Drawing.Point(854, 495);
+            this.lblErrorMinQty.Name = "lblErrorMinQty";
+            this.lblErrorMinQty.Size = new System.Drawing.Size(227, 15);
+            this.lblErrorMinQty.TabIndex = 142;
+            this.lblErrorMinQty.Text = "Invalid Input! Enter Numbers Only";
+            this.lblErrorMinQty.Visible = false;
+            // 
+            // txtboxMinQty
+            // 
+            this.txtboxMinQty.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxMinQty.Location = new System.Drawing.Point(582, 488);
+            this.txtboxMinQty.Name = "txtboxMinQty";
+            this.txtboxMinQty.Size = new System.Drawing.Size(257, 27);
+            this.txtboxMinQty.TabIndex = 141;
+            this.txtboxMinQty.TextChanged += new System.EventHandler(this.txtboxMinQty_TextChanged);
+            // 
+            // lblMinQty
+            // 
+            this.lblMinQty.AutoSize = true;
+            this.lblMinQty.BackColor = System.Drawing.Color.Transparent;
+            this.lblMinQty.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMinQty.ForeColor = System.Drawing.Color.White;
+            this.lblMinQty.Location = new System.Drawing.Point(428, 491);
+            this.lblMinQty.Name = "lblMinQty";
+            this.lblMinQty.Size = new System.Drawing.Size(110, 19);
+            this.lblMinQty.TabIndex = 140;
+            this.lblMinQty.Text = "Min. Quantity";
+            // 
             // ItemUpdateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(66)))));
-            this.ClientSize = new System.Drawing.Size(1275, 686);
+            this.ClientSize = new System.Drawing.Size(1275, 758);
+            this.Controls.Add(this.lblErrorMinQty);
+            this.Controls.Add(this.txtboxMinQty);
+            this.Controls.Add(this.lblMinQty);
             this.Controls.Add(this.lblErrorQty);
             this.Controls.Add(this.lblErrorSell);
             this.Controls.Add(this.lblErrorBuy);
@@ -410,5 +452,8 @@
         private System.Windows.Forms.Label lblSupplier;
         public System.Windows.Forms.TextBox txtBoxItemID;
         private System.Windows.Forms.Label lblItemId;
+        private System.Windows.Forms.Label lblErrorMinQty;
+        private System.Windows.Forms.Label lblMinQty;
+        public System.Windows.Forms.TextBox txtboxMinQty;
     }
 }

@@ -77,7 +77,7 @@ namespace RasaMotorsManagementSystem.Inventory
 
             try
             {
-                if (txtBoxItemName.Text == string.Empty || txtBoxItemType.Text == string.Empty || txtBoxBuyPrice.Text == string.Empty || txtBoxSellPrice.Text == string.Empty || txtBoxQnt.Text == string.Empty || cmbBoxSupplier.Text == string.Empty)
+                if (txtBoxItemName.Text == string.Empty || txtBoxItemType.Text == string.Empty || txtBoxBuyPrice.Text == string.Empty || txtBoxSellPrice.Text == string.Empty || txtBoxQnt.Text == string.Empty || txtboxMinQty.Text == string.Empty || cmbBoxSupplier.Text == string.Empty)
                 {
                     MessageBox.Show("Please Fill All The Fields!");
                     val = false;
@@ -94,6 +94,11 @@ namespace RasaMotorsManagementSystem.Inventory
                     val = false;
                 }
                 else if (!Regex.IsMatch(txtBoxQnt.Text, @"^[0-9]+$"))
+                {
+                    MessageBox.Show("Enter Only Numbers for Quantity!");
+                    val = false;
+                }
+                else if (!Regex.IsMatch(txtboxMinQty.Text, @"^[0-9]+$"))
                 {
                     MessageBox.Show("Enter Only Numbers for Quantity!");
                     val = false;
@@ -119,6 +124,7 @@ namespace RasaMotorsManagementSystem.Inventory
             txtBoxBuyPrice.Text = "";
             txtBoxQnt.Text = "";
             cmbBoxSupplier.Text = "";
+            txtboxMinQty.Text = "";
         }
 
         private void btnAddSup_Click(object sender, EventArgs e)
@@ -139,6 +145,7 @@ namespace RasaMotorsManagementSystem.Inventory
                 i.sellingPrice = double.Parse(txtBoxSellPrice.Text);
                 i.quantity = int.Parse(txtBoxQnt.Text);
                 i.supplier = cmbBoxSupplier.Text;
+                i.minQty = int.Parse(txtboxMinQty.Text);
 
                 //update data
                 Boolean success = i.Update(i);
@@ -247,6 +254,22 @@ namespace RasaMotorsManagementSystem.Inventory
         private void ItemUpdateForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             instance = null;
+        }
+
+        private void txtboxMinQty_TextChanged(object sender, EventArgs e)
+        {
+            if (txtboxMinQty.Text == string.Empty)
+            {
+                lblErrorMinQty.Visible = false;
+            }
+            else if (!Regex.IsMatch(txtboxMinQty.Text, @"^[0-9]+$"))
+            {
+                lblErrorMinQty.Visible = true;
+            }
+            else
+            {
+                lblErrorMinQty.Visible = false;
+            }
         }
     }
 }

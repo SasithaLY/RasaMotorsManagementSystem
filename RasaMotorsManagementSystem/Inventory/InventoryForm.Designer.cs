@@ -54,6 +54,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.rASADataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.supplierBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lblErrorMinQty = new System.Windows.Forms.Label();
+            this.txtboxMinQty = new System.Windows.Forms.TextBox();
+            this.lblMinQty = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rASADataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.supplierBindingSource)).BeginInit();
@@ -112,7 +115,7 @@
             this.btnAddSup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddSup.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddSup.ForeColor = System.Drawing.Color.White;
-            this.btnAddSup.Location = new System.Drawing.Point(880, 515);
+            this.btnAddSup.Location = new System.Drawing.Point(880, 559);
             this.btnAddSup.Name = "btnAddSup";
             this.btnAddSup.Size = new System.Drawing.Size(166, 32);
             this.btnAddSup.TabIndex = 132;
@@ -124,7 +127,7 @@
             this.cmbBoxSupplier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBoxSupplier.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbBoxSupplier.FormattingEnabled = true;
-            this.cmbBoxSupplier.Location = new System.Drawing.Point(625, 519);
+            this.cmbBoxSupplier.Location = new System.Drawing.Point(625, 563);
             this.cmbBoxSupplier.Name = "cmbBoxSupplier";
             this.cmbBoxSupplier.Size = new System.Drawing.Size(215, 27);
             this.cmbBoxSupplier.TabIndex = 131;
@@ -137,7 +140,7 @@
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(700, 620);
+            this.btnClear.Location = new System.Drawing.Point(700, 660);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(103, 40);
             this.btnClear.TabIndex = 129;
@@ -153,7 +156,7 @@
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(517, 620);
+            this.btnAdd.Location = new System.Drawing.Point(517, 660);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(103, 40);
             this.btnAdd.TabIndex = 128;
@@ -270,7 +273,7 @@
             this.lblSupplier.BackColor = System.Drawing.Color.Transparent;
             this.lblSupplier.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSupplier.ForeColor = System.Drawing.Color.White;
-            this.lblSupplier.Location = new System.Drawing.Point(471, 522);
+            this.lblSupplier.Location = new System.Drawing.Point(471, 566);
             this.lblSupplier.Name = "lblSupplier";
             this.lblSupplier.Size = new System.Drawing.Size(72, 19);
             this.lblSupplier.TabIndex = 117;
@@ -327,12 +330,48 @@
             // 
             this.supplierBindingSource.DataMember = "supplier";
             // 
+            // lblErrorMinQty
+            // 
+            this.lblErrorMinQty.AutoSize = true;
+            this.lblErrorMinQty.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorMinQty.ForeColor = System.Drawing.Color.Red;
+            this.lblErrorMinQty.Location = new System.Drawing.Point(856, 523);
+            this.lblErrorMinQty.Name = "lblErrorMinQty";
+            this.lblErrorMinQty.Size = new System.Drawing.Size(227, 15);
+            this.lblErrorMinQty.TabIndex = 139;
+            this.lblErrorMinQty.Text = "Invalid Input! Enter Numbers Only";
+            this.lblErrorMinQty.Visible = false;
+            this.lblErrorMinQty.Click += new System.EventHandler(this.lblErrorMinQty_Click);
+            // 
+            // txtboxMinQty
+            // 
+            this.txtboxMinQty.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxMinQty.Location = new System.Drawing.Point(625, 516);
+            this.txtboxMinQty.Name = "txtboxMinQty";
+            this.txtboxMinQty.Size = new System.Drawing.Size(215, 27);
+            this.txtboxMinQty.TabIndex = 138;
+            // 
+            // lblMinQty
+            // 
+            this.lblMinQty.AutoSize = true;
+            this.lblMinQty.BackColor = System.Drawing.Color.Transparent;
+            this.lblMinQty.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMinQty.ForeColor = System.Drawing.Color.White;
+            this.lblMinQty.Location = new System.Drawing.Point(471, 519);
+            this.lblMinQty.Name = "lblMinQty";
+            this.lblMinQty.Size = new System.Drawing.Size(110, 19);
+            this.lblMinQty.TabIndex = 137;
+            this.lblMinQty.Text = "Min. Quantity";
+            // 
             // InventoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(66)))));
-            this.ClientSize = new System.Drawing.Size(1264, 710);
+            this.ClientSize = new System.Drawing.Size(1264, 750);
+            this.Controls.Add(this.lblErrorMinQty);
+            this.Controls.Add(this.txtboxMinQty);
+            this.Controls.Add(this.lblMinQty);
             this.Controls.Add(this.lblErrorQty);
             this.Controls.Add(this.lblErrorBuy);
             this.Controls.Add(this.lblErrorSell);
@@ -395,5 +434,8 @@
         private System.Windows.Forms.Label lblItemId;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblInventory;
+        private System.Windows.Forms.Label lblErrorMinQty;
+        private System.Windows.Forms.TextBox txtboxMinQty;
+        private System.Windows.Forms.Label lblMinQty;
     }
 }

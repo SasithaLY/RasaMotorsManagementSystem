@@ -8,7 +8,9 @@ namespace RasaMotorsManagementSystem.Common
 {
     class Utils
     {
-        private static string connectionString = "Data Source=DESKTOP-T0HOCLV;Initial Catalog=ServiceCenterManagementDB;Integrated Security=True";
+       // private static string connectionString = "Data Source=DESKTOP-T0HOCLV;Initial Catalog=ServiceCenterManagementDB;Integrated Security=True";
+        private static string connectionString = @"Data Source=DESKTOP-60QFL5G\SQLEXPRESS;Initial Catalog=ServiceCenterManagementDB;Integrated Security=True";
+        
 
         public static string ConnectionString
         {
