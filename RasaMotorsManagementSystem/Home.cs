@@ -105,5 +105,10 @@ namespace RasaMotorsManagementSystem
         {
             new Finance.calculation().Show();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            new Salary.Salaryform().Show();
+        }
     }
 }
