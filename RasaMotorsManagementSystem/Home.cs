@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using RasaMotorsManagementSystem.Inventory;
 using RasaMotorsManagementSystem.Employees;
+using RasaMotorsManagementSystem.Payments;
 
 namespace RasaMotorsManagementSystem
 {
@@ -29,6 +30,12 @@ namespace RasaMotorsManagementSystem
         {
             ViewEmployee viewEmp = new ViewEmployee();
             viewEmp.Show();
+        }
+
+        private void payBtn_Click(object sender, EventArgs e)
+        {
+            PaymentMain paymentMain = new PaymentMain();
+            paymentMain.Show();
         }
     }
 }
