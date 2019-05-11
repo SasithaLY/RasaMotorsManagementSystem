@@ -35,18 +35,22 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblNotifications = new System.Windows.Forms.Label();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.logLbl = new System.Windows.Forms.Label();
+            this.btnLgOut = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.pnlMenu = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnUserManagement = new System.Windows.Forms.Button();
+            this.btnReports = new System.Windows.Forms.Button();
+            this.btnSalary = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnFinance = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnEmployee = new System.Windows.Forms.Button();
+            this.btnSupplier = new System.Windows.Forms.Button();
             this.btnInventory = new System.Windows.Forms.Button();
             this.payBtn = new System.Windows.Forms.Button();
             this.cusBtn = new System.Windows.Forms.Button();
@@ -54,8 +58,8 @@
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.toolStrip1.SuspendLayout();
             this.pnlHeader.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -65,7 +69,7 @@
             this.panel3.BackColor = System.Drawing.Color.Black;
             this.panel3.Controls.Add(this.label8);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(10, 878);
+            this.panel3.Location = new System.Drawing.Point(10, 934);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1605, 44);
             this.panel3.TabIndex = 17;
@@ -88,7 +92,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(10, 922);
+            this.panel2.Size = new System.Drawing.Size(10, 978);
             this.panel2.TabIndex = 0;
             // 
             // panel1
@@ -98,13 +102,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.lblNotifications);
-            this.panel1.Controls.Add(this.toolStrip1);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.pnlHeader);
             this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.toolStrip1);
             this.panel1.Location = new System.Drawing.Point(280, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1615, 922);
+            this.panel1.Size = new System.Drawing.Size(1615, 978);
             this.panel1.TabIndex = 18;
             this.panel1.Click += new System.EventHandler(this.panel1_Click);
             // 
@@ -120,6 +124,8 @@
             this.pictureBox2.TabIndex = 23;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
+            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
             // 
             // lblNotifications
             // 
@@ -132,6 +138,81 @@
             this.lblNotifications.Size = new System.Drawing.Size(26, 29);
             this.lblNotifications.TabIndex = 20;
             this.lblNotifications.Text = "0";
+            // 
+            // pnlHeader
+            // 
+            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(66)))));
+            this.pnlHeader.Controls.Add(this.logLbl);
+            this.pnlHeader.Controls.Add(this.btnLgOut);
+            this.pnlHeader.Controls.Add(this.label10);
+            this.pnlHeader.Controls.Add(this.panel7);
+            this.pnlHeader.Controls.Add(this.label9);
+            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeader.Location = new System.Drawing.Point(10, 0);
+            this.pnlHeader.Name = "pnlHeader";
+            this.pnlHeader.Size = new System.Drawing.Size(1605, 131);
+            this.pnlHeader.TabIndex = 14;
+            // 
+            // logLbl
+            // 
+            this.logLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.logLbl.AutoSize = true;
+            this.logLbl.Font = new System.Drawing.Font("Times", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.logLbl.Location = new System.Drawing.Point(891, 13);
+            this.logLbl.Name = "logLbl";
+            this.logLbl.Size = new System.Drawing.Size(50, 19);
+            this.logLbl.TabIndex = 26;
+            this.logLbl.Text = "label1";
+            // 
+            // btnLgOut
+            // 
+            this.btnLgOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLgOut.BackColor = System.Drawing.Color.Maroon;
+            this.btnLgOut.FlatAppearance.BorderSize = 0;
+            this.btnLgOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLgOut.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLgOut.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnLgOut.Location = new System.Drawing.Point(1146, 4);
+            this.btnLgOut.Name = "btnLgOut";
+            this.btnLgOut.Size = new System.Drawing.Size(82, 31);
+            this.btnLgOut.TabIndex = 24;
+            this.btnLgOut.Text = "Log Out";
+            this.btnLgOut.UseVisualStyleBackColor = false;
+            this.btnLgOut.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Palatino Linotype", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Goldenrod;
+            this.label10.Location = new System.Drawing.Point(907, 72);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(339, 44);
+            this.label10.TabIndex = 25;
+            this.label10.Text = "Management Software";
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Maroon;
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel7.Location = new System.Drawing.Point(0, 121);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(1605, 10);
+            this.panel7.TabIndex = 19;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Palatino Linotype", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Goldenrod;
+            this.label9.Location = new System.Drawing.Point(771, 32);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(480, 50);
+            this.label9.TabIndex = 24;
+            this.label9.Text = "Automobile Service Center";
             // 
             // toolStrip1
             // 
@@ -165,90 +246,87 @@
             this.toolStripDropDownButton1.ShowDropDownArrow = false;
             this.toolStripDropDownButton1.Size = new System.Drawing.Size(45, 36);
             // 
-            // pnlHeader
-            // 
-            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(66)))));
-            this.pnlHeader.Controls.Add(this.label10);
-            this.pnlHeader.Controls.Add(this.panel7);
-            this.pnlHeader.Controls.Add(this.label9);
-            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlHeader.Location = new System.Drawing.Point(10, 0);
-            this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(1605, 131);
-            this.pnlHeader.TabIndex = 14;
-            // 
-            // label10
-            // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Palatino Linotype", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(886, 62);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(339, 44);
-            this.label10.TabIndex = 25;
-            this.label10.Text = "Management Software";
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.Maroon;
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel7.Location = new System.Drawing.Point(0, 121);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1605, 10);
-            this.panel7.TabIndex = 19;
-            // 
-            // label9
-            // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Palatino Linotype", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(771, 12);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(480, 50);
-            this.label9.TabIndex = 24;
-            this.label9.Text = "Automobile Service Center";
-            // 
             // pnlMenu
             // 
             this.pnlMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.pnlMenu.Controls.Add(this.button6);
+            this.pnlMenu.Controls.Add(this.btnUserManagement);
+            this.pnlMenu.Controls.Add(this.btnReports);
+            this.pnlMenu.Controls.Add(this.btnSalary);
             this.pnlMenu.Controls.Add(this.pictureBox1);
             this.pnlMenu.Controls.Add(this.btnFinance);
-            this.pnlMenu.Controls.Add(this.button4);
-            this.pnlMenu.Controls.Add(this.button3);
+            this.pnlMenu.Controls.Add(this.btnEmployee);
+            this.pnlMenu.Controls.Add(this.btnSupplier);
             this.pnlMenu.Controls.Add(this.btnInventory);
             this.pnlMenu.Controls.Add(this.payBtn);
             this.pnlMenu.Controls.Add(this.cusBtn);
             this.pnlMenu.Controls.Add(this.jobBtn);
             this.pnlMenu.Location = new System.Drawing.Point(0, -39);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(950, 999);
+            this.pnlMenu.Size = new System.Drawing.Size(950, 1055);
             this.pnlMenu.TabIndex = 17;
             // 
-            // button6
+            // btnUserManagement
             // 
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(12, 686);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(250, 52);
-            this.button6.TabIndex = 11;
-            this.button6.Text = "Salary";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.btnUserManagement.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnUserManagement.FlatAppearance.BorderSize = 0;
+            this.btnUserManagement.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnUserManagement.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnUserManagement.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.btnUserManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUserManagement.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUserManagement.ForeColor = System.Drawing.Color.White;
+            this.btnUserManagement.Image = global::RasaMotorsManagementSystem.Properties.Resources.userManagement;
+            this.btnUserManagement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUserManagement.Location = new System.Drawing.Point(12, 794);
+            this.btnUserManagement.Name = "btnUserManagement";
+            this.btnUserManagement.Size = new System.Drawing.Size(250, 50);
+            this.btnUserManagement.TabIndex = 13;
+            this.btnUserManagement.Text = "User Management";
+            this.btnUserManagement.UseVisualStyleBackColor = true;
+            this.btnUserManagement.Click += new System.EventHandler(this.btnUserManagement_Click);
+            // 
+            // btnReports
+            // 
+            this.btnReports.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnReports.FlatAppearance.BorderSize = 0;
+            this.btnReports.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnReports.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnReports.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReports.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReports.ForeColor = System.Drawing.Color.White;
+            this.btnReports.Image = global::RasaMotorsManagementSystem.Properties.Resources.report;
+            this.btnReports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReports.Location = new System.Drawing.Point(12, 738);
+            this.btnReports.Name = "btnReports";
+            this.btnReports.Size = new System.Drawing.Size(250, 50);
+            this.btnReports.TabIndex = 12;
+            this.btnReports.Text = "Reports";
+            this.btnReports.UseVisualStyleBackColor = true;
+            this.btnReports.Click += new System.EventHandler(this.btnReports_Click_1);
+            // 
+            // btnSalary
+            // 
+            this.btnSalary.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSalary.FlatAppearance.BorderSize = 0;
+            this.btnSalary.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnSalary.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSalary.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.btnSalary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalary.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalary.ForeColor = System.Drawing.Color.White;
+            this.btnSalary.Image = ((System.Drawing.Image)(resources.GetObject("btnSalary.Image")));
+            this.btnSalary.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalary.Location = new System.Drawing.Point(12, 631);
+            this.btnSalary.Name = "btnSalary";
+            this.btnSalary.Size = new System.Drawing.Size(250, 52);
+            this.btnSalary.TabIndex = 11;
+            this.btnSalary.Text = "Salary";
+            this.btnSalary.UseVisualStyleBackColor = true;
+            this.btnSalary.Click += new System.EventHandler(this.button6_Click);
             // 
             // pictureBox1
             // 
@@ -273,7 +351,7 @@
             this.btnFinance.ForeColor = System.Drawing.Color.White;
             this.btnFinance.Image = ((System.Drawing.Image)(resources.GetObject("btnFinance.Image")));
             this.btnFinance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFinance.Location = new System.Drawing.Point(12, 633);
+            this.btnFinance.Location = new System.Drawing.Point(12, 680);
             this.btnFinance.Name = "btnFinance";
             this.btnFinance.Size = new System.Drawing.Size(250, 52);
             this.btnFinance.TabIndex = 10;
@@ -281,45 +359,45 @@
             this.btnFinance.UseVisualStyleBackColor = true;
             this.btnFinance.Click += new System.EventHandler(this.btnFinance_Click);
             // 
-            // button4
+            // btnEmployee
             // 
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(12, 575);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(250, 52);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "Employees";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnEmployee.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnEmployee.FlatAppearance.BorderSize = 0;
+            this.btnEmployee.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnEmployee.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnEmployee.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.btnEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmployee.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmployee.ForeColor = System.Drawing.Color.White;
+            this.btnEmployee.Image = ((System.Drawing.Image)(resources.GetObject("btnEmployee.Image")));
+            this.btnEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEmployee.Location = new System.Drawing.Point(12, 575);
+            this.btnEmployee.Name = "btnEmployee";
+            this.btnEmployee.Size = new System.Drawing.Size(250, 52);
+            this.btnEmployee.TabIndex = 9;
+            this.btnEmployee.Text = "Employees";
+            this.btnEmployee.UseVisualStyleBackColor = true;
+            this.btnEmployee.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button3
+            // btnSupplier
             // 
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(12, 517);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(250, 52);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Suppliers";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnSupplier.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSupplier.FlatAppearance.BorderSize = 0;
+            this.btnSupplier.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnSupplier.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSupplier.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.btnSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSupplier.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSupplier.ForeColor = System.Drawing.Color.White;
+            this.btnSupplier.Image = ((System.Drawing.Image)(resources.GetObject("btnSupplier.Image")));
+            this.btnSupplier.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSupplier.Location = new System.Drawing.Point(12, 517);
+            this.btnSupplier.Name = "btnSupplier";
+            this.btnSupplier.Size = new System.Drawing.Size(250, 52);
+            this.btnSupplier.TabIndex = 8;
+            this.btnSupplier.Text = "Suppliers";
+            this.btnSupplier.UseVisualStyleBackColor = true;
+            this.btnSupplier.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnInventory
             // 
@@ -403,21 +481,23 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(66)))));
-            this.ClientSize = new System.Drawing.Size(1553, 781);
+            this.ClientSize = new System.Drawing.Size(1553, 837);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlMenu);
             this.Name = "Home";
             this.Text = "Home";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Activated += new System.EventHandler(this.Home_Activated);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Home_FormClosed);
+            this.Load += new System.EventHandler(this.Home_Load);
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.pnlMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -434,11 +514,11 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnSalary;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnFinance;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnEmployee;
+        private System.Windows.Forms.Button btnSupplier;
         private System.Windows.Forms.Button btnInventory;
         private System.Windows.Forms.Button payBtn;
         private System.Windows.Forms.Button cusBtn;
@@ -448,6 +528,10 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnLgOut;
+        private System.Windows.Forms.Label logLbl;
+        private System.Windows.Forms.Button btnReports;
+        private System.Windows.Forms.Button btnUserManagement;
     }
 }
 

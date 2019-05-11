@@ -176,5 +176,10 @@ namespace RasaMotorsManagementSystem.CustomerVehicles
         {
 
         }
+
+        private void btnUpdDelBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

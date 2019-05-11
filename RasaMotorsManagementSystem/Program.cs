@@ -16,7 +16,8 @@ namespace RasaMotorsManagementSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Home());
+            frmLogin login = new frmLogin();
+            Application.Run(login.checkInstance);
         }
     }
 }

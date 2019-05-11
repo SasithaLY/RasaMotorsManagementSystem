@@ -186,5 +186,10 @@ namespace RasaMotorsManagementSystem.CustomerVehicles
             else
                 lblProdYearError.Visible = false;
         }
+
+        private void btnBackAddVeh_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

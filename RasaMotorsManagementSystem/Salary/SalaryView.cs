@@ -39,8 +39,8 @@ namespace RasaMotorsManagementSystem.Salary
 
         public void clear()
         {
-           // u.txtOT.Text = "";
-            //u.TxtBonus.Text = "";
+            u.txtOT.Text = "";
+            u.TxtBonus.Text = "";
             // dateTimePicker1.Text = "";
         }
 
@@ -87,7 +87,8 @@ namespace RasaMotorsManagementSystem.Salary
             //get the value from textbox
             string keyword = txtSearch.Text;
             SqlConnection conn = new SqlConnection(myconnsstrng);
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM sal WHERE EmployeeID LIKE '%" + keyword + "%'", conn);
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM empsalary WHERE EmployeeID LIKE '%" + keyword + "%'", conn);
+
 
             DataTable dt = new DataTable();
             sda.Fill(dt);
@@ -106,7 +107,7 @@ namespace RasaMotorsManagementSystem.Salary
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlDataAdapter sdf = new SqlDataAdapter("select * from sal where Date between '" + from.Value.ToString() + "' and '" + To.Value.ToString() + "'", con);
+            SqlDataAdapter sdf = new SqlDataAdapter("select * from empsalary where Date between '" + from.Value.ToString() + "' and '" + To.Value.ToString() + "'", con);
             DataTable sd = new DataTable();
             sdf.Fill(sd);
             dataGrid.DataSource = sd;
@@ -227,6 +228,13 @@ namespace RasaMotorsManagementSystem.Salary
             u.txtRate.Text = dataGrid.Rows[rowIndex].Cells[5].Value.ToString();
             u.txtTot.Text = dataGrid.Rows[rowIndex].Cells[7].Value.ToString();
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            salaryreport f4 = new salaryreport();
+            f4.Show();
         }
     }
 }

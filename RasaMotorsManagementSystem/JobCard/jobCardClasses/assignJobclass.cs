@@ -71,7 +71,7 @@ namespace RasaMotorsManagementSystem.JobCard.jobCardClasses
                 string sql = "INSERT INTO jobPred(vehicleNo, jobOne, jobTwo, jobThree, predictPrice,date)VALUES(@vehicleNo, @jobOne, @jobTwo, @jobThree, @predictPrice, @date)";
                 SqlCommand cmd = new SqlCommand(sql, conn);
 
-                cmd.Parameters.AddWithValue("@vehicleNo", c.Id);
+                cmd.Parameters.AddWithValue("@vehicleNo", c.vehicleNo);
                 cmd.Parameters.AddWithValue("@jobOne", c.jobOne);
                 cmd.Parameters.AddWithValue("@jobTwo", c.jobTwo);
                 cmd.Parameters.AddWithValue("@jobThree", c.jobThree);

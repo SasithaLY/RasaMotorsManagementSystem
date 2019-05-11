@@ -31,6 +31,9 @@ namespace RasaMotorsManagementSystem.JobCard
             this.Close();
         }
 
+
+       
+
         public void fillcombo()
         {
             comboJone.Items.Clear();
@@ -207,10 +210,12 @@ namespace RasaMotorsManagementSystem.JobCard
                 if (cmbVno.Text != "" || txtCusName.Text != "")
                 {
                     // obj.vehicleNo = txtVehicleNo.Text;
+                    obj.vehicleNo = cmbVno.Text;
                     obj.jobOne = comboJone.Text;
                     obj.jobTwo = comboJtwo.Text;
                     obj.jobThree = comboJthree.Text;
                     obj.predictPrice = float.Parse(txtPdctPrc.Text);
+                    
 
 
                     bool success = obj.InsertJob(obj);
@@ -244,7 +249,7 @@ namespace RasaMotorsManagementSystem.JobCard
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Please Select a Job!");
             }
         }
 
@@ -252,6 +257,11 @@ namespace RasaMotorsManagementSystem.JobCard
         {
             new createJob().Show();
             this.Close();
+        }
+
+        private void cmbVno_KeyPress(object sender, KeyPressEventArgs e)
+        {
+           
         }
     }
 }

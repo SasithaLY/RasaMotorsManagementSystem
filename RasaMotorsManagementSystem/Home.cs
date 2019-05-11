@@ -17,9 +17,13 @@ namespace RasaMotorsManagementSystem
 {
     public partial class Home : Form
     {
-        public Home()
+        String username, jstatus;
+        public Home(String uname, String jStatus)
         {
-            InitializeComponent();  
+            InitializeComponent();
+            username = uname;
+            jstatus = jStatus;
+
         }
 
         string connString = Common.Utils.ConnectionString;
@@ -136,17 +140,81 @@ namespace RasaMotorsManagementSystem
 
         private void panel1_Click(object sender, EventArgs e)
         {
-            if (flag == true)
+            //if (flag == true)
+            //{
+            //    pictureBox2.BackColor = Color.DimGray;
+            //    flag = false;
+            //}
+            //else
+            //{
+            //    pictureBox2.BackColor = Color.Transparent;
+            //    flag = true;
+            //}
+        }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+            if( jstatus == "Cashier")
             {
-                pictureBox2.BackColor = Color.DimGray;
-                flag = false;
+                logLbl.Text = "Hi Welcome Back " + username;
+                btnInventory.Visible = false;
+                btnFinance.Visible = false;
+                btnSupplier.Visible = false;
+                btnSalary.Visible = false;
+                btnEmployee.Visible = false;
+                btnReports.Visible = false;
+                btnUserManagement.Visible = false;
+            }
+            else if( jstatus == "Supervisor")
+            {
+                logLbl.Text = "Hi Welcome Back " + username;
+                btnFinance.Visible = false;
+                btnReports.Visible = false;
+                btnUserManagement.Visible = false;
             }
             else
             {
-                pictureBox2.BackColor = Color.Transparent;
-                flag = true;
+                logLbl.Text = "Hi Welcome Back " + username;
             }
         }
-     
+
+    
+
+        private void btnReports_Click_1(object sender, EventArgs e)
+        {
+            frmReports reports = new frmReports();
+            reports.Show();
+        }
+
+        private void btnUserManagement_Click(object sender, EventArgs e)
+        {
+            new Login.userManagement().Show();
+        }
+
+        private void Home_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            frmLogin login = new frmLogin();
+            login.checkInstance.Show();
+            Application.OpenForms.Cast<Form>().Where(x => !(x is frmLogin)).ToList().ForEach(x => x.Close());
+        }
+
+        private void pictureBox2_MouseLeave(object sender, EventArgs e)
+        {
+            
+                pictureBox2.BackColor = Color.Transparent;
+                
+        }
+
+        private void pictureBox2_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox2.BackColor = Color.DimGray;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmLogin login = new frmLogin();
+            login.checkInstance.Show();
+        }
     }
 }

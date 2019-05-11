@@ -36,6 +36,7 @@
             this.btnAddNewVehicle = new System.Windows.Forms.Button();
             this.txtBoxSearchVeh = new System.Windows.Forms.TextBox();
             this.ViewGridVehicles = new System.Windows.Forms.DataGridView();
+            this.btnVehListBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.logoVehList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ViewGridVehicles)).BeginInit();
             this.SuspendLayout();
@@ -58,7 +59,7 @@
             this.pnlmidVehList.BackColor = System.Drawing.Color.Maroon;
             this.pnlmidVehList.Location = new System.Drawing.Point(-34, 124);
             this.pnlmidVehList.Name = "pnlmidVehList";
-            this.pnlmidVehList.Size = new System.Drawing.Size(2666, 10);
+            this.pnlmidVehList.Size = new System.Drawing.Size(2893, 10);
             this.pnlmidVehList.TabIndex = 127;
             // 
             // headVehList
@@ -69,7 +70,7 @@
             this.headVehList.AutoSize = true;
             this.headVehList.Font = new System.Drawing.Font("Rockwell", 42F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headVehList.ForeColor = System.Drawing.Color.White;
-            this.headVehList.Location = new System.Drawing.Point(335, 23);
+            this.headVehList.Location = new System.Drawing.Point(453, 30);
             this.headVehList.Name = "headVehList";
             this.headVehList.Size = new System.Drawing.Size(808, 68);
             this.headVehList.TabIndex = 126;
@@ -82,7 +83,7 @@
             this.lblSearchVeh.BackColor = System.Drawing.Color.Transparent;
             this.lblSearchVeh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSearchVeh.ForeColor = System.Drawing.Color.White;
-            this.lblSearchVeh.Location = new System.Drawing.Point(38, 187);
+            this.lblSearchVeh.Location = new System.Drawing.Point(38, 284);
             this.lblSearchVeh.Name = "lblSearchVeh";
             this.lblSearchVeh.Size = new System.Drawing.Size(81, 20);
             this.lblSearchVeh.TabIndex = 125;
@@ -96,7 +97,7 @@
             this.btnAddNewVehicle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddNewVehicle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddNewVehicle.ForeColor = System.Drawing.Color.Transparent;
-            this.btnAddNewVehicle.Location = new System.Drawing.Point(1124, 178);
+            this.btnAddNewVehicle.Location = new System.Drawing.Point(1351, 275);
             this.btnAddNewVehicle.Name = "btnAddNewVehicle";
             this.btnAddNewVehicle.Size = new System.Drawing.Size(105, 28);
             this.btnAddNewVehicle.TabIndex = 124;
@@ -110,9 +111,9 @@
             this.txtBoxSearchVeh.BackColor = System.Drawing.Color.White;
             this.txtBoxSearchVeh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxSearchVeh.ForeColor = System.Drawing.Color.Gray;
-            this.txtBoxSearchVeh.Location = new System.Drawing.Point(125, 180);
+            this.txtBoxSearchVeh.Location = new System.Drawing.Point(125, 277);
             this.txtBoxSearchVeh.Name = "txtBoxSearchVeh";
-            this.txtBoxSearchVeh.Size = new System.Drawing.Size(979, 26);
+            this.txtBoxSearchVeh.Size = new System.Drawing.Size(1206, 26);
             this.txtBoxSearchVeh.TabIndex = 123;
             this.txtBoxSearchVeh.Text = "Search by Brand or Model...";
             this.txtBoxSearchVeh.TextChanged += new System.EventHandler(this.txtBoxSearchVeh_TextChanged);
@@ -125,18 +126,36 @@
             this.ViewGridVehicles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ViewGridVehicles.BackgroundColor = System.Drawing.Color.White;
             this.ViewGridVehicles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ViewGridVehicles.Location = new System.Drawing.Point(42, 245);
+            this.ViewGridVehicles.Location = new System.Drawing.Point(42, 342);
             this.ViewGridVehicles.Name = "ViewGridVehicles";
-            this.ViewGridVehicles.Size = new System.Drawing.Size(1187, 409);
+            this.ViewGridVehicles.Size = new System.Drawing.Size(1414, 409);
             this.ViewGridVehicles.TabIndex = 122;
             this.ViewGridVehicles.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.ViewGridVehicles_RowHeaderMouseClick);
+            // 
+            // btnVehListBack
+            // 
+            this.btnVehListBack.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnVehListBack.BackColor = System.Drawing.Color.Maroon;
+            this.btnVehListBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnVehListBack.FlatAppearance.BorderSize = 0;
+            this.btnVehListBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVehListBack.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVehListBack.ForeColor = System.Drawing.Color.White;
+            this.btnVehListBack.Location = new System.Drawing.Point(42, 789);
+            this.btnVehListBack.Name = "btnVehListBack";
+            this.btnVehListBack.Size = new System.Drawing.Size(82, 32);
+            this.btnVehListBack.TabIndex = 148;
+            this.btnVehListBack.Text = "Back";
+            this.btnVehListBack.UseVisualStyleBackColor = false;
+            this.btnVehListBack.Click += new System.EventHandler(this.btnVehListBack_Click);
             // 
             // frmVehicleList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1263, 686);
+            this.ClientSize = new System.Drawing.Size(1490, 880);
+            this.Controls.Add(this.btnVehListBack);
             this.Controls.Add(this.logoVehList);
             this.Controls.Add(this.pnlmidVehList);
             this.Controls.Add(this.headVehList);
@@ -164,5 +183,6 @@
         private System.Windows.Forms.Button btnAddNewVehicle;
         private System.Windows.Forms.TextBox txtBoxSearchVeh;
         private System.Windows.Forms.DataGridView ViewGridVehicles;
+        private System.Windows.Forms.Button btnVehListBack;
     }
 }

@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.jobPredBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.jobData = new RasaMotorsManagementSystem.JobCard.jobData();
             this.btnLoad = new System.Windows.Forms.Button();
             this.dtTo = new System.Windows.Forms.DateTimePicker();
             this.dtFrm = new System.Windows.Forms.DateTimePicker();
@@ -39,13 +41,21 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.jobPredBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.jobData = new RasaMotorsManagementSystem.JobCard.jobData();
             this.jobPredTableAdapter = new RasaMotorsManagementSystem.JobCard.jobDataTableAdapters.jobPredTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jobPredBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jobData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // jobPredBindingSource
+            // 
+            this.jobPredBindingSource.DataMember = "jobPred";
+            this.jobPredBindingSource.DataSource = this.jobData;
+            // 
+            // jobData
+            // 
+            this.jobData.DataSetName = "jobData";
+            this.jobData.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnLoad
             // 
@@ -138,18 +148,10 @@
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "RasaMotorsManagementSystem.JobCard.PredictJobReport.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(54, 213);
             this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(913, 461);
             this.reportViewer1.TabIndex = 17;
-            // 
-            // jobPredBindingSource
-            // 
-            this.jobPredBindingSource.DataMember = "jobPred";
-            this.jobPredBindingSource.DataSource = this.jobData;
-            // 
-            // jobData
-            // 
-            this.jobData.DataSetName = "jobData";
-            this.jobData.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // jobPredTableAdapter
             // 
@@ -173,9 +175,9 @@
             this.Name = "JobReport";
             this.Text = "JobReport";
             this.Load += new System.EventHandler(this.JobReport_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jobPredBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jobData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

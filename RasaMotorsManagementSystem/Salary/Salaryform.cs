@@ -134,7 +134,7 @@ namespace RasaMotorsManagementSystem.Salary
                 con.Open();
                 SqlCommand cm = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT * FROM edit WHERE ID='" + combo.SelectedItem.ToString() + "'";
+                cmd.CommandText = "SELECT * FROM EditDet WHERE ID='" + combo.SelectedItem.ToString() + "'";
                 cmd.ExecuteNonQuery();
                 DataTable d = new DataTable();
                 SqlDataAdapter f = new SqlDataAdapter(cm);
@@ -272,6 +272,11 @@ namespace RasaMotorsManagementSystem.Salary
         {
             this.KeyPreview = true;
             fill();
+        }
+
+        private void txtRate_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -203,6 +203,18 @@
       <DependentUpon>reportViewer.cs</DependentUpon>
     </Compile>
     <Compile Include="Finance\serviceCenterClasses\netProfit.cs" />
+    <Compile Include="frmReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReports.Designer.cs">
+      <DependentUpon>frmReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -355,6 +367,13 @@
     <Compile Include="JobCard\updateStatus.Designer.cs">
       <DependentUpon>updateStatus.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login\LoginClass.cs" />
+    <Compile Include="Login\userManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\userManagement.Designer.cs">
+      <DependentUpon>userManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Salary\EditDetails.cs">
@@ -363,6 +382,11 @@
     <Compile Include="Salary\EditDetails.Designer.cs">
       <DependentUpon>EditDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="Salary\EmpData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmpData.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Salary\SalaryClasses\EditDe.cs" />
     <Compile Include="Salary\SalaryClasses\ssalaryclass.cs" />
     <Compile Include="Salary\Salaryform.cs">
@@ -370,6 +394,12 @@
     </Compile>
     <Compile Include="Salary\Salaryform.Designer.cs">
       <DependentUpon>Salaryform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Salary\salaryreport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Salary\salaryreport.Designer.cs">
+      <DependentUpon>salaryreport.cs</DependentUpon>
     </Compile>
     <Compile Include="Salary\SalaryView.cs">
       <SubType>Form</SubType>
@@ -496,6 +526,12 @@
     <EmbeddedResource Include="Finance\reportViewer.resx">
       <DependentUpon>reportViewer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmReports.resx">
+      <DependentUpon>frmReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -560,6 +596,9 @@
     <EmbeddedResource Include="JobCard\updateStatus.resx">
       <DependentUpon>updateStatus.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Login\userManagement.resx">
+      <DependentUpon>userManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -575,6 +614,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Salary\Salaryform.resx">
       <DependentUpon>Salaryform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Salary\salaryreport.rdlc" />
+    <EmbeddedResource Include="Salary\salaryreport.resx">
+      <DependentUpon>salaryreport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Salary\SalaryView.resx">
       <DependentUpon>SalaryView.cs</DependentUpon>
@@ -725,6 +768,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Salary\EmpData.xsc">
+      <DependentUpon>EmpData.xsd</DependentUpon>
+    </None>
+    <None Include="Salary\EmpData.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EmpData.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Salary\EmpData.xss">
+      <DependentUpon>EmpData.xsd</DependentUpon>
+    </None>
     <None Include="ServiceCenterManagementDBDataSet.xsc">
       <DependentUpon>ServiceCenterManagementDBDataSet.xsd</DependentUpon>
     </None>
@@ -810,10 +864,12 @@
     <Content Include="Resources\Payment.png" />
     <Content Include="Resources\Rasa Motors Logo black.png" />
     <Content Include="Resources\Rasa Motors Logo.png" />
+    <None Include="Resources\report.png" />
     <Content Include="Resources\sal 2.png" />
     <Content Include="Resources\salary.png" />
     <Content Include="Resources\Suppliers.png" />
     <Content Include="Resources\suv.jpeg" />
+    <None Include="Resources\userManagement.png" />
     <Content Include="Salary\SalaryReadme.txt" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">

@@ -53,6 +53,7 @@
             this.lblNIC = new System.Windows.Forms.Label();
             this.TextBoxName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
+            this.btnUpdDelBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.logoAddCus)).BeginInit();
             this.SuspendLayout();
             // 
@@ -348,12 +349,30 @@
             this.lblName.TabIndex = 122;
             this.lblName.Text = "Name";
             // 
+            // btnUpdDelBack
+            // 
+            this.btnUpdDelBack.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnUpdDelBack.BackColor = System.Drawing.Color.Maroon;
+            this.btnUpdDelBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnUpdDelBack.FlatAppearance.BorderSize = 0;
+            this.btnUpdDelBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdDelBack.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdDelBack.ForeColor = System.Drawing.Color.White;
+            this.btnUpdDelBack.Location = new System.Drawing.Point(205, 524);
+            this.btnUpdDelBack.Name = "btnUpdDelBack";
+            this.btnUpdDelBack.Size = new System.Drawing.Size(82, 32);
+            this.btnUpdDelBack.TabIndex = 146;
+            this.btnUpdDelBack.Text = "Back";
+            this.btnUpdDelBack.UseVisualStyleBackColor = false;
+            this.btnUpdDelBack.Click += new System.EventHandler(this.btnUpdDelBack_Click);
+            // 
             // frmCusUpdateDelete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1197, 619);
+            this.Controls.Add(this.btnUpdDelBack);
             this.Controls.Add(this.logoAddCus);
             this.Controls.Add(this.pnlmidAddCus);
             this.Controls.Add(this.headAddCus);
@@ -380,7 +399,6 @@
             this.Controls.Add(this.lblName);
             this.Name = "frmCusUpdateDelete";
             this.Text = "frmCusUpdateDelete";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.logoAddCus)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -413,5 +431,6 @@
         private System.Windows.Forms.Label lblNIC;
         public System.Windows.Forms.TextBox TextBoxName;
         private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Button btnUpdDelBack;
     }
 }

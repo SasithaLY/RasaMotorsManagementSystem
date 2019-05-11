@@ -267,5 +267,10 @@ namespace RasaMotorsManagementSystem.CustomerVehicles
                 textBoxMail.ForeColor = Color.Gray;
             }
         }
+
+        private void btnAddCusBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

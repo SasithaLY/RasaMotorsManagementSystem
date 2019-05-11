@@ -105,5 +105,10 @@ namespace RasaMotorsManagementSystem.CustomerVehicles
                 txtBoxSearchVeh.ForeColor = Color.Gray;
             }
         }
+
+        private void btnVehListBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

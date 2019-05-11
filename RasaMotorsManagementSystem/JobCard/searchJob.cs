@@ -30,8 +30,15 @@ namespace RasaMotorsManagementSystem.JobCard
 
         private void mainPanel_Paint(object sender, PaintEventArgs e)
         {
-            DataTable dt = c.Select();
-            dgvAllJobs.DataSource = dt;
+            try
+            {
+                DataTable dt = c.Select();
+                dgvAllJobs.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("You are not allowedto change!");
+            }
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)

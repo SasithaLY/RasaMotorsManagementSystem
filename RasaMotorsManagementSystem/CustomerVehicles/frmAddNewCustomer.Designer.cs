@@ -51,6 +51,7 @@
             this.lblNIC = new System.Windows.Forms.Label();
             this.TextBoxName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
+            this.btnAddCusBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.logoAddCus)).BeginInit();
             this.SuspendLayout();
             // 
@@ -346,12 +347,29 @@
             this.lblName.TabIndex = 119;
             this.lblName.Text = "Name";
             // 
+            // btnAddCusBack
+            // 
+            this.btnAddCusBack.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnAddCusBack.BackColor = System.Drawing.Color.Maroon;
+            this.btnAddCusBack.FlatAppearance.BorderSize = 0;
+            this.btnAddCusBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddCusBack.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddCusBack.ForeColor = System.Drawing.Color.White;
+            this.btnAddCusBack.Location = new System.Drawing.Point(201, 511);
+            this.btnAddCusBack.Name = "btnAddCusBack";
+            this.btnAddCusBack.Size = new System.Drawing.Size(82, 32);
+            this.btnAddCusBack.TabIndex = 141;
+            this.btnAddCusBack.Text = "Back";
+            this.btnAddCusBack.UseVisualStyleBackColor = false;
+            this.btnAddCusBack.Click += new System.EventHandler(this.btnAddCusBack_Click);
+            // 
             // frmAddNewCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1197, 619);
+            this.Controls.Add(this.btnAddCusBack);
             this.Controls.Add(this.logoAddCus);
             this.Controls.Add(this.pnlmidAddCus);
             this.Controls.Add(this.headAddCus);
@@ -376,7 +394,6 @@
             this.Controls.Add(this.lblName);
             this.Name = "frmAddNewCustomer";
             this.Text = "frmAddNewCustomer";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmAddNewCustomer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.logoAddCus)).EndInit();
             this.ResumeLayout(false);
@@ -408,5 +425,6 @@
         private System.Windows.Forms.Label lblNIC;
         private System.Windows.Forms.TextBox TextBoxName;
         private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Button btnAddCusBack;
     }
 }

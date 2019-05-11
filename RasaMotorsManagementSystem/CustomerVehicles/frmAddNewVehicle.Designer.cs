@@ -54,6 +54,7 @@
             this.lblModel = new System.Windows.Forms.Label();
             this.TextBoxBrand = new System.Windows.Forms.TextBox();
             this.lblBrand = new System.Windows.Forms.Label();
+            this.btnAddVehBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.logoAddVeh)).BeginInit();
             this.SuspendLayout();
             // 
@@ -388,12 +389,30 @@
             this.lblBrand.TabIndex = 122;
             this.lblBrand.Text = "Brand";
             // 
+            // btnAddVehBack
+            // 
+            this.btnAddVehBack.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnAddVehBack.BackColor = System.Drawing.Color.Maroon;
+            this.btnAddVehBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAddVehBack.FlatAppearance.BorderSize = 0;
+            this.btnAddVehBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddVehBack.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddVehBack.ForeColor = System.Drawing.Color.White;
+            this.btnAddVehBack.Location = new System.Drawing.Point(117, 528);
+            this.btnAddVehBack.Name = "btnAddVehBack";
+            this.btnAddVehBack.Size = new System.Drawing.Size(82, 32);
+            this.btnAddVehBack.TabIndex = 147;
+            this.btnAddVehBack.Text = "Back";
+            this.btnAddVehBack.UseVisualStyleBackColor = false;
+            this.btnAddVehBack.Click += new System.EventHandler(this.btnAddVehBack_Click);
+            // 
             // frmAddNewVehicle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1105, 585);
+            this.Controls.Add(this.btnAddVehBack);
             this.Controls.Add(this.logoAddVeh);
             this.Controls.Add(this.pnlmidAddVeh);
             this.Controls.Add(this.headAddVeh);
@@ -421,7 +440,6 @@
             this.Controls.Add(this.lblBrand);
             this.Name = "frmAddNewVehicle";
             this.Text = "frmAddNewVehicle";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmAddNewVehicle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.logoAddVeh)).EndInit();
             this.ResumeLayout(false);
@@ -456,5 +474,6 @@
         private System.Windows.Forms.Label lblModel;
         private System.Windows.Forms.TextBox TextBoxBrand;
         private System.Windows.Forms.Label lblBrand;
+        private System.Windows.Forms.Button btnAddVehBack;
     }
 }

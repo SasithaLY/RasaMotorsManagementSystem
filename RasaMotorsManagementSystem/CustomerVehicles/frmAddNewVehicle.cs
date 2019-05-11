@@ -309,5 +309,10 @@ namespace RasaMotorsManagementSystem.CustomerVehicles
                 textBoxProdYear.ForeColor = Color.Gray;
             }
         }
+
+        private void btnAddVehBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

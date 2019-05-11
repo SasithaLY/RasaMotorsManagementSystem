@@ -98,13 +98,16 @@
             // 
             // cmbVno
             // 
+            this.cmbVno.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cmbVno.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbVno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbVno.FormattingEnabled = true;
-            this.cmbVno.Location = new System.Drawing.Point(434, 301);
+            this.cmbVno.Location = new System.Drawing.Point(434, 304);
             this.cmbVno.Name = "cmbVno";
             this.cmbVno.Size = new System.Drawing.Size(121, 28);
             this.cmbVno.TabIndex = 144;
             this.cmbVno.SelectedIndexChanged += new System.EventHandler(this.cmbVno_SelectedIndexChanged);
+            this.cmbVno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbVno_KeyPress);
             // 
             // btnHme
             // 
@@ -171,6 +174,8 @@
             // 
             // comboJthree
             // 
+            this.comboJthree.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.comboJthree.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboJthree.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboJthree.FormattingEnabled = true;
             this.comboJthree.Location = new System.Drawing.Point(434, 538);
@@ -181,6 +186,8 @@
             // 
             // comboJtwo
             // 
+            this.comboJtwo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.comboJtwo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboJtwo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboJtwo.FormattingEnabled = true;
             this.comboJtwo.Location = new System.Drawing.Point(434, 484);
@@ -269,6 +276,8 @@
             // 
             // comboJone
             // 
+            this.comboJone.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.comboJone.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboJone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboJone.FormattingEnabled = true;
             this.comboJone.Location = new System.Drawing.Point(434, 424);

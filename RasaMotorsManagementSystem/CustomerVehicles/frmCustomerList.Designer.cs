@@ -59,11 +59,12 @@
             this.headCusList.AutoSize = true;
             this.headCusList.Font = new System.Drawing.Font("Rockwell", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headCusList.ForeColor = System.Drawing.Color.White;
-            this.headCusList.Location = new System.Drawing.Point(366, 23);
+            this.headCusList.Location = new System.Drawing.Point(513, 24);
             this.headCusList.Name = "headCusList";
             this.headCusList.Size = new System.Drawing.Size(512, 77);
             this.headCusList.TabIndex = 133;
             this.headCusList.Text = "Customers List";
+            this.headCusList.Click += new System.EventHandler(this.headCusList_Click);
             // 
             // lblSearchCus
             // 

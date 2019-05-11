@@ -152,6 +152,7 @@
             this.txtRate.Size = new System.Drawing.Size(172, 22);
             this.txtRate.TabIndex = 95;
             this.txtRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtRate.TextChanged += new System.EventHandler(this.txtRate_TextChanged);
             // 
             // txtEpf
             // 

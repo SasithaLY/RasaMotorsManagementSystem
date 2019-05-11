@@ -114,5 +114,10 @@ namespace RasaMotorsManagementSystem.CustomerVehicles
             CusVehReportViewer cusVehReport = new CusVehReportViewer();
             cusVehReport.Show();
         }
+
+        private void headCusList_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

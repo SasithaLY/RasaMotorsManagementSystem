@@ -56,6 +56,7 @@
             this.lblModel = new System.Windows.Forms.Label();
             this.TextBoxBrand = new System.Windows.Forms.TextBox();
             this.lblBrand = new System.Windows.Forms.Label();
+            this.btnBackAddVeh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.logoUpdDelVeh)).BeginInit();
             this.SuspendLayout();
             // 
@@ -242,9 +243,9 @@
             this.btnUpdateVehicle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateVehicle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateVehicle.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateVehicle.Location = new System.Drawing.Point(618, 575);
+            this.btnUpdateVehicle.Location = new System.Drawing.Point(642, 575);
             this.btnUpdateVehicle.Name = "btnUpdateVehicle";
-            this.btnUpdateVehicle.Size = new System.Drawing.Size(205, 33);
+            this.btnUpdateVehicle.Size = new System.Drawing.Size(153, 33);
             this.btnUpdateVehicle.TabIndex = 142;
             this.btnUpdateVehicle.Text = "Update Vehicle";
             this.btnUpdateVehicle.UseVisualStyleBackColor = false;
@@ -388,12 +389,30 @@
             this.lblBrand.TabIndex = 130;
             this.lblBrand.Text = "Brand";
             // 
+            // btnBackAddVeh
+            // 
+            this.btnBackAddVeh.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnBackAddVeh.BackColor = System.Drawing.Color.Maroon;
+            this.btnBackAddVeh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnBackAddVeh.FlatAppearance.BorderSize = 0;
+            this.btnBackAddVeh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBackAddVeh.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBackAddVeh.ForeColor = System.Drawing.Color.White;
+            this.btnBackAddVeh.Location = new System.Drawing.Point(194, 576);
+            this.btnBackAddVeh.Name = "btnBackAddVeh";
+            this.btnBackAddVeh.Size = new System.Drawing.Size(82, 32);
+            this.btnBackAddVeh.TabIndex = 157;
+            this.btnBackAddVeh.Text = "Back";
+            this.btnBackAddVeh.UseVisualStyleBackColor = false;
+            this.btnBackAddVeh.Click += new System.EventHandler(this.btnBackAddVeh_Click);
+            // 
             // frmVehUpdateDelete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1197, 619);
+            this.Controls.Add(this.btnBackAddVeh);
             this.Controls.Add(this.lblProdYearError);
             this.Controls.Add(this.lblChassiNoError);
             this.Controls.Add(this.lblEngineNoError);
@@ -423,7 +442,6 @@
             this.Controls.Add(this.lblBrand);
             this.Name = "frmVehUpdateDelete";
             this.Text = "frmVehUpdateDelete";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.logoUpdDelVeh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -459,5 +477,6 @@
         private System.Windows.Forms.Label lblModel;
         public System.Windows.Forms.TextBox TextBoxBrand;
         private System.Windows.Forms.Label lblBrand;
+        private System.Windows.Forms.Button btnBackAddVeh;
     }
 }
