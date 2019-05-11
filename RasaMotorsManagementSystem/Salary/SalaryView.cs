@@ -15,7 +15,7 @@ namespace RasaMotorsManagementSystem.Salary
 {
     public partial class SalaryView : Form
     {
-        public static SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-60QFL5G\SQLEXPRESS;Initial Catalog=salaryM;Integrated Security=True");
+        public static SqlConnection con = new SqlConnection("Data Source=DESKTOP-T0HOCLV;Initial Catalog=ServiceCenterManagementDB;Integrated Security=True");
         update u = new update();
 
         public SalaryView()
@@ -87,7 +87,7 @@ namespace RasaMotorsManagementSystem.Salary
             //get the value from textbox
             string keyword = txtSearch.Text;
             SqlConnection conn = new SqlConnection(myconnsstrng);
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM empsalary WHERE EmployeeID LIKE '%" + keyword + "%'", conn);
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM sal WHERE EmployeeID LIKE '%" + keyword + "%'", conn);
 
             DataTable dt = new DataTable();
             sda.Fill(dt);
@@ -106,7 +106,7 @@ namespace RasaMotorsManagementSystem.Salary
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlDataAdapter sdf = new SqlDataAdapter("select * from empsalary where Date between '" + from.Value.ToString() + "' and '" + To.Value.ToString() + "'", con);
+            SqlDataAdapter sdf = new SqlDataAdapter("select * from sal where Date between '" + from.Value.ToString() + "' and '" + To.Value.ToString() + "'", con);
             DataTable sd = new DataTable();
             sdf.Fill(sd);
             dataGrid.DataSource = sd;
@@ -166,7 +166,7 @@ namespace RasaMotorsManagementSystem.Salary
             int rowIndex = e.RowIndex;
 
 
-            dataGrid.Rows[rowIndex].Cells["No"].ToString();
+            dataGrid.Rows[rowIndex].Cells["EmployeeID"].ToString();
             u.No.Text = dataGrid.Rows[rowIndex].Cells[8].Value.ToString();
             u.txtID.Text = dataGrid.Rows[rowIndex].Cells[0].Value.ToString();
             u.txtOT.Text = dataGrid.Rows[rowIndex].Cells[2].Value.ToString();
@@ -217,7 +217,7 @@ namespace RasaMotorsManagementSystem.Salary
             int rowIndex = e.RowIndex;
 
 
-            dataGrid.Rows[rowIndex].Cells["No"].ToString();
+            dataGrid.Rows[rowIndex].Cells["EmployeeID"].ToString();
             u.No.Text = dataGrid.Rows[rowIndex].Cells[8].Value.ToString();
             u.txtID.Text = dataGrid.Rows[rowIndex].Cells[0].Value.ToString();
             u.txtOT.Text = dataGrid.Rows[rowIndex].Cells[2].Value.ToString();

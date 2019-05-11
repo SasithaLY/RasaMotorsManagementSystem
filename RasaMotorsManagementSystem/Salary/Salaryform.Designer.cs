@@ -172,6 +172,7 @@
             this.Etf.AutoSize = true;
             this.Etf.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Etf.Font = new System.Drawing.Font("Iskoola Pota", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Etf.ForeColor = System.Drawing.Color.White;
             this.Etf.Location = new System.Drawing.Point(132, 279);
             this.Etf.Name = "Etf";
             this.Etf.Padding = new System.Windows.Forms.Padding(2);
@@ -184,6 +185,7 @@
             this.otRate.AutoSize = true;
             this.otRate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.otRate.Font = new System.Drawing.Font("Iskoola Pota", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.otRate.ForeColor = System.Drawing.Color.White;
             this.otRate.Location = new System.Drawing.Point(132, 238);
             this.otRate.Name = "otRate";
             this.otRate.Padding = new System.Windows.Forms.Padding(2);
@@ -235,6 +237,7 @@
             this.lblDate.AutoSize = true;
             this.lblDate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblDate.Font = new System.Drawing.Font("Iskoola Pota", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.ForeColor = System.Drawing.Color.White;
             this.lblDate.Location = new System.Drawing.Point(29, 97);
             this.lblDate.Name = "lblDate";
             this.lblDate.Padding = new System.Windows.Forms.Padding(2);
@@ -262,6 +265,7 @@
             this.lblBasic.AutoSize = true;
             this.lblBasic.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblBasic.Font = new System.Drawing.Font("Iskoola Pota", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBasic.ForeColor = System.Drawing.Color.White;
             this.lblBasic.Location = new System.Drawing.Point(132, 192);
             this.lblBasic.Name = "lblBasic";
             this.lblBasic.Padding = new System.Windows.Forms.Padding(2);
@@ -274,6 +278,7 @@
             this.lblTotal.AutoSize = true;
             this.lblTotal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblTotal.Font = new System.Drawing.Font("Iskoola Pota", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.ForeColor = System.Drawing.Color.White;
             this.lblTotal.Location = new System.Drawing.Point(132, 410);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Padding = new System.Windows.Forms.Padding(2);
@@ -340,6 +345,7 @@
             this.LBLOT.AutoSize = true;
             this.LBLOT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.LBLOT.Font = new System.Drawing.Font("Iskoola Pota", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLOT.ForeColor = System.Drawing.Color.White;
             this.LBLOT.Location = new System.Drawing.Point(132, 318);
             this.LBLOT.Name = "LBLOT";
             this.LBLOT.Padding = new System.Windows.Forms.Padding(2);
@@ -352,6 +358,7 @@
             this.lblBonus.AutoSize = true;
             this.lblBonus.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblBonus.Font = new System.Drawing.Font("Iskoola Pota", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBonus.ForeColor = System.Drawing.Color.White;
             this.lblBonus.Location = new System.Drawing.Point(132, 358);
             this.lblBonus.Name = "lblBonus";
             this.lblBonus.Padding = new System.Windows.Forms.Padding(2);
@@ -364,6 +371,7 @@
             this.lblID.AutoSize = true;
             this.lblID.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblID.Font = new System.Drawing.Font("Iskoola Pota", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.ForeColor = System.Drawing.Color.White;
             this.lblID.Location = new System.Drawing.Point(132, 153);
             this.lblID.Name = "lblID";
             this.lblID.Padding = new System.Windows.Forms.Padding(2);
@@ -432,6 +440,7 @@
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.txtOT);
             this.Controls.Add(this.TxtBonus);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "Salaryform";
             this.Text = "Salaryform";
             this.Load += new System.EventHandler(this.Salaryform_Load);

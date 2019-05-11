@@ -17,7 +17,7 @@ namespace RasaMotorsManagementSystem.Salary
     {
 
 
-        public static SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-60QFL5G\SQLEXPRESS;Initial Catalog=salaryM;Integrated Security=True");
+        public static SqlConnection con = new SqlConnection("Data Source=DESKTOP-T0HOCLV;Initial Catalog=ServiceCenterManagementDB;Integrated Security=True");
 
        
         public EditDetails()
@@ -64,7 +64,7 @@ namespace RasaMotorsManagementSystem.Salary
             da.Fill(dt);
             foreach (DataRow dr in dt.Rows)
             {
-                txtBasic.Text = dr["Basic"].ToString();
+                txtBasic.Text = dr["Salary"].ToString();
             }
             con.Close();
         }

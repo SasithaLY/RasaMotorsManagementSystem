@@ -43,6 +43,30 @@ namespace RasaMotorsManagementSystem.Inventory
             returnsReport.Show();
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            from = dtpInventoryFrom.Text;
+            to = dtpInventoryTo.Text;
+
+            if (rbAll.Checked)
+            {
+                HistoryReportAll historyReport = new HistoryReportAll();
+                historyReport.Show();
+            }
+            else if(rbUpdate.Checked)
+            {
+                UpdatedHistoryReport updatedHistory = new UpdatedHistoryReport();
+                updatedHistory.Show();
+
+            }else if (rbDelete.Checked)
+            {
+                DeleteHistoryReport deleteHistory = new DeleteHistoryReport();
+                deleteHistory.Show();
+            }
+
+           
+        }
+
         private void btnStockIn_Click(object sender, EventArgs e)
         {
             from = dtpInventoryFrom.Text;

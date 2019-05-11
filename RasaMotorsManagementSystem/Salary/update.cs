@@ -15,7 +15,7 @@ namespace RasaMotorsManagementSystem.Salary
 {
     public partial class update : Form
     {
-        public static SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-60QFL5G\SQLEXPRESS;Initial Catalog=salaryM;Integrated Security=True");
+        public static SqlConnection con = new SqlConnection("Data Source=DESKTOP-T0HOCLV;Initial Catalog=ServiceCenterManagementDB;Integrated Security=True");
         public update()
         {
             InitializeComponent();

@@ -39,7 +39,7 @@ namespace RasaMotorsManagementSystem.Salary.SalaryClasses
             try
             {
                 //sql query
-                string sql = "select * from empsalary";
+                string sql = "select * from sal";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 conn.Open();
@@ -87,7 +87,7 @@ namespace RasaMotorsManagementSystem.Salary.SalaryClasses
             try
             {
                 //sql query
-                string sql = "select * from EditDet";
+                string sql = "select * from edit";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 conn.Open();
@@ -121,7 +121,7 @@ namespace RasaMotorsManagementSystem.Salary.SalaryClasses
             {
 
                 //step 2.create sql query to insert data
-                string sql = "INSERT INTO empsalary(EmployeeID,BasicSalary,OTHours,Bonus,EtfEpf,OTPayment,Date,Total)VALUES(@EmployeeID,@BasicSalary,@OTHours,@Bonus,@EtfEpf,@OTPayment,@Date,@Total)";
+                string sql = "INSERT INTO sal(EmployeeID,BasicSalary,OTHours,Bonus,EtfEpf,OTPayment,Date,Total)VALUES(@EmployeeID,@BasicSalary,@OTHours,@Bonus,@EtfEpf,@OTPayment,@Date,@Total)";
                 //create sql command usinf sql,conn
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 //create parameters to add data
@@ -174,7 +174,7 @@ namespace RasaMotorsManagementSystem.Salary.SalaryClasses
             try
             {
                 //sql to update data in our database
-                string sql = "UPDATE empsalary SET OTHours=@OTHours,Bonus=@Bonus,Total=@Total WHERE No=@No";
+                string sql = "UPDATE sal SET OTHours=@OTHours,Bonus=@Bonus,Total=@Total WHERE No=@No";
 
                 SqlCommand cmd = new SqlCommand(sql, conn);
 
@@ -217,7 +217,7 @@ namespace RasaMotorsManagementSystem.Salary.SalaryClasses
             //try
             //{
                 //sql delete data
-                string sql = "DELETE FROM empsalary WHERE No=@No";
+                string sql = "DELETE FROM sal WHERE EmployeeID=@No";
 
                 //create sql command
                 SqlCommand cmd = new SqlCommand(sql, conn);

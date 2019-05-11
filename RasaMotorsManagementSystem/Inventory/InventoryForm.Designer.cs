@@ -122,6 +122,7 @@
             this.btnAddSup.TabIndex = 132;
             this.btnAddSup.Text = "Add New Suplier";
             this.btnAddSup.UseVisualStyleBackColor = false;
+            this.btnAddSup.Click += new System.EventHandler(this.btnAddSup_Click_1);
             // 
             // cmbBoxSupplier
             // 
@@ -415,6 +416,7 @@
             this.Name = "InventoryForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InventoryForm";
+            this.Activated += new System.EventHandler(this.InventoryForm_Activated);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.InventoryForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rASADataSetBindingSource)).EndInit();

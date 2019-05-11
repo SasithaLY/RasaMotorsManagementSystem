@@ -10,6 +10,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using RasaMotorsManagementSystem.Inventory.inventoryClasses;
+using RasaMotorsManagementSystem.Supplier;
 
 namespace RasaMotorsManagementSystem.Inventory
 {
@@ -129,12 +130,7 @@ namespace RasaMotorsManagementSystem.Inventory
             return val;
         }
 
-        private void btnAddSup_Click(object sender, EventArgs e)
-        {
-            //supplier.supplieInsert supplieInsert = new supplier.supplieInsert();
-            //supplieInsert.Show();
-        }
-
+   
         private void btnAdd_Click(object sender, EventArgs e)
         {
             //insert data into database
@@ -238,6 +234,18 @@ namespace RasaMotorsManagementSystem.Inventory
             {
                 lblErrorMinQty.Visible = false;
             }
+        }
+
+        private void btnAddSup_Click_1(object sender, EventArgs e)
+        {
+            Supplier.supplieInsert supplieInsert = new Supplier.supplieInsert();
+            supplieInsert.Show();
+        }
+
+        private void InventoryForm_Activated(object sender, EventArgs e)
+        {
+            cmbBoxSupplier.Items.Clear();
+            fillCombo();
         }
     }
 }

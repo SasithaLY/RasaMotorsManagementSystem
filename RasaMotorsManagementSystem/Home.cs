@@ -97,9 +97,23 @@ namespace RasaMotorsManagementSystem
 
         }
 
+        Boolean flag = true;
         private void pictureBox2_Click(object sender, EventArgs e)
-        {  
-            toolStripDropDownButton1.ShowDropDown();
+        {
+            
+            if(flag == true)
+            {
+                toolStripDropDownButton1.ShowDropDown();
+                pictureBox2.BackColor = Color.DimGray;
+                flag = false; 
+            }
+            else
+            {
+                pictureBox2.BackColor = Color.Transparent;
+                flag = true;
+            }
+            
+            
         }
 
 
@@ -119,5 +133,20 @@ namespace RasaMotorsManagementSystem
         {
             new Salary.Salaryform().Show();
         }
+
+        private void panel1_Click(object sender, EventArgs e)
+        {
+            if (flag == true)
+            {
+                pictureBox2.BackColor = Color.DimGray;
+                flag = false;
+            }
+            else
+            {
+                pictureBox2.BackColor = Color.Transparent;
+                flag = true;
+            }
+        }
+     
     }
 }

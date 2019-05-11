@@ -15,7 +15,7 @@ namespace RasaMotorsManagementSystem.Salary
 {
     public partial class Salaryform : Form
     {
-        public static SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-60QFL5G\SQLEXPRESS;Initial Catalog=salaryM;Integrated Security=True");
+        public static SqlConnection con = new SqlConnection("Data Source=DESKTOP-T0HOCLV;Initial Catalog=ServiceCenterManagementDB;Integrated Security=True");
         public Salaryform()
         {
             InitializeComponent();
@@ -119,14 +119,14 @@ namespace RasaMotorsManagementSystem.Salary
                 con.Open();
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT * FROM emp WHERE ID='" + combo.SelectedItem.ToString() + "'";
+                cmd.CommandText = "SELECT * FROM emp WHERE EmployeeID='" + combo.SelectedItem.ToString() + "'";
                 cmd.ExecuteNonQuery();
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(dt);
                 foreach (DataRow dr in dt.Rows)
                 {
-                    txtBasic.Text = dr["Basic"].ToString();
+                    txtBasic.Text = dr["Salary"].ToString();
 
                 }
                 con.Close();
@@ -134,7 +134,7 @@ namespace RasaMotorsManagementSystem.Salary
                 con.Open();
                 SqlCommand cm = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT * FROM EditDet WHERE ID='" + combo.SelectedItem.ToString() + "'";
+                cmd.CommandText = "SELECT * FROM edit WHERE ID='" + combo.SelectedItem.ToString() + "'";
                 cmd.ExecuteNonQuery();
                 DataTable d = new DataTable();
                 SqlDataAdapter f = new SqlDataAdapter(cm);
@@ -258,7 +258,7 @@ namespace RasaMotorsManagementSystem.Salary
                 da.Fill(dt);
                 foreach (DataRow dr in dt.Rows)
                 {
-                    combo.Items.Add(dr["ID"].ToString());
+                    combo.Items.Add(dr["EmployeeID"].ToString());
                 }
                 con.Close();
             }
