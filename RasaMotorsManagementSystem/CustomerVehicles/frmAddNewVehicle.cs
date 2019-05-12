@@ -105,17 +105,17 @@ namespace RasaMotorsManagementSystem.CustomerVehicles
                     MessageBox.Show("Please enter a valid Vehicle Brand!");
                     status = false;
                 }
-                else if (!Regex.IsMatch(textBoxModel.Text, @"^[a-zA-Z\s]+$"))
+                else if (!Regex.IsMatch(textBoxModel.Text, @"^[a-zA-Z0-9\s]+$"))
                 {
                     MessageBox.Show("Please enter a valid Vehicle Model!");
                     status = false;
                 }
-                else if (!Regex.IsMatch(textBoxEngNo.Text, @"^[a-zA-Z0-9-]+$"))
+                else if (!Regex.IsMatch(textBoxEngNo.Text, "^[a-zA-Z0-9-]{17}$"))
                 {
                     MessageBox.Show("Please Enter a Engine Number!");
                     status = false;
                 }
-                else if (!Regex.IsMatch(textBoxChassiNo.Text, @"^[a-zA-Z0-9-]+$"))
+                else if (!Regex.IsMatch(textBoxChassiNo.Text, "^[a-zA-Z0-9-]{17}$"))
                 {
                     MessageBox.Show("Please Enter a Chassi Number!");
                     status = false;
@@ -125,7 +125,7 @@ namespace RasaMotorsManagementSystem.CustomerVehicles
                     MessageBox.Show("Please Enter a Valid Year!");
                     status = false;
                 }
-                else if (textBoxVehNo.Text == "ABC-1234" || textBoxEngNo.Text == "1HGBH41JXMN109186" || textBoxChassiNo.Text == "WAUZZZ8R8AA042836" || textBoxProdYear.Text == "2005")
+                else if (textBoxVehNo.Text == "ABC-1234" || textBoxEngNo.Text == "1HGBH41JXMN109186" || textBoxChassiNo.Text == "WAUZZZ8R8AA042836" || textBoxProdYear.Text == "YYYY")
                 {
                     MessageBox.Show("Please Enter Values According to the Hint!");
                     status = false;
@@ -166,7 +166,7 @@ namespace RasaMotorsManagementSystem.CustomerVehicles
         {
             if (textBoxModel.Text == string.Empty)
                 lblModelError.Visible = false;
-            else if (!Regex.IsMatch(textBoxModel.Text, @"^[a-zA-Z\s]+$"))
+            else if (!Regex.IsMatch(textBoxModel.Text, @"^[a-zA-Z0-9\s]+$"))
                 lblModelError.Visible = true;
             else
                 lblModelError.Visible = false;
@@ -176,7 +176,7 @@ namespace RasaMotorsManagementSystem.CustomerVehicles
         {
             if (textBoxEngNo.Text == string.Empty)
                 lblEngineNoError.Visible = false;
-            else if (!Regex.IsMatch(textBoxEngNo.Text, @"^[a-zA-Z0-9-]+$"))
+            else if (!Regex.IsMatch(textBoxEngNo.Text, "^[a-zA-Z0-9-]{17}$"))
                 lblEngineNoError.Visible = true;
             else
                 lblEngineNoError.Visible = false;
@@ -186,7 +186,7 @@ namespace RasaMotorsManagementSystem.CustomerVehicles
         {
             if (textBoxChassiNo.Text == string.Empty)
                 lblChassiNoError.Visible = false;
-            else if (!Regex.IsMatch(textBoxChassiNo.Text, @"^[a-zA-Z0-9-]+$"))
+            else if (!Regex.IsMatch(textBoxChassiNo.Text, "^[a-zA-Z0-9-]{17}$"))
                 lblChassiNoError.Visible = true;
             else
                 lblChassiNoError.Visible = false;
@@ -294,7 +294,7 @@ namespace RasaMotorsManagementSystem.CustomerVehicles
 
         private void textBoxProdYear_Enter(object sender, EventArgs e)
         {
-            if (textBoxProdYear.Text == "2005")
+            if (textBoxProdYear.Text == "YYYY")
             {
                 textBoxProdYear.Text = "";
                 textBoxProdYear.ForeColor = Color.Black;
@@ -305,7 +305,7 @@ namespace RasaMotorsManagementSystem.CustomerVehicles
         {
             if (textBoxProdYear.Text == "")
             {
-                textBoxProdYear.Text = "2005";
+                textBoxProdYear.Text = "YYYY";
                 textBoxProdYear.ForeColor = Color.Gray;
             }
         }
@@ -313,6 +313,29 @@ namespace RasaMotorsManagementSystem.CustomerVehicles
         private void btnAddVehBack_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnDemo_Click(object sender, EventArgs e)
+        {
+            textBoxVehNo.Text = "CEB-2016";
+            textBoxVehNo.ForeColor = Color.Black;
+
+            TextBoxBrand.Text = "Toyota";
+            TextBoxBrand.ForeColor = Color.Black;
+
+            textBoxModel.Text = "Prado";
+            textBoxModel.ForeColor = Color.Black;
+
+            textBoxEngNo.Text = "1HGBH41JXPA109186";
+            textBoxEngNo.ForeColor = Color.Black;
+
+            textBoxChassiNo.Text = "WAUZZZ8R8NN042836";
+            textBoxChassiNo.ForeColor = Color.Black;
+
+            textBoxProdYear.Text = "2011";
+            textBoxProdYear.ForeColor = Color.Black;
+
+            comboBoxType.Text = "SUV";
         }
     }
 }

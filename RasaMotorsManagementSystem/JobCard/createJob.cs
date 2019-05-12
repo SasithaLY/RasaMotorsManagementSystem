@@ -198,7 +198,6 @@ namespace RasaMotorsManagementSystem.JobCard
 
         private void btnCbck_Click(object sender, EventArgs e)
         {
-            new assignJob().Show();
             this.Close();
         }
 

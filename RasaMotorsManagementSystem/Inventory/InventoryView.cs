@@ -58,24 +58,34 @@ namespace RasaMotorsManagementSystem.Inventory
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+           
             if (rowIndex.Equals(null))
             {
                 MessageBox.Show("Item Not Selected!");
             }
             else
             {
-                ItemUpdateForm itemUpdate = new ItemUpdateForm();
+                try
+                {
+                    ItemUpdateForm itemUpdate = new ItemUpdateForm();
 
-                itemUpdate.checkInstance.txtBoxItemID.Text = this.dataGridItems.Rows[rowIndex].Cells[0].Value.ToString();
-                itemUpdate.checkInstance.txtBoxItemName.Text = this.dataGridItems.Rows[rowIndex].Cells[1].Value.ToString();
-                itemUpdate.checkInstance.txtBoxItemType.Text = this.dataGridItems.Rows[rowIndex].Cells[2].Value.ToString();
-                itemUpdate.checkInstance.txtBoxBuyPrice.Text = this.dataGridItems.Rows[rowIndex].Cells[3].Value.ToString();
-                itemUpdate.checkInstance.txtBoxSellPrice.Text = this.dataGridItems.Rows[rowIndex].Cells[4].Value.ToString();
-                itemUpdate.checkInstance.txtBoxQnt.Text = this.dataGridItems.Rows[rowIndex].Cells[5].Value.ToString();
-                itemUpdate.checkInstance.cmbBoxSupplier.Text = this.dataGridItems.Rows[rowIndex].Cells[8].Value.ToString();
-                itemUpdate.checkInstance.txtboxMinQty.Text = this.dataGridItems.Rows[rowIndex].Cells[9].Value.ToString();
+                    itemUpdate.checkInstance.txtBoxItemID.Text = this.dataGridItems.Rows[rowIndex].Cells[0].Value.ToString();
+                    itemUpdate.checkInstance.txtBoxItemName.Text = this.dataGridItems.Rows[rowIndex].Cells[1].Value.ToString();
+                    itemUpdate.checkInstance.txtBoxItemType.Text = this.dataGridItems.Rows[rowIndex].Cells[2].Value.ToString();
+                    itemUpdate.checkInstance.txtBoxBuyPrice.Text = this.dataGridItems.Rows[rowIndex].Cells[3].Value.ToString();
+                    itemUpdate.checkInstance.txtBoxSellPrice.Text = this.dataGridItems.Rows[rowIndex].Cells[4].Value.ToString();
+                    itemUpdate.checkInstance.txtBoxQnt.Text = this.dataGridItems.Rows[rowIndex].Cells[5].Value.ToString();
+                    itemUpdate.checkInstance.lblTempSupplier.Text = this.dataGridItems.Rows[rowIndex].Cells[8].Value.ToString();
+                    itemUpdate.checkInstance.cmbBoxSupplier.Text = this.dataGridItems.Rows[rowIndex].Cells[8].Value.ToString();
+                    itemUpdate.checkInstance.txtboxMinQty.Text = this.dataGridItems.Rows[rowIndex].Cells[9].Value.ToString();
 
-                itemUpdate.checkInstance.Show();
+                    itemUpdate.checkInstance.Show();
+                }
+                catch (Exception ex)
+                {
+
+                }
+               
             }
         }
 
@@ -89,19 +99,27 @@ namespace RasaMotorsManagementSystem.Inventory
             {
                 if (DialogResult.Yes == MessageBox.Show("Are you sure you want to remove this item?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Information))
                 {
-                    i.itemID = int.Parse(this.dataGridItems.Rows[rowIndex].Cells[0].Value.ToString());
-
-                    Boolean success = i.Delete(i);
-
-                    if (success == true)
+                    try
                     {
-                        MessageBox.Show("Item Deleted Successfully!");
+                        i.itemID = int.Parse(this.dataGridItems.Rows[rowIndex].Cells[0].Value.ToString());
+
+                        Boolean success = i.Delete(i);
+
+                        if (success == true)
+                        {
+                            MessageBox.Show("Item Deleted Successfully!");
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Item Delete Failed!");
+                        }
+                    }
+                    catch
+                    {
 
                     }
-                    else
-                    {
-                        MessageBox.Show("Item Delete Failed!");
-                    }
+                   
                 }
                 else
                 {
@@ -135,20 +153,29 @@ namespace RasaMotorsManagementSystem.Inventory
 
         private void dataGridItems_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            ItemUpdateForm itemUpdate = new ItemUpdateForm();
+            try
+            {
+                ItemUpdateForm itemUpdate = new ItemUpdateForm();
 
-            int rowIndex = e.RowIndex;
+                int rowIndex = e.RowIndex;
 
-            itemUpdate.checkInstance.txtBoxItemID.Text = this.dataGridItems.Rows[rowIndex].Cells[0].Value.ToString();
-            itemUpdate.checkInstance.txtBoxItemName.Text = this.dataGridItems.Rows[rowIndex].Cells[1].Value.ToString();
-            itemUpdate.checkInstance.txtBoxItemType.Text = this.dataGridItems.Rows[rowIndex].Cells[2].Value.ToString();
-            itemUpdate.checkInstance.txtBoxBuyPrice.Text = this.dataGridItems.Rows[rowIndex].Cells[3].Value.ToString();
-            itemUpdate.checkInstance.txtBoxSellPrice.Text = this.dataGridItems.Rows[rowIndex].Cells[4].Value.ToString();
-            itemUpdate.checkInstance.txtBoxQnt.Text = this.dataGridItems.Rows[rowIndex].Cells[5].Value.ToString();
-            itemUpdate.checkInstance.cmbBoxSupplier.Text = this.dataGridItems.Rows[rowIndex].Cells[8].Value.ToString();
-            itemUpdate.checkInstance.txtboxMinQty.Text = this.dataGridItems.Rows[rowIndex].Cells[9].Value.ToString();
+                itemUpdate.checkInstance.txtBoxItemID.Text = this.dataGridItems.Rows[rowIndex].Cells[0].Value.ToString();
+                itemUpdate.checkInstance.txtBoxItemName.Text = this.dataGridItems.Rows[rowIndex].Cells[1].Value.ToString();
+                itemUpdate.checkInstance.txtBoxItemType.Text = this.dataGridItems.Rows[rowIndex].Cells[2].Value.ToString();
+                itemUpdate.checkInstance.txtBoxBuyPrice.Text = this.dataGridItems.Rows[rowIndex].Cells[3].Value.ToString();
+                itemUpdate.checkInstance.txtBoxSellPrice.Text = this.dataGridItems.Rows[rowIndex].Cells[4].Value.ToString();
+                itemUpdate.checkInstance.txtBoxQnt.Text = this.dataGridItems.Rows[rowIndex].Cells[5].Value.ToString();
+                itemUpdate.checkInstance.lblTempSupplier.Text = this.dataGridItems.Rows[rowIndex].Cells[8].Value.ToString();
+                itemUpdate.checkInstance.cmbBoxSupplier.Text = this.dataGridItems.Rows[rowIndex].Cells[8].Value.ToString();
+                itemUpdate.checkInstance.txtboxMinQty.Text = this.dataGridItems.Rows[rowIndex].Cells[9].Value.ToString();
 
-            itemUpdate.checkInstance.Show();
+                itemUpdate.checkInstance.Show();
+            }
+            catch(Exception ex)
+            {
+
+            }
+            
         }
 
         private void InventoryView_Activated(object sender, EventArgs e)
@@ -201,23 +228,39 @@ namespace RasaMotorsManagementSystem.Inventory
             }
             else
             {
-                Restock restock = new Restock();
+                try
+                {
+                    Restock restock = new Restock();
 
-                restock.checkInstance.labelID.Text = this.dataGridItems.Rows[rowIndex].Cells[0].Value.ToString();
-                restock.checkInstance.labelItem.Text = this.dataGridItems.Rows[rowIndex].Cells[1].Value.ToString();
-           
-                restock.checkInstance.Show();
+                    restock.checkInstance.labelID.Text = this.dataGridItems.Rows[rowIndex].Cells[0].Value.ToString();
+                    restock.checkInstance.labelItem.Text = this.dataGridItems.Rows[rowIndex].Cells[1].Value.ToString();
+
+                    restock.checkInstance.Show();
+                }
+                catch(Exception ex)
+                {
+
+                }
+                
             }
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
-            Returns returns = new Returns();
+            try
+            {
+                Returns returns = new Returns();
 
-            returns.checkInstance.labelID.Text = this.dataGridItems.Rows[rowIndex].Cells[0].Value.ToString();
-            returns.checkInstance.labelItem.Text = this.dataGridItems.Rows[rowIndex].Cells[1].Value.ToString();
+                returns.checkInstance.labelID.Text = this.dataGridItems.Rows[rowIndex].Cells[0].Value.ToString();
+                returns.checkInstance.labelItem.Text = this.dataGridItems.Rows[rowIndex].Cells[1].Value.ToString();
 
-            returns.checkInstance.Show();
+                returns.checkInstance.Show();
+            }
+            catch(Exception ex)
+            {
+
+            }
+            
         }
     }
     

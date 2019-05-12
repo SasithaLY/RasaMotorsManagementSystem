@@ -52,6 +52,7 @@
             this.TextBoxName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.btnAddCusBack = new System.Windows.Forms.Button();
+            this.btnDemo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.logoAddCus)).BeginInit();
             this.SuspendLayout();
             // 
@@ -363,12 +364,29 @@
             this.btnAddCusBack.UseVisualStyleBackColor = false;
             this.btnAddCusBack.Click += new System.EventHandler(this.btnAddCusBack_Click);
             // 
+            // btnDemo
+            // 
+            this.btnDemo.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnDemo.BackColor = System.Drawing.Color.Maroon;
+            this.btnDemo.FlatAppearance.BorderSize = 0;
+            this.btnDemo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDemo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDemo.ForeColor = System.Drawing.Color.White;
+            this.btnDemo.Location = new System.Drawing.Point(992, 511);
+            this.btnDemo.Name = "btnDemo";
+            this.btnDemo.Size = new System.Drawing.Size(82, 32);
+            this.btnDemo.TabIndex = 142;
+            this.btnDemo.Text = "Demo";
+            this.btnDemo.UseVisualStyleBackColor = true;
+            this.btnDemo.Click += new System.EventHandler(this.btnDemo_Click);
+            // 
             // frmAddNewCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1197, 619);
+            this.Controls.Add(this.btnDemo);
             this.Controls.Add(this.btnAddCusBack);
             this.Controls.Add(this.logoAddCus);
             this.Controls.Add(this.pnlmidAddCus);
@@ -426,5 +444,6 @@
         private System.Windows.Forms.TextBox TextBoxName;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Button btnAddCusBack;
+        private System.Windows.Forms.Button btnDemo;
     }
 }

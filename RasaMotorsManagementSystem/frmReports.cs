@@ -56,5 +56,10 @@ namespace RasaMotorsManagementSystem
         {
             new Salary.salaryreport().Show();
         }
+
+        private void btnCrJb_Click(object sender, EventArgs e)
+        {
+            new JobCard.createJob().Show();
+        }
     }
 }

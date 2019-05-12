@@ -272,5 +272,25 @@ namespace RasaMotorsManagementSystem.CustomerVehicles
         {
             this.Close();
         }
+
+        private void btnDemo_Click(object sender, EventArgs e)
+        {
+            TextBoxName.Text = "Thilina Supun";
+            TextBoxName.ForeColor = Color.Black;
+
+            textBoxNIC.Text = "976565664v";
+            textBoxNIC.ForeColor = Color.Black;
+
+            textBoxAddress.Text = "25, Old Road, Padukka";
+            textBoxAddress.ForeColor = Color.Black;
+
+            textBoxPhone.Text = "0712648957";
+            textBoxPhone.ForeColor = Color.Black;
+
+            textBoxMail.Text = "thilina@gmail.com";
+            textBoxMail.ForeColor = Color.Black;
+
+            comboBoxGender.Text = "Male";
+        }
     }
 }

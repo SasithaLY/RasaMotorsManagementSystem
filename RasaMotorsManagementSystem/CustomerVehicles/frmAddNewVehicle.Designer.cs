@@ -55,6 +55,7 @@
             this.TextBoxBrand = new System.Windows.Forms.TextBox();
             this.lblBrand = new System.Windows.Forms.Label();
             this.btnAddVehBack = new System.Windows.Forms.Button();
+            this.btnDemo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.logoAddVeh)).BeginInit();
             this.SuspendLayout();
             // 
@@ -268,7 +269,7 @@
             this.textBoxProdYear.Name = "textBoxProdYear";
             this.textBoxProdYear.Size = new System.Drawing.Size(414, 26);
             this.textBoxProdYear.TabIndex = 131;
-            this.textBoxProdYear.Text = "2005";
+            this.textBoxProdYear.Text = "YYYY";
             this.textBoxProdYear.TextChanged += new System.EventHandler(this.textBoxProdYear_TextChanged);
             this.textBoxProdYear.Enter += new System.EventHandler(this.textBoxProdYear_Enter);
             this.textBoxProdYear.Leave += new System.EventHandler(this.textBoxProdYear_Leave);
@@ -406,12 +407,30 @@
             this.btnAddVehBack.UseVisualStyleBackColor = false;
             this.btnAddVehBack.Click += new System.EventHandler(this.btnAddVehBack_Click);
             // 
+            // btnDemo
+            // 
+            this.btnDemo.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnDemo.BackColor = System.Drawing.Color.Maroon;
+            this.btnDemo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnDemo.FlatAppearance.BorderSize = 0;
+            this.btnDemo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDemo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDemo.ForeColor = System.Drawing.Color.White;
+            this.btnDemo.Location = new System.Drawing.Point(920, 528);
+            this.btnDemo.Name = "btnDemo";
+            this.btnDemo.Size = new System.Drawing.Size(82, 32);
+            this.btnDemo.TabIndex = 148;
+            this.btnDemo.Text = "Demo";
+            this.btnDemo.UseVisualStyleBackColor = false;
+            this.btnDemo.Click += new System.EventHandler(this.btnDemo_Click);
+            // 
             // frmAddNewVehicle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1105, 585);
+            this.Controls.Add(this.btnDemo);
             this.Controls.Add(this.btnAddVehBack);
             this.Controls.Add(this.logoAddVeh);
             this.Controls.Add(this.pnlmidAddVeh);
@@ -475,5 +494,6 @@
         private System.Windows.Forms.TextBox TextBoxBrand;
         private System.Windows.Forms.Label lblBrand;
         private System.Windows.Forms.Button btnAddVehBack;
+        private System.Windows.Forms.Button btnDemo;
     }
 }

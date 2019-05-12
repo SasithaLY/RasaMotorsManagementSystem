@@ -1078,10 +1078,10 @@ namespace RasaMotorsManagementSystem.CustomerVehicles.CustomerVehicleDataSetTabl
             this._commandCollection[0].CommandText = @"SELECT        CusDetails.CustomerId, CusDetails.Name, CusDetails.PhoneNumber, CusDetails.EMail, VehDetails.VehicleID, VehDetails.VehicleNo, VehDetails.Brand, VehDetails.Model, VehDetails.EnteredDate
 FROM            CusDetails INNER JOIN
                          VehDetails ON CusDetails.CustomerId = VehDetails.CustomerID
-WHERE        (CusDetails.EntryDate BETWEEN @FROM AND @TO)";
+WHERE        (VehDetails.EnteredDate BETWEEN @FROM AND @TO)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FROM", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "EntryDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TO", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "EntryDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FROM", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "EnteredDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TO", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "EnteredDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

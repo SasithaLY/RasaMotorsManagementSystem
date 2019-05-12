@@ -107,22 +107,7 @@ namespace RasaMotorsManagementSystem.JobCard
 
         private void cmbVno_SelectedIndexChanged(object sender, EventArgs e)
         {
-            con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            //select V.vehiId,V.vehiTyp,C.cusName FROM vehicles V, customer C WHERE C.cusId = V.custId
-            cmd.CommandText = "select V.VehicleId AS 'vid',V.Type AS 'vtyp',V.VehicleNo as 'vno',C.Name as 'cnme' FROM VehDetails V, CusDetails C WHERE C.CustomerId=V.CustomerID AND V.VehicleNo='" + cmbVno.SelectedItem.ToString() + "'";
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            foreach (DataRow dr in dt.Rows)
-            {
-                txtCusName.Text = dr["cnme"].ToString();
-                txtVtyp.Text = dr["vtyp"].ToString();
-            }
-
-            con.Close();
+           
         }
 
         private void comboJone_SelectedIndexChanged(object sender, EventArgs e)
@@ -231,7 +216,7 @@ namespace RasaMotorsManagementSystem.JobCard
                 if (cmbVno.Text != "" || txtCusName.Text != "")
                 {
                     // obj.vehicleNo = txtVehicleNo.Text;
-                    obj.vehicleNo = cmbVno.Text;
+                    obj.vehicleNo = txtVehiNo.Text;
                     obj.jobOne = comboJone.Text;
                     obj.jobTwo = comboJtwo.Text;
                     obj.jobThree = comboJthree.Text;
@@ -247,7 +232,7 @@ namespace RasaMotorsManagementSystem.JobCard
                         //clear();
                         ReceiptPrint rp = new ReceiptPrint();
                         rp.jbId.Text = txtTest.Text.ToString();
-                        rp.vhclNo.Text = cmbVno.Text.ToString();
+                        rp.vhclNo.Text = txtVehiNo.Text.ToString();
                         rp.vhclTyp.Text = txtVtyp.Text.ToString();
                         rp.cusName.Text = txtCusName.Text.ToString();
                         rp.jOne.Text = comboJone.Text.ToString();
@@ -309,6 +294,27 @@ namespace RasaMotorsManagementSystem.JobCard
             {
                 MessageBox.Show("Nothing to Erase!");
             }
+        }
+
+        private void txtVehiNo_TextChanged(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            //select V.vehiId,V.vehiTyp,C.cusName FROM vehicles V, customer C WHERE C.cusId = V.custId
+            cmd.CommandText = "select V.VehicleId AS 'vid',V.Type AS 'vtyp',V.VehicleNo as 'vno',C.Name as 'cnme' FROM VehDetails V, CusDetails C WHERE C.CustomerId=V.CustomerID AND V.VehicleNo='" + txtVehiNo.Text.ToString() + "'";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
+            {
+                txtCusName.Text = dr["cnme"].ToString();
+                txtVtyp.Text = dr["vtyp"].ToString();
+            }
+
+            con.Close();
+
         }
     }
 }

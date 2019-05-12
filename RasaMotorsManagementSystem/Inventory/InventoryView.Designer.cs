@@ -31,7 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnReport = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -57,22 +56,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1317, 10);
             this.panel2.TabIndex = 69;
-            // 
-            // btnReport
-            // 
-            this.btnReport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnReport.BackColor = System.Drawing.Color.Maroon;
-            this.btnReport.FlatAppearance.BorderSize = 0;
-            this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReport.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReport.ForeColor = System.Drawing.Color.White;
-            this.btnReport.Location = new System.Drawing.Point(1101, 711);
-            this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(145, 40);
-            this.btnReport.TabIndex = 67;
-            this.btnReport.Text = "Generate Report";
-            this.btnReport.UseVisualStyleBackColor = false;
-            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // btnUpdate
             // 
@@ -253,7 +236,6 @@
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnRestock);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.btnReport);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.btnAdd);
@@ -279,7 +261,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Button btnAdd;

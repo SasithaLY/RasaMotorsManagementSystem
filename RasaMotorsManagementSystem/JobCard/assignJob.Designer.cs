@@ -35,7 +35,6 @@
             this.heading = new System.Windows.Forms.Label();
             this.cmbVno = new System.Windows.Forms.ComboBox();
             this.btnHme = new System.Windows.Forms.Button();
-            this.btnCrtjb = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -53,6 +52,8 @@
             this.txtTest = new System.Windows.Forms.TextBox();
             this.txtVtyp = new System.Windows.Forms.TextBox();
             this.btnClear = new System.Windows.Forms.Button();
+            this.txtVehiNo = new System.Windows.Forms.TextBox();
+            this.btnCrtjb = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,10 +106,11 @@
             this.cmbVno.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbVno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbVno.FormattingEnabled = true;
-            this.cmbVno.Location = new System.Drawing.Point(434, 304);
+            this.cmbVno.Location = new System.Drawing.Point(589, 301);
             this.cmbVno.Name = "cmbVno";
-            this.cmbVno.Size = new System.Drawing.Size(121, 28);
+            this.cmbVno.Size = new System.Drawing.Size(10, 28);
             this.cmbVno.TabIndex = 144;
+            this.cmbVno.Visible = false;
             this.cmbVno.SelectedIndexChanged += new System.EventHandler(this.cmbVno_SelectedIndexChanged);
             this.cmbVno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbVno_KeyPress);
             // 
@@ -126,21 +128,6 @@
             this.btnHme.Text = "Home";
             this.btnHme.UseVisualStyleBackColor = false;
             this.btnHme.Click += new System.EventHandler(this.btnHme_Click);
-            // 
-            // btnCrtjb
-            // 
-            this.btnCrtjb.BackColor = System.Drawing.Color.Maroon;
-            this.btnCrtjb.FlatAppearance.BorderSize = 0;
-            this.btnCrtjb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCrtjb.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrtjb.ForeColor = System.Drawing.Color.White;
-            this.btnCrtjb.Location = new System.Drawing.Point(950, 235);
-            this.btnCrtjb.Name = "btnCrtjb";
-            this.btnCrtjb.Size = new System.Drawing.Size(116, 35);
-            this.btnCrtjb.TabIndex = 142;
-            this.btnCrtjb.Text = "Create Job";
-            this.btnCrtjb.UseVisualStyleBackColor = false;
-            this.btnCrtjb.Click += new System.EventHandler(this.btnCrtjb_Click);
             // 
             // label1
             // 
@@ -338,12 +325,40 @@
             this.btnClear.Visible = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
+            // txtVehiNo
+            // 
+            this.txtVehiNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVehiNo.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtVehiNo.Location = new System.Drawing.Point(434, 298);
+            this.txtVehiNo.Multiline = true;
+            this.txtVehiNo.Name = "txtVehiNo";
+            this.txtVehiNo.Size = new System.Drawing.Size(121, 26);
+            this.txtVehiNo.TabIndex = 153;
+            this.txtVehiNo.TextChanged += new System.EventHandler(this.txtVehiNo_TextChanged);
+            // 
+            // btnCrtjb
+            // 
+            this.btnCrtjb.BackColor = System.Drawing.Color.Maroon;
+            this.btnCrtjb.FlatAppearance.BorderSize = 0;
+            this.btnCrtjb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCrtjb.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrtjb.ForeColor = System.Drawing.Color.White;
+            this.btnCrtjb.Location = new System.Drawing.Point(950, 235);
+            this.btnCrtjb.Name = "btnCrtjb";
+            this.btnCrtjb.Size = new System.Drawing.Size(116, 35);
+            this.btnCrtjb.TabIndex = 142;
+            this.btnCrtjb.Text = "Create Job";
+            this.btnCrtjb.UseVisualStyleBackColor = false;
+            this.btnCrtjb.Visible = false;
+            this.btnCrtjb.Click += new System.EventHandler(this.btnCrtjb_Click);
+            // 
             // assignJob
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(66)))));
             this.ClientSize = new System.Drawing.Size(1334, 688);
+            this.Controls.Add(this.txtVehiNo);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.txtVtyp);
             this.Controls.Add(this.txtTest);
@@ -385,7 +400,6 @@
         private System.Windows.Forms.Label heading;
         private System.Windows.Forms.ComboBox cmbVno;
         private System.Windows.Forms.Button btnHme;
-        private System.Windows.Forms.Button btnCrtjb;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label4;
@@ -402,5 +416,7 @@
         private System.Windows.Forms.TextBox txtTest;
         private System.Windows.Forms.TextBox txtVtyp;
         private System.Windows.Forms.Button btnClear;
+        public System.Windows.Forms.TextBox txtVehiNo;
+        private System.Windows.Forms.Button btnCrtjb;
     }
 }

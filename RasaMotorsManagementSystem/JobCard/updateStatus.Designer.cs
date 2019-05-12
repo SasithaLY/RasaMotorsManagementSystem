@@ -83,7 +83,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(704, 602);
+            this.button2.Location = new System.Drawing.Point(753, 603);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(83, 35);
             this.button2.TabIndex = 150;
@@ -171,11 +171,11 @@
             this.stUpdt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.stUpdt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stUpdt.ForeColor = System.Drawing.Color.White;
-            this.stUpdt.Location = new System.Drawing.Point(587, 603);
+            this.stUpdt.Location = new System.Drawing.Point(508, 603);
             this.stUpdt.Name = "stUpdt";
-            this.stUpdt.Size = new System.Drawing.Size(81, 34);
+            this.stUpdt.Size = new System.Drawing.Size(182, 34);
             this.stUpdt.TabIndex = 144;
-            this.stUpdt.Text = "UPDATE";
+            this.stUpdt.Text = "UPDATE AND PAY";
             this.stUpdt.UseVisualStyleBackColor = false;
             this.stUpdt.Click += new System.EventHandler(this.stUpdt_Click);
             // 

@@ -44,6 +44,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnChart = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.tbl_ProfitBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.profitData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -67,6 +68,7 @@
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "RasaMotorsManagementSystem.Finance.financeReport.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(192, 271);
             this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(986, 473);
             this.reportViewer1.TabIndex = 0;
             // 
@@ -76,14 +78,14 @@
             // 
             // dteFrm
             // 
-            this.dteFrm.Location = new System.Drawing.Point(301, 192);
+            this.dteFrm.Location = new System.Drawing.Point(310, 221);
             this.dteFrm.Name = "dteFrm";
             this.dteFrm.Size = new System.Drawing.Size(200, 20);
             this.dteFrm.TabIndex = 3;
             // 
             // dteTo
             // 
-            this.dteTo.Location = new System.Drawing.Point(610, 193);
+            this.dteTo.Location = new System.Drawing.Point(619, 222);
             this.dteTo.Name = "dteTo";
             this.dteTo.Size = new System.Drawing.Size(200, 20);
             this.dteTo.TabIndex = 4;
@@ -93,7 +95,7 @@
             this.btnSearch.BackColor = System.Drawing.Color.Maroon;
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSearch.Location = new System.Drawing.Point(881, 190);
+            this.btnSearch.Location = new System.Drawing.Point(890, 219);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(83, 29);
             this.btnSearch.TabIndex = 5;
@@ -106,7 +108,7 @@
             this.From.AutoSize = true;
             this.From.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.From.ForeColor = System.Drawing.Color.Goldenrod;
-            this.From.Location = new System.Drawing.Point(221, 193);
+            this.From.Location = new System.Drawing.Point(230, 222);
             this.From.Name = "From";
             this.From.Size = new System.Drawing.Size(50, 20);
             this.From.TabIndex = 6;
@@ -117,7 +119,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label1.Location = new System.Drawing.Point(562, 193);
+            this.label1.Location = new System.Drawing.Point(571, 222);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 20);
             this.label1.TabIndex = 7;
@@ -183,12 +185,24 @@
             this.btnChart.UseVisualStyleBackColor = false;
             this.btnChart.Click += new System.EventHandler(this.btnChart_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.Maroon;
+            this.panel1.Location = new System.Drawing.Point(3, 184);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1196, 19);
+            this.panel1.TabIndex = 68;
+            // 
             // reportViewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(66)))));
             this.ClientSize = new System.Drawing.Size(1190, 806);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnChart);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
@@ -228,5 +242,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnChart;
+        private System.Windows.Forms.Panel panel1;
     }
 }

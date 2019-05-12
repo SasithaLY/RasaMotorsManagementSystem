@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using RasaMotorsManagementSystem.JobCard.jobCardClasses;
+using RasaMotorsManagementSystem.Payments;
 
 namespace RasaMotorsManagementSystem.JobCard
 {
@@ -22,11 +23,25 @@ namespace RasaMotorsManagementSystem.JobCard
 
 
 
+
         private void btnUpBack_Click(object sender, EventArgs e)
         {
             new JobCard.searchJob().Show();
             this.Close();
         }
+
+        public void clear()
+        {
+            txtUJid.Text = "";
+            txtUVhcl.Text = "";
+            txtUJone.Text = "";
+            txtUJTwo.Text = "";
+            txtUJThree.Text = "";
+            txtUPrc.Text = "";
+            cmbStatus.Text = "";
+            txtDate.Text = "";
+        }
+
 
         private void stUpdt_Click(object sender, EventArgs e)
         {
@@ -42,13 +57,24 @@ namespace RasaMotorsManagementSystem.JobCard
                 bool success = obj.Update(obj);
                 if (success == true)
                 {
-                    MessageBox.Show("Successfully Updated!");
-                    //Clear Fields
-                    //clear();
-                    //update grid view
-                    DataTable dt = obj.Select();
-                    us.dgvAllJobs.DataSource = dt;
+                    if (cmbStatus.Text == "Incomplete")
+                    {
+                        MessageBox.Show("Job is Incomplete Can not made payment!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Successfully Updated!");
+                        //Clear Fields
+                        //clear();
+                        //update grid view
+                        DataTable dt = obj.Select();
+                        us.dgvAllJobs.DataSource = dt;
 
+                        PaymentMain pv = new PaymentMain();
+                        pv.txtJID.Text = txtUJid.Text.ToString();
+                        pv.ShowDialog();
+
+                    }
                 }
                 else
                 {

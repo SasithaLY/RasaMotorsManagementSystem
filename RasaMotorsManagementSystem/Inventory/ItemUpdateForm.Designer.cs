@@ -55,6 +55,7 @@
             this.lblErrorMinQty = new System.Windows.Forms.Label();
             this.txtboxMinQty = new System.Windows.Forms.TextBox();
             this.lblMinQty = new System.Windows.Forms.Label();
+            this.lblTempSupplier = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,6 +118,7 @@
             this.btnAddSup.TabIndex = 129;
             this.btnAddSup.Text = "Add New Suplier";
             this.btnAddSup.UseVisualStyleBackColor = false;
+            this.btnAddSup.Click += new System.EventHandler(this.btnAddSup_Click_1);
             // 
             // btnClear
             // 
@@ -178,6 +180,7 @@
             // 
             // cmbBoxSupplier
             // 
+            this.cmbBoxSupplier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBoxSupplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbBoxSupplier.FormattingEnabled = true;
             this.cmbBoxSupplier.Location = new System.Drawing.Point(582, 538);
@@ -382,12 +385,28 @@
             this.lblMinQty.TabIndex = 140;
             this.lblMinQty.Text = "Min. Quantity";
             // 
+            // lblTempSupplier
+            // 
+            this.lblTempSupplier.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTempSupplier.AutoSize = true;
+            this.lblTempSupplier.BackColor = System.Drawing.Color.Transparent;
+            this.lblTempSupplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTempSupplier.ForeColor = System.Drawing.Color.White;
+            this.lblTempSupplier.Location = new System.Drawing.Point(1053, 541);
+            this.lblTempSupplier.Name = "lblTempSupplier";
+            this.lblTempSupplier.Size = new System.Drawing.Size(75, 20);
+            this.lblTempSupplier.TabIndex = 143;
+            this.lblTempSupplier.Text = "Supplier";
+            this.lblTempSupplier.Visible = false;
+            // 
             // ItemUpdateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(66)))));
             this.ClientSize = new System.Drawing.Size(1275, 758);
+            this.Controls.Add(this.lblTempSupplier);
             this.Controls.Add(this.lblErrorMinQty);
             this.Controls.Add(this.txtboxMinQty);
             this.Controls.Add(this.lblMinQty);
@@ -418,6 +437,7 @@
             this.Name = "ItemUpdateForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ItemUpdateForm";
+            this.Activated += new System.EventHandler(this.ItemUpdateForm_Activated);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ItemUpdateForm_FormClosed);
             this.Load += new System.EventHandler(this.ItemUpdateForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -455,5 +475,6 @@
         private System.Windows.Forms.Label lblErrorMinQty;
         private System.Windows.Forms.Label lblMinQty;
         public System.Windows.Forms.TextBox txtboxMinQty;
+        public System.Windows.Forms.Label lblTempSupplier;
     }
 }

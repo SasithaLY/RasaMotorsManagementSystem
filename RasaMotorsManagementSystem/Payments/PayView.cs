@@ -137,8 +137,6 @@ namespace RasaMotorsManagementSystem.Payments
             txtDis.Text = PaymentDetails.Rows[rowIndex].Cells[9].Value.ToString();
             txtNet.Text = PaymentDetails.Rows[rowIndex].Cells[10].Value.ToString();
 
-
-
         }
         private void PayView_Load(object sender, EventArgs e)
         {

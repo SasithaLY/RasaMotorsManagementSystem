@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using RasaMotorsManagementSystem.CustomerVehicles;
 using RasaMotorsManagementSystem.JobCard.jobCardClasses;
 
 namespace RasaMotorsManagementSystem.JobCard
@@ -78,7 +79,7 @@ namespace RasaMotorsManagementSystem.JobCard
 
         private void btnNJob_Click(object sender, EventArgs e)
         {
-            new assignJob().Show();
+            new frmCustomerList().Show();
             this.Close();
         }
 

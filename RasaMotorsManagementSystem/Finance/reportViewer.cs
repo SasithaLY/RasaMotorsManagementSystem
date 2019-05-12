@@ -44,7 +44,7 @@ namespace RasaMotorsManagementSystem.Finance
 
         private void btnChart_Click(object sender, EventArgs e)
         {
-           // new chart().Show();
+            new chart().Show();
         }
     }
 }

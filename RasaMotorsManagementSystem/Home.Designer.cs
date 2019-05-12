@@ -33,6 +33,9 @@ namespace RasaMotorsManagementSystem
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblSearchCus = new System.Windows.Forms.Label();
+            this.txtBoxSearchCus = new System.Windows.Forms.TextBox();
+            this.dgvHome = new System.Windows.Forms.DataGridView();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblNotifications = new System.Windows.Forms.Label();
             this.pnlHeader = new System.Windows.Forms.Panel();
@@ -57,6 +60,7 @@ namespace RasaMotorsManagementSystem
             this.jobBtn = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlHeader.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -70,7 +74,7 @@ namespace RasaMotorsManagementSystem
             this.panel3.Controls.Add(this.label8);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(8, 896);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1393, 36);
             this.panel3.TabIndex = 17;
@@ -101,6 +105,9 @@ namespace RasaMotorsManagementSystem
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.lblSearchCus);
+            this.panel1.Controls.Add(this.txtBoxSearchCus);
+            this.panel1.Controls.Add(this.dgvHome);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.lblNotifications);
             this.panel1.Controls.Add(this.panel3);
@@ -108,11 +115,52 @@ namespace RasaMotorsManagementSystem
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.toolStrip1);
             this.panel1.Location = new System.Drawing.Point(263, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1401, 932);
             this.panel1.TabIndex = 18;
             this.panel1.Click += new System.EventHandler(this.panel1_Click);
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // lblSearchCus
+            // 
+            this.lblSearchCus.AutoSize = true;
+            this.lblSearchCus.BackColor = System.Drawing.Color.Transparent;
+            this.lblSearchCus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSearchCus.ForeColor = System.Drawing.Color.White;
+            this.lblSearchCus.Location = new System.Drawing.Point(37, 231);
+            this.lblSearchCus.Name = "lblSearchCus";
+            this.lblSearchCus.Size = new System.Drawing.Size(81, 20);
+            this.lblSearchCus.TabIndex = 133;
+            this.lblSearchCus.Text = "Search...";
+            this.lblSearchCus.Click += new System.EventHandler(this.lblSearchCus_Click);
+            // 
+            // txtBoxSearchCus
+            // 
+            this.txtBoxSearchCus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBoxSearchCus.BackColor = System.Drawing.Color.White;
+            this.txtBoxSearchCus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxSearchCus.ForeColor = System.Drawing.Color.Gray;
+            this.txtBoxSearchCus.Location = new System.Drawing.Point(150, 225);
+            this.txtBoxSearchCus.Name = "txtBoxSearchCus";
+            this.txtBoxSearchCus.Size = new System.Drawing.Size(905, 26);
+            this.txtBoxSearchCus.TabIndex = 131;
+            this.txtBoxSearchCus.Text = "Search by Name...";
+            this.txtBoxSearchCus.TextChanged += new System.EventHandler(this.txtBoxSearchCus_TextChanged);
+            // 
+            // dgvHome
+            // 
+            this.dgvHome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvHome.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvHome.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHome.Location = new System.Drawing.Point(41, 277);
+            this.dgvHome.Name = "dgvHome";
+            this.dgvHome.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvHome.Size = new System.Drawing.Size(1016, 526);
+            this.dgvHome.TabIndex = 24;
+            this.dgvHome.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHome_CellContentDoubleClick);
             // 
             // pictureBox2
             // 
@@ -120,7 +168,7 @@ namespace RasaMotorsManagementSystem
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(1018, 150);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(37, 29);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -179,7 +227,7 @@ namespace RasaMotorsManagementSystem
             this.btnLgOut.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLgOut.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnLgOut.Location = new System.Drawing.Point(963, 9);
-            this.btnLgOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLgOut.Margin = new System.Windows.Forms.Padding(2);
             this.btnLgOut.Name = "btnLgOut";
             this.btnLgOut.Size = new System.Drawing.Size(86, 25);
             this.btnLgOut.TabIndex = 24;
@@ -206,7 +254,7 @@ namespace RasaMotorsManagementSystem
             this.panel7.BackColor = System.Drawing.Color.Maroon;
             this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel7.Location = new System.Drawing.Point(0, 132);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1393, 8);
             this.panel7.TabIndex = 19;
@@ -292,7 +340,7 @@ namespace RasaMotorsManagementSystem
             this.btnUserManagement.Image = global::RasaMotorsManagementSystem.Properties.Resources.userManagement;
             this.btnUserManagement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUserManagement.Location = new System.Drawing.Point(9, 756);
-            this.btnUserManagement.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUserManagement.Margin = new System.Windows.Forms.Padding(2);
             this.btnUserManagement.Name = "btnUserManagement";
             this.btnUserManagement.Size = new System.Drawing.Size(245, 52);
             this.btnUserManagement.TabIndex = 13;
@@ -314,7 +362,7 @@ namespace RasaMotorsManagementSystem
             this.btnReports.Image = global::RasaMotorsManagementSystem.Properties.Resources.report;
             this.btnReports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReports.Location = new System.Drawing.Point(9, 700);
-            this.btnReports.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReports.Margin = new System.Windows.Forms.Padding(2);
             this.btnReports.Name = "btnReports";
             this.btnReports.Size = new System.Drawing.Size(248, 52);
             this.btnReports.TabIndex = 12;
@@ -335,7 +383,7 @@ namespace RasaMotorsManagementSystem
             this.btnSalary.Image = ((System.Drawing.Image)(resources.GetObject("btnSalary.Image")));
             this.btnSalary.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalary.Location = new System.Drawing.Point(12, 588);
-            this.btnSalary.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalary.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalary.Name = "btnSalary";
             this.btnSalary.Size = new System.Drawing.Size(248, 52);
             this.btnSalary.TabIndex = 11;
@@ -348,7 +396,7 @@ namespace RasaMotorsManagementSystem
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(9, 34);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(250, 121);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -368,7 +416,7 @@ namespace RasaMotorsManagementSystem
             this.btnFinance.Image = ((System.Drawing.Image)(resources.GetObject("btnFinance.Image")));
             this.btnFinance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFinance.Location = new System.Drawing.Point(9, 644);
-            this.btnFinance.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFinance.Margin = new System.Windows.Forms.Padding(2);
             this.btnFinance.Name = "btnFinance";
             this.btnFinance.Size = new System.Drawing.Size(248, 52);
             this.btnFinance.TabIndex = 10;
@@ -389,7 +437,7 @@ namespace RasaMotorsManagementSystem
             this.btnEmployee.Image = ((System.Drawing.Image)(resources.GetObject("btnEmployee.Image")));
             this.btnEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEmployee.Location = new System.Drawing.Point(9, 418);
-            this.btnEmployee.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEmployee.Margin = new System.Windows.Forms.Padding(2);
             this.btnEmployee.Name = "btnEmployee";
             this.btnEmployee.Size = new System.Drawing.Size(248, 52);
             this.btnEmployee.TabIndex = 9;
@@ -410,7 +458,7 @@ namespace RasaMotorsManagementSystem
             this.btnSupplier.Image = ((System.Drawing.Image)(resources.GetObject("btnSupplier.Image")));
             this.btnSupplier.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSupplier.Location = new System.Drawing.Point(12, 474);
-            this.btnSupplier.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSupplier.Margin = new System.Windows.Forms.Padding(2);
             this.btnSupplier.Name = "btnSupplier";
             this.btnSupplier.Size = new System.Drawing.Size(248, 52);
             this.btnSupplier.TabIndex = 8;
@@ -513,6 +561,7 @@ namespace RasaMotorsManagementSystem
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
@@ -552,6 +601,9 @@ namespace RasaMotorsManagementSystem
         private System.Windows.Forms.Label logLbl;
         private System.Windows.Forms.Button btnReports;
         private System.Windows.Forms.Button btnUserManagement;
+        private System.Windows.Forms.DataGridView dgvHome;
+        private System.Windows.Forms.TextBox txtBoxSearchCus;
+        private System.Windows.Forms.Label lblSearchCus;
     }
 }
 

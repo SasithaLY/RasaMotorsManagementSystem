@@ -35,7 +35,6 @@
             this.btnAddNewCustomer = new System.Windows.Forms.Button();
             this.txtBoxSearchCus = new System.Windows.Forms.TextBox();
             this.ViewGridCustomers = new System.Windows.Forms.DataGridView();
-            this.btnReport = new System.Windows.Forms.Button();
             this.logoCusList = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ViewGridCustomers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoCusList)).BeginInit();
@@ -48,7 +47,7 @@
             this.pnlmidCusList.BackColor = System.Drawing.Color.Maroon;
             this.pnlmidCusList.Location = new System.Drawing.Point(-34, 124);
             this.pnlmidCusList.Name = "pnlmidCusList";
-            this.pnlmidCusList.Size = new System.Drawing.Size(2666, 10);
+            this.pnlmidCusList.Size = new System.Drawing.Size(2779, 10);
             this.pnlmidCusList.TabIndex = 134;
             // 
             // headCusList
@@ -73,7 +72,7 @@
             this.lblSearchCus.BackColor = System.Drawing.Color.Transparent;
             this.lblSearchCus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSearchCus.ForeColor = System.Drawing.Color.White;
-            this.lblSearchCus.Location = new System.Drawing.Point(38, 187);
+            this.lblSearchCus.Location = new System.Drawing.Point(38, 230);
             this.lblSearchCus.Name = "lblSearchCus";
             this.lblSearchCus.Size = new System.Drawing.Size(81, 20);
             this.lblSearchCus.TabIndex = 132;
@@ -87,7 +86,7 @@
             this.btnAddNewCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddNewCustomer.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddNewCustomer.ForeColor = System.Drawing.Color.Transparent;
-            this.btnAddNewCustomer.Location = new System.Drawing.Point(1124, 178);
+            this.btnAddNewCustomer.Location = new System.Drawing.Point(1237, 221);
             this.btnAddNewCustomer.Name = "btnAddNewCustomer";
             this.btnAddNewCustomer.Size = new System.Drawing.Size(105, 28);
             this.btnAddNewCustomer.TabIndex = 131;
@@ -101,9 +100,9 @@
             this.txtBoxSearchCus.BackColor = System.Drawing.Color.White;
             this.txtBoxSearchCus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxSearchCus.ForeColor = System.Drawing.Color.Gray;
-            this.txtBoxSearchCus.Location = new System.Drawing.Point(125, 180);
+            this.txtBoxSearchCus.Location = new System.Drawing.Point(125, 223);
             this.txtBoxSearchCus.Name = "txtBoxSearchCus";
-            this.txtBoxSearchCus.Size = new System.Drawing.Size(823, 26);
+            this.txtBoxSearchCus.Size = new System.Drawing.Size(1094, 26);
             this.txtBoxSearchCus.TabIndex = 130;
             this.txtBoxSearchCus.Text = "Search by Name...";
             this.txtBoxSearchCus.TextChanged += new System.EventHandler(this.txtBoxSearchCus_TextChanged);
@@ -116,29 +115,13 @@
             this.ViewGridCustomers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ViewGridCustomers.BackgroundColor = System.Drawing.Color.White;
             this.ViewGridCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ViewGridCustomers.Location = new System.Drawing.Point(42, 245);
+            this.ViewGridCustomers.Location = new System.Drawing.Point(42, 288);
             this.ViewGridCustomers.Name = "ViewGridCustomers";
             this.ViewGridCustomers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ViewGridCustomers.Size = new System.Drawing.Size(1187, 409);
+            this.ViewGridCustomers.Size = new System.Drawing.Size(1300, 455);
             this.ViewGridCustomers.TabIndex = 129;
             this.ViewGridCustomers.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ViewGridCustomers_CellContentDoubleClick);
             this.ViewGridCustomers.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.ViewGridCustomers_RowHeaderMouseClick);
-            // 
-            // btnReport
-            // 
-            this.btnReport.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnReport.BackColor = System.Drawing.Color.Maroon;
-            this.btnReport.FlatAppearance.BorderSize = 0;
-            this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReport.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReport.ForeColor = System.Drawing.Color.Transparent;
-            this.btnReport.Location = new System.Drawing.Point(964, 178);
-            this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(147, 28);
-            this.btnReport.TabIndex = 136;
-            this.btnReport.Text = "Generate Report";
-            this.btnReport.UseVisualStyleBackColor = false;
-            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // logoCusList
             // 
@@ -156,8 +139,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1263, 686);
-            this.Controls.Add(this.btnReport);
+            this.ClientSize = new System.Drawing.Size(1376, 772);
             this.Controls.Add(this.logoCusList);
             this.Controls.Add(this.pnlmidCusList);
             this.Controls.Add(this.headCusList);
@@ -185,6 +167,5 @@
         private System.Windows.Forms.Button btnAddNewCustomer;
         private System.Windows.Forms.TextBox txtBoxSearchCus;
         public System.Windows.Forms.DataGridView ViewGridCustomers;
-        private System.Windows.Forms.Button btnReport;
     }
 }

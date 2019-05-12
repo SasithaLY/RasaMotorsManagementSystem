@@ -1,4 +1,5 @@
 ﻿using RasaMotorsManagementSystem.CustomerVehicles.Classes;
+using RasaMotorsManagementSystem.JobCard;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -51,17 +52,20 @@ namespace RasaMotorsManagementSystem.CustomerVehicles
         {
             frmVehUpdateDelete vehFrm = new frmVehUpdateDelete();
 
+            
+
             // get data from data grid view to text fields
 
             int rowIndex = e.RowIndex;
 
             vehFrm.textBoxId.Text = this.ViewGridVehicles.Rows[rowIndex].Cells[0].Value.ToString();
-            vehFrm.TextBoxBrand.Text = this.ViewGridVehicles.Rows[rowIndex].Cells[1].Value.ToString();
-            vehFrm.textBoxModel.Text = this.ViewGridVehicles.Rows[rowIndex].Cells[2].Value.ToString();
-            vehFrm.textBoxEngNo.Text = this.ViewGridVehicles.Rows[rowIndex].Cells[3].Value.ToString();
-            vehFrm.textBoxChassiNo.Text = this.ViewGridVehicles.Rows[rowIndex].Cells[4].Value.ToString();
-            vehFrm.textBoxProdYear.Text = this.ViewGridVehicles.Rows[rowIndex].Cells[5].Value.ToString();
-            vehFrm.comboBoxType.Text = this.ViewGridVehicles.Rows[rowIndex].Cells[6].Value.ToString();
+            vehFrm.textBoxVehNo.Text = this.ViewGridVehicles.Rows[rowIndex].Cells[1].Value.ToString();
+            vehFrm.TextBoxBrand.Text = this.ViewGridVehicles.Rows[rowIndex].Cells[2].Value.ToString();
+            vehFrm.textBoxModel.Text = this.ViewGridVehicles.Rows[rowIndex].Cells[3].Value.ToString();
+            vehFrm.textBoxEngNo.Text = this.ViewGridVehicles.Rows[rowIndex].Cells[4].Value.ToString();
+            vehFrm.textBoxChassiNo.Text = this.ViewGridVehicles.Rows[rowIndex].Cells[5].Value.ToString();
+            vehFrm.textBoxProdYear.Text = this.ViewGridVehicles.Rows[rowIndex].Cells[6].Value.ToString();
+            vehFrm.comboBoxType.Text = this.ViewGridVehicles.Rows[rowIndex].Cells[7].Value.ToString();
 
             vehFrm.ShowDialog();
         }
@@ -70,45 +74,39 @@ namespace RasaMotorsManagementSystem.CustomerVehicles
 
         private void txtBoxSearchVeh_TextChanged(object sender, EventArgs e)
         {
-            string keyword = txtBoxSearchVeh.Text;
 
-            if (keyword == "Search by Brand or Model...")
-            {
-                DataTable dt = v.select();
-                ViewGridVehicles.DataSource = dt;
-            }
-            else
-            {
-                SqlConnection conn = new SqlConnection(myconnstr);
-                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM VehDetails WHERE Model like '%" + keyword + "%' OR Brand like '%" + keyword + "%'", conn);
-
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-                ViewGridVehicles.DataSource = dt;
-            }
         }
 
         private void txtBoxSearchVeh_Enter(object sender, EventArgs e)
         {
-            if (txtBoxSearchVeh.Text == "Search by Brand or Model...")
-            {
-                txtBoxSearchVeh.Text = "";
-                txtBoxSearchVeh.ForeColor = Color.Black;
-            }
+
         }
 
         private void txtBoxSearchVeh_Leave(object sender, EventArgs e)
         {
-            if (txtBoxSearchVeh.Text == "")
-            {
-                txtBoxSearchVeh.Text = "Search by Brand or Model...";
-                txtBoxSearchVeh.ForeColor = Color.Gray;
-            }
+
         }
 
         private void btnVehListBack_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ViewGridVehicles_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            
+
+           
+        }
+
+        private void ViewGridVehicles_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            assignJob aj = new assignJob();
+
+            aj.txtVehiNo.Text = this.ViewGridVehicles.CurrentRow.Cells[1].Value.ToString();
+
+
+            aj.ShowDialog();
         }
     }
 }

@@ -13,6 +13,9 @@ using RasaMotorsManagementSystem.Employees;
 using RasaMotorsManagementSystem.Payments;
 using System.Data.SqlClient;
 using RasaMotorsManagementSystem.CustomerVehicles;
+using RasaMotorsManagementSystem.JobCard.jobCardClasses;
+using RasaMotorsManagementSystem.JobCard;
+using RasaMotorsManagementSystem.CustomerVehicles.Classes;
 
 namespace RasaMotorsManagementSystem
 {
@@ -26,6 +29,9 @@ namespace RasaMotorsManagementSystem
             jstatus = jStatus;
 
         }
+
+        //assignJobclass c = new assignJobclass();
+        CustomerClass c = new CustomerClass();
 
         string connString = Common.Utils.ConnectionString;
 
@@ -216,6 +222,46 @@ namespace RasaMotorsManagementSystem
         private void pictureBox2_MouseHover(object sender, EventArgs e)
         {
             pictureBox2.BackColor = Color.DimGray;
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            DataTable dt = c.select();
+            dgvHome.DataSource = dt;
+        }
+
+        private void dgvHome_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            String customerID = this.dgvHome.SelectedRows[0].Cells[0].Value.ToString();
+            Console.Write(customerID);
+
+            frmVehicleList v1 = new frmVehicleList(customerID);
+            v1.ShowDialog();
+        }
+
+        private void txtBoxSearchCus_TextChanged(object sender, EventArgs e)
+        {
+            string keyword = txtBoxSearchCus.Text;
+
+            if (keyword == "Search by Name...")
+            {
+                DataTable dt = c.select();
+                dgvHome.DataSource = dt;
+            }
+            else
+            {
+                SqlConnection conn = new SqlConnection(connString);
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM CusDetails WHERE Name like '%" + keyword + "%'", conn);
+
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dgvHome.DataSource = dt;
+            }
+        }
+
+        private void lblSearchCus_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void button1_Click(object sender, EventArgs e)

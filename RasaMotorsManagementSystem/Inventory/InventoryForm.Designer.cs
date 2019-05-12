@@ -343,7 +343,6 @@
             this.lblErrorMinQty.TabIndex = 139;
             this.lblErrorMinQty.Text = "Invalid Input! Enter Numbers Only";
             this.lblErrorMinQty.Visible = false;
-            this.lblErrorMinQty.Click += new System.EventHandler(this.lblErrorMinQty_Click);
             // 
             // txtboxMinQty
             // 
@@ -352,6 +351,7 @@
             this.txtboxMinQty.Name = "txtboxMinQty";
             this.txtboxMinQty.Size = new System.Drawing.Size(215, 27);
             this.txtboxMinQty.TabIndex = 138;
+            this.txtboxMinQty.TextChanged += new System.EventHandler(this.txtboxMinQty_TextChanged);
             // 
             // lblMinQty
             // 

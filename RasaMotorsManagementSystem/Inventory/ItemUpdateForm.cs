@@ -127,12 +127,7 @@ namespace RasaMotorsManagementSystem.Inventory
             txtboxMinQty.Text = "";
         }
 
-        private void btnAddSup_Click(object sender, EventArgs e)
-        {
-            //supplier.supplieInsert supplieInsert = new supplier.supplieInsert();
-            //supplieInsert.Show();
-        }
-
+      
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             if (validate())
@@ -164,7 +159,7 @@ namespace RasaMotorsManagementSystem.Inventory
 
         private void ItemUpdateForm_Load(object sender, EventArgs e)
         {
-            fillCombo();
+            cmbBoxSupplier.Text = lblTempSupplier.Text;
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
@@ -271,5 +266,19 @@ namespace RasaMotorsManagementSystem.Inventory
                 lblErrorMinQty.Visible = false;
             }
         }
+
+        private void btnAddSup_Click_1(object sender, EventArgs e)
+        {
+            Supplier.supplieInsert supplieInsert = new Supplier.supplieInsert();
+            supplieInsert.Show();
+        }
+
+        private void ItemUpdateForm_Activated(object sender, EventArgs e)
+        {
+            cmbBoxSupplier.Items.Clear();
+            fillCombo();
+            cmbBoxSupplier.Text = lblTempSupplier.Text;
+        }
+
     }
 }

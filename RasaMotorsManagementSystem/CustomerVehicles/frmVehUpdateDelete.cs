@@ -74,17 +74,17 @@ namespace RasaMotorsManagementSystem.CustomerVehicles
                     MessageBox.Show("Please enter a valid Vehicle Brand!");
                     status = false;
                 }
-                else if (!Regex.IsMatch(textBoxModel.Text, @"^[a-zA-Z\s]+$"))
+                else if (!Regex.IsMatch(textBoxModel.Text, @"^[a-zA-Z0-9\s]+$"))
                 {
                     MessageBox.Show("Please enter a valid Vehicle Model!");
                     status = false;
                 }
-                else if (!Regex.IsMatch(textBoxEngNo.Text, @"^[a-zA-Z0-9-]+$"))
+                else if (!Regex.IsMatch(textBoxEngNo.Text, "^[a-zA-Z0-9-]{17}$"))
                 {
                     MessageBox.Show("Please Enter a Engine Number!");
                     status = false;
                 }
-                else if (!Regex.IsMatch(textBoxChassiNo.Text, @"^[a-zA-Z0-9-]+$"))
+                else if (!Regex.IsMatch(textBoxChassiNo.Text, "^[a-zA-Z0-9-]{17}$"))
                 {
                     MessageBox.Show("Please Enter a Chassi Number!");
                     status = false;
@@ -151,7 +151,7 @@ namespace RasaMotorsManagementSystem.CustomerVehicles
         {
             if (textBoxModel.Text == string.Empty)
                 lblModelError.Visible = false;
-            else if (!Regex.IsMatch(textBoxModel.Text, @"^[a-zA-Z\s]+$"))
+            else if (!Regex.IsMatch(textBoxModel.Text, @"^[a-zA-Z0-9\s]+$"))
                 lblModelError.Visible = true;
             else
                 lblModelError.Visible = false;
@@ -161,7 +161,7 @@ namespace RasaMotorsManagementSystem.CustomerVehicles
         {
             if (textBoxEngNo.Text == string.Empty)
                 lblEngineNoError.Visible = false;
-            else if (!Regex.IsMatch(textBoxEngNo.Text, @"^[a-zA-Z0-9-]+$"))
+            else if (!Regex.IsMatch(textBoxEngNo.Text, "^[a-zA-Z0-9-]{17}$"))
                 lblEngineNoError.Visible = true;
             else
                 lblEngineNoError.Visible = false;
@@ -171,7 +171,7 @@ namespace RasaMotorsManagementSystem.CustomerVehicles
         {
             if (textBoxChassiNo.Text == string.Empty)
                 lblChassiNoError.Visible = false;
-            else if (!Regex.IsMatch(textBoxChassiNo.Text, @"^[a-zA-Z0-9-]+$"))
+            else if (!Regex.IsMatch(textBoxChassiNo.Text, "^[a-zA-Z0-9-]{17}$"))
                 lblChassiNoError.Visible = true;
             else
                 lblChassiNoError.Visible = false;

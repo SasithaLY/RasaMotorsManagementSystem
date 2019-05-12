@@ -456,7 +456,6 @@
         private System.Windows.Forms.Label lblModelError;
         private System.Windows.Forms.Label lblBrandError;
         private System.Windows.Forms.Label lblVehicleNoError;
-        private System.Windows.Forms.TextBox textBoxVehNo;
         private System.Windows.Forms.Label lblVehNo;
         private System.Windows.Forms.PictureBox logoUpdDelVeh;
         private System.Windows.Forms.Panel pnlmidUpdDelVeh;
@@ -478,5 +477,6 @@
         public System.Windows.Forms.TextBox TextBoxBrand;
         private System.Windows.Forms.Label lblBrand;
         private System.Windows.Forms.Button btnBackAddVeh;
+        public System.Windows.Forms.TextBox textBoxVehNo;
     }
 }

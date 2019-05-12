@@ -145,19 +145,46 @@ namespace RasaMotorsManagementSystem.Inventory
                 i.supplier = cmbBoxSupplier.Text;
                 i.minQty = int.Parse(txtboxMinQty.Text);
 
-                Boolean success = i.Insert(i);
+                //sql query to check the item in db
+                string sql1 = "SELECT * FROM inventory where itemName = '"+txtBoxItemName.Text+"'";
+                SqlConnection conn = new SqlConnection(connString);
+                SqlCommand cmd = new SqlCommand(sql1, conn);
+                SqlDataReader reader;
 
-                if (success == true)
+                try
                 {
-                    MessageBox.Show("New Item Added Successfully!");
-                    //clear inputs fields
-                    Clear();
-                    Close();
+                    conn.Open();
+                    reader = cmd.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        MessageBox.Show("Item Already Exist!");
+
+                    }
+                    else
+                    {
+                      
+                        Boolean success = i.Insert(i);
+
+                        if (success == true)
+                        {
+                            MessageBox.Show("New Item Added Successfully!");
+                            //clear inputs fields
+                            Clear();
+                            Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Failed to Add New Item. Try Again!");
+                        }
+                    }
+
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Failed to Add New Item. Try Again!");
+                    MessageBox.Show(ex.Message);
                 }
+                
             }
         }
 
@@ -220,22 +247,6 @@ namespace RasaMotorsManagementSystem.Inventory
             instance = null;
         }
 
-        private void lblErrorMinQty_Click(object sender, EventArgs e)
-        {
-            if (txtboxMinQty.Text == string.Empty)
-            {
-                lblErrorMinQty.Visible = false;
-            }
-            else if (!Regex.IsMatch(txtboxMinQty.Text, @"^[0-9]+$"))
-            {
-                lblErrorMinQty.Visible = true;
-            }
-            else
-            {
-                lblErrorMinQty.Visible = false;
-            }
-        }
-
         private void btnAddSup_Click_1(object sender, EventArgs e)
         {
             Supplier.supplieInsert supplieInsert = new Supplier.supplieInsert();
@@ -257,6 +268,22 @@ namespace RasaMotorsManagementSystem.Inventory
             txtBoxQnt.Text = "50";
             txtboxMinQty.Text = "5";
             cmbBoxSupplier.Text = "Hasala Supply";
+        }
+
+        private void txtboxMinQty_TextChanged(object sender, EventArgs e)
+        {
+            if (txtboxMinQty.Text == string.Empty)
+            {
+                lblErrorMinQty.Visible = false;
+            }
+            else if (!Regex.IsMatch(txtboxMinQty.Text, @"^[0-9]+$"))
+            {
+                lblErrorMinQty.Visible = true;
+            }
+            else
+            {
+                lblErrorMinQty.Visible = false;
+            }
         }
     }
 }

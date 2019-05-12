@@ -37,6 +37,11 @@
             this.btPymntRprt = new System.Windows.Forms.Button();
             this.btnSalRprt = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.btnCrJb = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -47,11 +52,11 @@
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(232, 197);
+            this.btnAdd.Location = new System.Drawing.Point(242, 175);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(181, 41);
+            this.btnAdd.Size = new System.Drawing.Size(191, 48);
             this.btnAdd.TabIndex = 65;
-            this.btnAdd.Text = "Customers Report";
+            this.btnAdd.Text = "Customers/Vehicles Report";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -63,7 +68,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(232, 292);
+            this.button1.Location = new System.Drawing.Point(242, 270);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(181, 41);
             this.button1.TabIndex = 66;
@@ -79,7 +84,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(232, 392);
+            this.button2.Location = new System.Drawing.Point(242, 370);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(181, 41);
             this.button2.TabIndex = 67;
@@ -95,7 +100,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(232, 480);
+            this.button3.Location = new System.Drawing.Point(242, 458);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(181, 41);
             this.button3.TabIndex = 68;
@@ -111,7 +116,7 @@
             this.btnJbRprt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnJbRprt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnJbRprt.ForeColor = System.Drawing.Color.White;
-            this.btnJbRprt.Location = new System.Drawing.Point(601, 193);
+            this.btnJbRprt.Location = new System.Drawing.Point(620, 166);
             this.btnJbRprt.Name = "btnJbRprt";
             this.btnJbRprt.Size = new System.Drawing.Size(181, 41);
             this.btnJbRprt.TabIndex = 69;
@@ -127,7 +132,7 @@
             this.btSpRprt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btSpRprt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSpRprt.ForeColor = System.Drawing.Color.White;
-            this.btSpRprt.Location = new System.Drawing.Point(601, 288);
+            this.btSpRprt.Location = new System.Drawing.Point(620, 254);
             this.btSpRprt.Name = "btSpRprt";
             this.btSpRprt.Size = new System.Drawing.Size(181, 41);
             this.btSpRprt.TabIndex = 70;
@@ -143,7 +148,7 @@
             this.btPymntRprt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btPymntRprt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btPymntRprt.ForeColor = System.Drawing.Color.White;
-            this.btPymntRprt.Location = new System.Drawing.Point(601, 392);
+            this.btPymntRprt.Location = new System.Drawing.Point(620, 358);
             this.btPymntRprt.Name = "btPymntRprt";
             this.btPymntRprt.Size = new System.Drawing.Size(181, 41);
             this.btPymntRprt.TabIndex = 71;
@@ -158,7 +163,7 @@
             this.btnSalRprt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalRprt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalRprt.ForeColor = System.Drawing.Color.White;
-            this.btnSalRprt.Location = new System.Drawing.Point(601, 480);
+            this.btnSalRprt.Location = new System.Drawing.Point(620, 446);
             this.btnSalRprt.Name = "btnSalRprt";
             this.btnSalRprt.Size = new System.Drawing.Size(181, 41);
             this.btnSalRprt.TabIndex = 72;
@@ -174,20 +179,69 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(448, 548);
+            this.button4.Location = new System.Drawing.Point(361, 526);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(131, 41);
+            this.button4.Size = new System.Drawing.Size(151, 41);
             this.button4.TabIndex = 78;
             this.button4.Text = "HOME";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // btnCrJb
+            // 
+            this.btnCrJb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnCrJb.BackColor = System.Drawing.Color.Maroon;
+            this.btnCrJb.FlatAppearance.BorderSize = 0;
+            this.btnCrJb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCrJb.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrJb.ForeColor = System.Drawing.Color.White;
+            this.btnCrJb.Location = new System.Drawing.Point(555, 526);
+            this.btnCrJb.Name = "btnCrJb";
+            this.btnCrJb.Size = new System.Drawing.Size(151, 41);
+            this.btnCrJb.TabIndex = 79;
+            this.btnCrJb.Text = "Create Job";
+            this.btnCrJb.UseVisualStyleBackColor = false;
+            this.btnCrJb.Click += new System.EventHandler(this.btnCrJb_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Maroon;
+            this.panel1.Location = new System.Drawing.Point(1, 120);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1088, 16);
+            this.panel1.TabIndex = 80;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::RasaMotorsManagementSystem.Properties.Resources.Rasa_Motors_Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(23, 15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(213, 99);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 81;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Trajan Pro 3", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Goldenrod;
+            this.label1.Location = new System.Drawing.Point(387, 37);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(332, 51);
+            this.label1.TabIndex = 82;
+            this.label1.Text = "REPORT    PANEL";
             // 
             // frmReports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(66)))));
-            this.ClientSize = new System.Drawing.Size(1084, 601);
+            this.ClientSize = new System.Drawing.Size(1084, 611);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnCrJb);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.btnSalRprt);
             this.Controls.Add(this.btPymntRprt);
@@ -197,11 +251,13 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnAdd);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmReports";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmReports";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -216,5 +272,9 @@
         private System.Windows.Forms.Button btPymntRprt;
         private System.Windows.Forms.Button btnSalRprt;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnCrJb;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -18,6 +19,8 @@ namespace RasaMotorsManagementSystem.Payments
         {
             InitializeComponent();
         }
+        public static SqlConnection con = new SqlConnection("Data Source=DESKTOP-T0HOCLV;Initial Catalog=ServiceCenterManagementDB;Integrated Security=True");
+
         Payment1 p = new Payment1();
         private void AddButton_Click(object sender, EventArgs e)
         {
@@ -145,6 +148,27 @@ namespace RasaMotorsManagementSystem.Payments
             PayHistory h = new PayHistory();
             h.Show();
 
+        }
+
+        private void txtJID_TextChanged(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            //select V.vehiId,V.vehiTyp,C.cusName FROM vehicles V, customer C WHERE C.cusId = V.custId
+            cmd.CommandText = "select V.VehicleId AS 'vid',V.Type AS 'vtyp',V.VehicleNo as 'vno',C.CustomerId as 'cid',C.Name as 'cnme' FROM VehDetails V, CusDetails C WHERE C.CustomerId = V.CustomerID AND C.CustomerId='" + txtJID.Text.ToString() + "'";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
+            {
+                Customer.Text = dr["cid"].ToString();
+                CustomerName.Text = dr["cnme"].ToString();
+                VehicleNo.Text = dr["vno"].ToString();
+            }
+
+            con.Close();
         }
     }
     }
