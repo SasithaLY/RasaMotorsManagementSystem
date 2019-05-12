@@ -18,6 +18,7 @@ namespace RasaMotorsManagementSystem.Inventory.inventoryClasses
         public double sellingPrice { get; set; }
         public int quantity { get; set; }
         public string supplier { get; set; }
+        public int minQty { get; set; }  
 
 
         string connString = Common.Utils.ConnectionString;
@@ -34,7 +35,7 @@ namespace RasaMotorsManagementSystem.Inventory.inventoryClasses
             try
             {
                 //sql query
-                string sql = "SELECT itemID as 'Item ID', itemName as 'Item Name', itemType as 'Item Type', buyingPrice as 'Buying Price', sellingPrice as 'Selling Price', availableQty as 'Available Qty', soldQty as 'Sold Qty', addedDate as 'Added Date & Time', supplier as 'Supplier'  FROM inventory";
+                string sql = "SELECT itemID as 'Item ID', itemName as 'Item Name', itemType as 'Item Type', buyingPrice as 'Buying Price', sellingPrice as 'Selling Price', availableQty as 'Available Qty', soldQty as 'Sold Qty', addedDate as 'Added Date & Time', supplier as 'Supplier', minQty as 'Min Qty' FROM inventory";
 
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
@@ -66,7 +67,7 @@ namespace RasaMotorsManagementSystem.Inventory.inventoryClasses
             try
             {
                 //sql query
-                string sql = "INSERT INTO inventory (itemName, itemType, buyingPrice, sellingPrice, availableQty, addedDate, supplier) VALUES(@itemName, @itemType, @buyingPrice, @sellingPrice, @availableQty, @addedDate, @supplier)";
+                string sql = "INSERT INTO inventory (itemName, itemType, buyingPrice, sellingPrice, availableQty, addedDate, supplier, minQty) VALUES(@itemName, @itemType, @buyingPrice, @sellingPrice, @availableQty, @addedDate, @supplier, @minQty)";
 
                 SqlCommand cmd = new SqlCommand(sql, conn);
 
@@ -78,6 +79,7 @@ namespace RasaMotorsManagementSystem.Inventory.inventoryClasses
                 cmd.Parameters.AddWithValue("@availableQty", i.quantity);
                 cmd.Parameters.AddWithValue("@addedDate", DateTime.Now);
                 cmd.Parameters.AddWithValue("@supplier", i.supplier);
+                cmd.Parameters.AddWithValue("@minQty", i.minQty);
 
                 conn.Open();
                 int rows = cmd.ExecuteNonQuery();
@@ -115,7 +117,7 @@ namespace RasaMotorsManagementSystem.Inventory.inventoryClasses
             try
             {
                 //query to update data
-                string sql = "UPDATE inventory SET itemName = @itemName, itemType = @itemType, buyingPrice = @buyingPrice, sellingPrice = @sellingPrice, availableQty = @availableQty, supplier = @supplier WHERE itemID = @itemID";
+                string sql = "UPDATE inventory SET itemName = @itemName, itemType = @itemType, buyingPrice = @buyingPrice, sellingPrice = @sellingPrice, availableQty = @availableQty, supplier = @supplier, minQty = @minQty WHERE itemID = @itemID";
 
                 SqlCommand cmd = new SqlCommand(sql, conn);
 
@@ -126,6 +128,7 @@ namespace RasaMotorsManagementSystem.Inventory.inventoryClasses
                 cmd.Parameters.AddWithValue("@availableQty", i.quantity);
                 cmd.Parameters.AddWithValue("@supplier", i.supplier);
                 cmd.Parameters.AddWithValue("@itemID", i.itemID);
+                cmd.Parameters.AddWithValue("@minQty", i.minQty);
 
                 conn.Open();
 
@@ -200,7 +203,7 @@ namespace RasaMotorsManagementSystem.Inventory.inventoryClasses
 
             try
             {
-                if (itemName == null || itemType == null || quantity.Equals(null) || buyingPrice.Equals(null) || sellingPrice.Equals(null) || supplier == null)
+                if (itemName == null || itemType == null || quantity.Equals(null) || buyingPrice.Equals(null) || sellingPrice.Equals(null) || supplier == null || minQty.Equals(null))
                 {
                     isSuccess = false;
                 }
@@ -218,5 +221,7 @@ namespace RasaMotorsManagementSystem.Inventory.inventoryClasses
 
             return isSuccess;
         }
+
+      
     }
 }
