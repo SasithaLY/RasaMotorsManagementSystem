@@ -52,6 +52,7 @@
             this.lbTotIncome = new System.Windows.Forms.Label();
             this.btnCal = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +60,7 @@
             // 
             this.btnLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoad.Location = new System.Drawing.Point(1422, 191);
+            this.btnLoad.Location = new System.Drawing.Point(1438, 308);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(127, 59);
             this.btnLoad.TabIndex = 149;
@@ -69,14 +70,14 @@
             // 
             // dtPkr1
             // 
-            this.dtPkr1.Location = new System.Drawing.Point(1160, 255);
+            this.dtPkr1.Location = new System.Drawing.Point(1176, 372);
             this.dtPkr1.Name = "dtPkr1";
             this.dtPkr1.Size = new System.Drawing.Size(200, 22);
             this.dtPkr1.TabIndex = 148;
             // 
             // dtPckr
             // 
-            this.dtPckr.Location = new System.Drawing.Point(1160, 175);
+            this.dtPckr.Location = new System.Drawing.Point(1176, 292);
             this.dtPckr.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.dtPckr.Name = "dtPckr";
             this.dtPckr.Size = new System.Drawing.Size(200, 22);
@@ -84,7 +85,7 @@
             // 
             // txtCal
             // 
-            this.txtCal.Location = new System.Drawing.Point(696, 677);
+            this.txtCal.Location = new System.Drawing.Point(745, 718);
             this.txtCal.Name = "txtCal";
             this.txtCal.ReadOnly = true;
             this.txtCal.Size = new System.Drawing.Size(192, 22);
@@ -95,7 +96,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Maiandra GD", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label1.Location = new System.Drawing.Point(653, 80);
+            this.label1.Location = new System.Drawing.Point(659, 101);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(235, 72);
             this.label1.TabIndex = 147;
@@ -119,7 +120,7 @@
             this.lblProfit.AutoSize = true;
             this.lblProfit.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProfit.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.lblProfit.Location = new System.Drawing.Point(371, 664);
+            this.lblProfit.Location = new System.Drawing.Point(420, 705);
             this.lblProfit.Name = "lblProfit";
             this.lblProfit.Size = new System.Drawing.Size(151, 32);
             this.lblProfit.TabIndex = 142;
@@ -127,7 +128,7 @@
             // 
             // txtUtilityPay
             // 
-            this.txtUtilityPay.Location = new System.Drawing.Point(696, 565);
+            this.txtUtilityPay.Location = new System.Drawing.Point(745, 606);
             this.txtUtilityPay.Name = "txtUtilityPay";
             this.txtUtilityPay.Size = new System.Drawing.Size(192, 22);
             this.txtUtilityPay.TabIndex = 141;
@@ -137,7 +138,7 @@
             this.lbUtility.AutoSize = true;
             this.lbUtility.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUtility.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.lbUtility.Location = new System.Drawing.Point(371, 552);
+            this.lbUtility.Location = new System.Drawing.Point(420, 593);
             this.lbUtility.Name = "lbUtility";
             this.lbUtility.Size = new System.Drawing.Size(160, 32);
             this.lbUtility.TabIndex = 140;
@@ -145,7 +146,7 @@
             // 
             // txtSal
             // 
-            this.txtSal.Location = new System.Drawing.Point(696, 604);
+            this.txtSal.Location = new System.Drawing.Point(745, 645);
             this.txtSal.Name = "txtSal";
             this.txtSal.ReadOnly = true;
             this.txtSal.Size = new System.Drawing.Size(192, 22);
@@ -156,7 +157,7 @@
             this.lbSalary.AutoSize = true;
             this.lbSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSalary.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.lbSalary.Location = new System.Drawing.Point(371, 589);
+            this.lbSalary.Location = new System.Drawing.Point(420, 630);
             this.lbSalary.Name = "lbSalary";
             this.lbSalary.Size = new System.Drawing.Size(102, 32);
             this.lbSalary.TabIndex = 138;
@@ -167,7 +168,7 @@
             this.lbExpen.AutoSize = true;
             this.lbExpen.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbExpen.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.lbExpen.Location = new System.Drawing.Point(227, 400);
+            this.lbExpen.Location = new System.Drawing.Point(276, 441);
             this.lbExpen.Name = "lbExpen";
             this.lbExpen.Size = new System.Drawing.Size(179, 32);
             this.lbExpen.TabIndex = 137;
@@ -178,7 +179,7 @@
             this.lbIncome.AutoSize = true;
             this.lbIncome.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbIncome.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.lbIncome.Location = new System.Drawing.Point(227, 241);
+            this.lbIncome.Location = new System.Drawing.Point(276, 282);
             this.lbIncome.Name = "lbIncome";
             this.lbIncome.Size = new System.Drawing.Size(113, 32);
             this.lbIncome.TabIndex = 136;
@@ -186,7 +187,7 @@
             // 
             // txtOrder
             // 
-            this.txtOrder.Location = new System.Drawing.Point(696, 463);
+            this.txtOrder.Location = new System.Drawing.Point(745, 504);
             this.txtOrder.Name = "txtOrder";
             this.txtOrder.ReadOnly = true;
             this.txtOrder.Size = new System.Drawing.Size(192, 22);
@@ -197,7 +198,7 @@
             this.lbOrder.AutoSize = true;
             this.lbOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbOrder.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.lbOrder.Location = new System.Drawing.Point(371, 450);
+            this.lbOrder.Location = new System.Drawing.Point(420, 491);
             this.lbOrder.Name = "lbOrder";
             this.lbOrder.Size = new System.Drawing.Size(107, 32);
             this.lbOrder.TabIndex = 134;
@@ -205,7 +206,7 @@
             // 
             // txtInvenPay
             // 
-            this.txtInvenPay.Location = new System.Drawing.Point(696, 516);
+            this.txtInvenPay.Location = new System.Drawing.Point(745, 557);
             this.txtInvenPay.Name = "txtInvenPay";
             this.txtInvenPay.Size = new System.Drawing.Size(192, 22);
             this.txtInvenPay.TabIndex = 133;
@@ -215,7 +216,7 @@
             this.lbInvenPay.AutoSize = true;
             this.lbInvenPay.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbInvenPay.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.lbInvenPay.Location = new System.Drawing.Point(371, 501);
+            this.lbInvenPay.Location = new System.Drawing.Point(420, 542);
             this.lbInvenPay.Name = "lbInvenPay";
             this.lbInvenPay.Size = new System.Drawing.Size(250, 32);
             this.lbInvenPay.TabIndex = 132;
@@ -236,7 +237,7 @@
             // 
             // txtInvenSales
             // 
-            this.txtInvenSales.Location = new System.Drawing.Point(696, 345);
+            this.txtInvenSales.Location = new System.Drawing.Point(745, 386);
             this.txtInvenSales.Name = "txtInvenSales";
             this.txtInvenSales.Size = new System.Drawing.Size(192, 22);
             this.txtInvenSales.TabIndex = 130;
@@ -246,7 +247,7 @@
             this.lbInvenSales.AutoSize = true;
             this.lbInvenSales.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbInvenSales.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.lbInvenSales.Location = new System.Drawing.Point(371, 327);
+            this.lbInvenSales.Location = new System.Drawing.Point(420, 368);
             this.lbInvenSales.Name = "lbInvenSales";
             this.lbInvenSales.Size = new System.Drawing.Size(203, 32);
             this.lbInvenSales.TabIndex = 129;
@@ -254,7 +255,7 @@
             // 
             // txtTotIncome
             // 
-            this.txtTotIncome.Location = new System.Drawing.Point(696, 301);
+            this.txtTotIncome.Location = new System.Drawing.Point(745, 342);
             this.txtTotIncome.Name = "txtTotIncome";
             this.txtTotIncome.ReadOnly = true;
             this.txtTotIncome.Size = new System.Drawing.Size(192, 22);
@@ -265,7 +266,7 @@
             this.lbTotIncome.AutoSize = true;
             this.lbTotIncome.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTotIncome.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.lbTotIncome.Location = new System.Drawing.Point(371, 292);
+            this.lbTotIncome.Location = new System.Drawing.Point(420, 333);
             this.lbTotIncome.Name = "lbTotIncome";
             this.lbTotIncome.Size = new System.Drawing.Size(295, 32);
             this.lbTotIncome.TabIndex = 127;
@@ -294,12 +295,24 @@
             this.pictureBox1.TabIndex = 144;
             this.pictureBox1.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.AutoSize = true;
+            this.panel1.BackColor = System.Drawing.Color.Maroon;
+            this.panel1.Location = new System.Drawing.Point(-31, 215);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1649, 15);
+            this.panel1.TabIndex = 150;
+            // 
             // calculation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(66)))));
             this.ClientSize = new System.Drawing.Size(1586, 992);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.dtPkr1);
             this.Controls.Add(this.dtPckr);
@@ -359,5 +372,6 @@
         public System.Windows.Forms.TextBox txtTotIncome;
         private System.Windows.Forms.Label lbTotIncome;
         private System.Windows.Forms.Button btnCal;
+        private System.Windows.Forms.Panel panel1;
     }
 }

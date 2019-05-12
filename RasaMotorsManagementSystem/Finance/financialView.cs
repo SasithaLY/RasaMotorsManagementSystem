@@ -26,9 +26,9 @@ namespace RasaMotorsManagementSystem.Finance
         private void btnReport_Click(object sender, EventArgs e)
         {
             this.Hide();
-          //  reportViewer manager = new reportViewer();
+           reportViewer manager = new reportViewer();
 
-         //  manager.ShowDialog();
+           manager.ShowDialog();
             this.Close();
         }
 

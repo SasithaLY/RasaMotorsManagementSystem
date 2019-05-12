@@ -34,10 +34,6 @@
             this.btnReport = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.dgvFinancial = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.serviceCenterManagementDBDataSet = new RasaMotorsManagementSystem.ServiceCenterManagementDBDataSet();
-            this.tblProfitBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tbl_ProfitTableAdapter = new RasaMotorsManagementSystem.ServiceCenterManagementDBDataSetTableAdapters.tbl_ProfitTableAdapter();
             this.customerIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.incomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.invenSalesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,23 +43,30 @@
             this.salaryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.netProfitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.serviceCenterManagementDBDataSet1 = new RasaMotorsManagementSystem.ServiceCenterManagementDBDataSet1();
             this.tblProfitBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.serviceCenterManagementDBDataSet1 = new RasaMotorsManagementSystem.ServiceCenterManagementDBDataSet1();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.serviceCenterManagementDBDataSet = new RasaMotorsManagementSystem.ServiceCenterManagementDBDataSet();
+            this.tblProfitBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tbl_ProfitTableAdapter = new RasaMotorsManagementSystem.ServiceCenterManagementDBDataSetTableAdapters.tbl_ProfitTableAdapter();
             this.tbl_ProfitTableAdapter1 = new RasaMotorsManagementSystem.ServiceCenterManagementDBDataSet1TableAdapters.tbl_ProfitTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFinancial)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblProfitBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serviceCenterManagementDBDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceCenterManagementDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblProfitBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.serviceCenterManagementDBDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblProfitBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.Maroon;
             this.panel1.Location = new System.Drawing.Point(-4, 224);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1595, 25);
+            this.panel1.Size = new System.Drawing.Size(1595, 18);
             this.panel1.TabIndex = 67;
             // 
             // label1
@@ -127,30 +130,6 @@
             this.dgvFinancial.TabIndex = 62;
             this.dgvFinancial.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvFinancial_CellMouseDoubleClick);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::RasaMotorsManagementSystem.Properties.Resources.Rasa_Motors_Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 24);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(459, 173);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 63;
-            this.pictureBox1.TabStop = false;
-            // 
-            // serviceCenterManagementDBDataSet
-            // 
-            this.serviceCenterManagementDBDataSet.DataSetName = "ServiceCenterManagementDBDataSet";
-            this.serviceCenterManagementDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tblProfitBindingSource
-            // 
-            this.tblProfitBindingSource.DataMember = "tbl_Profit";
-            this.tblProfitBindingSource.DataSource = this.serviceCenterManagementDBDataSet;
-            // 
-            // tbl_ProfitTableAdapter
-            // 
-            this.tbl_ProfitTableAdapter.ClearBeforeFill = true;
-            // 
             // customerIdDataGridViewTextBoxColumn
             // 
             this.customerIdDataGridViewTextBoxColumn.DataPropertyName = "CustomerId";
@@ -206,15 +185,39 @@
             this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
             this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
             // 
+            // tblProfitBindingSource1
+            // 
+            this.tblProfitBindingSource1.DataMember = "tbl_Profit";
+            this.tblProfitBindingSource1.DataSource = this.serviceCenterManagementDBDataSet1;
+            // 
             // serviceCenterManagementDBDataSet1
             // 
             this.serviceCenterManagementDBDataSet1.DataSetName = "ServiceCenterManagementDBDataSet1";
             this.serviceCenterManagementDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // tblProfitBindingSource1
+            // pictureBox1
             // 
-            this.tblProfitBindingSource1.DataMember = "tbl_Profit";
-            this.tblProfitBindingSource1.DataSource = this.serviceCenterManagementDBDataSet1;
+            this.pictureBox1.Image = global::RasaMotorsManagementSystem.Properties.Resources.Rasa_Motors_Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 24);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(459, 173);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 63;
+            this.pictureBox1.TabStop = false;
+            // 
+            // serviceCenterManagementDBDataSet
+            // 
+            this.serviceCenterManagementDBDataSet.DataSetName = "ServiceCenterManagementDBDataSet";
+            this.serviceCenterManagementDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblProfitBindingSource
+            // 
+            this.tblProfitBindingSource.DataMember = "tbl_Profit";
+            this.tblProfitBindingSource.DataSource = this.serviceCenterManagementDBDataSet;
+            // 
+            // tbl_ProfitTableAdapter
+            // 
+            this.tbl_ProfitTableAdapter.ClearBeforeFill = true;
             // 
             // tbl_ProfitTableAdapter1
             // 
@@ -237,11 +240,11 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.financialView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFinancial)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblProfitBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serviceCenterManagementDBDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceCenterManagementDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblProfitBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.serviceCenterManagementDBDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblProfitBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
