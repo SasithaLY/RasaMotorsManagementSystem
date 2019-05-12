@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -279,6 +279,35 @@
     <Compile Include="Inventory\ItemUpdateForm.Designer.cs">
       <DependentUpon>ItemUpdateForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Payments\PayDetails.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PayDetails.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Payments\PayHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payments\PayHistory.Designer.cs">
+      <DependentUpon>PayHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payments\Paymentclasses\Payment1.cs" />
+    <Compile Include="Payments\PaymentMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payments\PaymentMain.Designer.cs">
+      <DependentUpon>PaymentMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payments\PayView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payments\PayView.Designer.cs">
+      <DependentUpon>PayView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payments\Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payments\Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
     <Compile Include="Inventory\Restock.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -559,6 +588,20 @@
     <EmbeddedResource Include="Inventory\ItemUpdateForm.resx">
       <DependentUpon>ItemUpdateForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Payments\PayHistory.resx">
+      <DependentUpon>PayHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payments\PaymentMain.resx">
+      <DependentUpon>PaymentMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payments\PayReport.rdlc" />
+    <EmbeddedResource Include="Payments\PayView.resx">
+      <DependentUpon>PayView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payments\Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payments\Report1.rdlc" />
     <EmbeddedResource Include="Inventory\Restock.resx">
       <DependentUpon>Restock.cs</DependentUpon>
     </EmbeddedResource>
@@ -609,6 +652,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Payments\PayDetails.xsc">
+      <DependentUpon>PayDetails.xsd</DependentUpon>
+    </None>
+    <None Include="Payments\PayDetails.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PayDetails.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Payments\PayDetails.xss">
+      <DependentUpon>PayDetails.xsd</DependentUpon>
+    </None>
     <EmbeddedResource Include="Salary\EditDetails.resx">
       <DependentUpon>EditDetails.cs</DependentUpon>
     </EmbeddedResource>

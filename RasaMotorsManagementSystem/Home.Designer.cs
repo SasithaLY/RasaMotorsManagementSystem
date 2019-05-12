@@ -1,4 +1,4 @@
-﻿namespace RasaMotorsManagementSystem
+namespace RasaMotorsManagementSystem
 {
     partial class Home
     {
@@ -80,6 +80,7 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(0, 0);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(1605, 44);
             this.label8.TabIndex = 1;
@@ -91,6 +92,7 @@
             this.panel2.BackColor = System.Drawing.Color.Maroon;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(10, 978);
             this.panel2.TabIndex = 0;
@@ -148,7 +150,8 @@
             this.pnlHeader.Controls.Add(this.panel7);
             this.pnlHeader.Controls.Add(this.label9);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlHeader.Location = new System.Drawing.Point(10, 0);
+            this.pnlHeader.Location = new System.Drawing.Point(13, 0);
+            this.pnlHeader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(1605, 131);
             this.pnlHeader.TabIndex = 14;
@@ -189,7 +192,7 @@
             this.label10.ForeColor = System.Drawing.Color.Goldenrod;
             this.label10.Location = new System.Drawing.Point(907, 72);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(339, 44);
+            this.label10.Size = new System.Drawing.Size(420, 54);
             this.label10.TabIndex = 25;
             this.label10.Text = "Management Software";
             // 
@@ -210,7 +213,7 @@
             this.label9.ForeColor = System.Drawing.Color.Goldenrod;
             this.label9.Location = new System.Drawing.Point(771, 32);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(480, 50);
+            this.label9.Size = new System.Drawing.Size(612, 63);
             this.label9.TabIndex = 24;
             this.label9.Text = "Automobile Service Center";
             // 
@@ -263,7 +266,8 @@
             this.pnlMenu.Controls.Add(this.payBtn);
             this.pnlMenu.Controls.Add(this.cusBtn);
             this.pnlMenu.Controls.Add(this.jobBtn);
-            this.pnlMenu.Location = new System.Drawing.Point(0, -39);
+            this.pnlMenu.Location = new System.Drawing.Point(0, -48);
+            this.pnlMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(950, 1055);
             this.pnlMenu.TabIndex = 17;
@@ -334,7 +338,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(12, 42);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(250, 121);
+            this.pictureBox1.Size = new System.Drawing.Size(333, 149);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -353,7 +357,7 @@
             this.btnFinance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFinance.Location = new System.Drawing.Point(12, 680);
             this.btnFinance.Name = "btnFinance";
-            this.btnFinance.Size = new System.Drawing.Size(250, 52);
+            this.btnFinance.Size = new System.Drawing.Size(333, 64);
             this.btnFinance.TabIndex = 10;
             this.btnFinance.Text = "Finance";
             this.btnFinance.UseVisualStyleBackColor = true;
@@ -411,9 +415,10 @@
             this.btnInventory.ForeColor = System.Drawing.Color.White;
             this.btnInventory.Image = ((System.Drawing.Image)(resources.GetObject("btnInventory.Image")));
             this.btnInventory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInventory.Location = new System.Drawing.Point(12, 459);
+            this.btnInventory.Location = new System.Drawing.Point(16, 565);
+            this.btnInventory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnInventory.Name = "btnInventory";
-            this.btnInventory.Size = new System.Drawing.Size(250, 52);
+            this.btnInventory.Size = new System.Drawing.Size(333, 64);
             this.btnInventory.TabIndex = 7;
             this.btnInventory.Text = "Inventory";
             this.btnInventory.UseVisualStyleBackColor = true;
@@ -431,12 +436,14 @@
             this.payBtn.ForeColor = System.Drawing.Color.White;
             this.payBtn.Image = ((System.Drawing.Image)(resources.GetObject("payBtn.Image")));
             this.payBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.payBtn.Location = new System.Drawing.Point(12, 401);
+            this.payBtn.Location = new System.Drawing.Point(16, 494);
+            this.payBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.payBtn.Name = "payBtn";
-            this.payBtn.Size = new System.Drawing.Size(250, 52);
+            this.payBtn.Size = new System.Drawing.Size(333, 64);
             this.payBtn.TabIndex = 6;
             this.payBtn.Text = "Payment";
             this.payBtn.UseVisualStyleBackColor = true;
+            this.payBtn.Click += new System.EventHandler(this.payBtn_Click);
             // 
             // cusBtn
             // 
@@ -450,9 +457,10 @@
             this.cusBtn.ForeColor = System.Drawing.Color.White;
             this.cusBtn.Image = ((System.Drawing.Image)(resources.GetObject("cusBtn.Image")));
             this.cusBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cusBtn.Location = new System.Drawing.Point(12, 344);
+            this.cusBtn.Location = new System.Drawing.Point(16, 423);
+            this.cusBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cusBtn.Name = "cusBtn";
-            this.cusBtn.Size = new System.Drawing.Size(250, 52);
+            this.cusBtn.Size = new System.Drawing.Size(333, 64);
             this.cusBtn.TabIndex = 5;
             this.cusBtn.Text = "Customers";
             this.cusBtn.UseVisualStyleBackColor = true;
@@ -468,9 +476,10 @@
             this.jobBtn.ForeColor = System.Drawing.Color.White;
             this.jobBtn.Image = ((System.Drawing.Image)(resources.GetObject("jobBtn.Image")));
             this.jobBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.jobBtn.Location = new System.Drawing.Point(12, 287);
+            this.jobBtn.Location = new System.Drawing.Point(16, 353);
+            this.jobBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.jobBtn.Name = "jobBtn";
-            this.jobBtn.Size = new System.Drawing.Size(250, 52);
+            this.jobBtn.Size = new System.Drawing.Size(333, 64);
             this.jobBtn.TabIndex = 4;
             this.jobBtn.Text = "Job";
             this.jobBtn.UseVisualStyleBackColor = true;
@@ -478,12 +487,13 @@
             // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(66)))));
             this.ClientSize = new System.Drawing.Size(1553, 837);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlMenu);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Home";
             this.Text = "Home";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
