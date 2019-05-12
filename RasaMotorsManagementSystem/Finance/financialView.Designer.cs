@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnReport = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.dgvFinancial = new System.Windows.Forms.DataGridView();
             this.customerIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,7 +64,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Maroon;
             this.panel1.Location = new System.Drawing.Point(-3, 182);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1196, 20);
             this.panel1.TabIndex = 67;
@@ -82,27 +81,13 @@
             this.label1.TabIndex = 66;
             this.label1.Text = "Financial View";
             // 
-            // btnReport
-            // 
-            this.btnReport.BackColor = System.Drawing.Color.Maroon;
-            this.btnReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReport.ForeColor = System.Drawing.Color.White;
-            this.btnReport.Location = new System.Drawing.Point(962, 729);
-            this.btnReport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(122, 62);
-            this.btnReport.TabIndex = 65;
-            this.btnReport.Text = "Report";
-            this.btnReport.UseVisualStyleBackColor = false;
-            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
-            // 
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.Color.Maroon;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Location = new System.Drawing.Point(254, 729);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBack.Location = new System.Drawing.Point(62, 721);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(119, 62);
             this.btnBack.TabIndex = 64;
@@ -128,7 +113,7 @@
             this.dgvFinancial.DataSource = this.tblProfitBindingSource1;
             this.dgvFinancial.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvFinancial.Location = new System.Drawing.Point(62, 334);
-            this.dgvFinancial.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvFinancial.Margin = new System.Windows.Forms.Padding(2);
             this.dgvFinancial.Name = "dgvFinancial";
             this.dgvFinancial.RowTemplate.Height = 24;
             this.dgvFinancial.Size = new System.Drawing.Size(1054, 360);
@@ -204,7 +189,7 @@
             // 
             this.pictureBox1.Image = global::RasaMotorsManagementSystem.Properties.Resources.Rasa_Motors_Logo;
             this.pictureBox1.Location = new System.Drawing.Point(9, 20);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(344, 141);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -271,11 +256,10 @@
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnReport);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvFinancial);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "financialView";
             this.Text = "financialView";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -295,7 +279,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.DataGridView dgvFinancial;

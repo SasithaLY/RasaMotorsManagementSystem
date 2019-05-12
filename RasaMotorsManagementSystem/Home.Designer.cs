@@ -73,10 +73,10 @@ namespace RasaMotorsManagementSystem
             this.panel3.BackColor = System.Drawing.Color.Black;
             this.panel3.Controls.Add(this.label8);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(8, 896);
+            this.panel3.Location = new System.Drawing.Point(8, 851);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1393, 36);
+            this.panel3.Size = new System.Drawing.Size(1090, 36);
             this.panel3.TabIndex = 17;
             // 
             // label8
@@ -84,9 +84,9 @@ namespace RasaMotorsManagementSystem
             this.label8.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(0, 0);
+            this.label8.Location = new System.Drawing.Point(0, -5);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(1393, 36);
+            this.label8.Size = new System.Drawing.Size(1090, 41);
             this.label8.TabIndex = 1;
             this.label8.Text = "Copyright © 2019 VALT PACK Solutions. All Right Reserved.";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -97,7 +97,7 @@ namespace RasaMotorsManagementSystem
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(8, 932);
+            this.panel2.Size = new System.Drawing.Size(8, 887);
             this.panel2.TabIndex = 0;
             // 
             // panel1
@@ -117,7 +117,7 @@ namespace RasaMotorsManagementSystem
             this.panel1.Location = new System.Drawing.Point(263, 2);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1401, 932);
+            this.panel1.Size = new System.Drawing.Size(1098, 887);
             this.panel1.TabIndex = 18;
             this.panel1.Click += new System.EventHandler(this.panel1_Click);
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
@@ -144,7 +144,7 @@ namespace RasaMotorsManagementSystem
             this.txtBoxSearchCus.ForeColor = System.Drawing.Color.Gray;
             this.txtBoxSearchCus.Location = new System.Drawing.Point(150, 225);
             this.txtBoxSearchCus.Name = "txtBoxSearchCus";
-            this.txtBoxSearchCus.Size = new System.Drawing.Size(905, 26);
+            this.txtBoxSearchCus.Size = new System.Drawing.Size(916, 26);
             this.txtBoxSearchCus.TabIndex = 131;
             this.txtBoxSearchCus.Text = "Search by Name...";
             this.txtBoxSearchCus.TextChanged += new System.EventHandler(this.txtBoxSearchCus_TextChanged);
@@ -158,7 +158,7 @@ namespace RasaMotorsManagementSystem
             this.dgvHome.Location = new System.Drawing.Point(41, 277);
             this.dgvHome.Name = "dgvHome";
             this.dgvHome.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHome.Size = new System.Drawing.Size(1016, 526);
+            this.dgvHome.Size = new System.Drawing.Size(1025, 526);
             this.dgvHome.TabIndex = 24;
             this.dgvHome.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHome_CellContentDoubleClick);
             // 
@@ -167,7 +167,7 @@ namespace RasaMotorsManagementSystem
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1018, 150);
+            this.pictureBox2.Location = new System.Drawing.Point(979, 154);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(37, 29);
@@ -184,7 +184,7 @@ namespace RasaMotorsManagementSystem
             this.lblNotifications.AutoSize = true;
             this.lblNotifications.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNotifications.ForeColor = System.Drawing.Color.Red;
-            this.lblNotifications.Location = new System.Drawing.Point(1056, 152);
+            this.lblNotifications.Location = new System.Drawing.Point(1017, 156);
             this.lblNotifications.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNotifications.Name = "lblNotifications";
             this.lblNotifications.Size = new System.Drawing.Size(26, 29);
@@ -202,7 +202,7 @@ namespace RasaMotorsManagementSystem
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(8, 0);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(1393, 140);
+            this.pnlHeader.Size = new System.Drawing.Size(1090, 140);
             this.pnlHeader.TabIndex = 14;
             // 
             // logLbl
@@ -211,7 +211,7 @@ namespace RasaMotorsManagementSystem
             this.logLbl.AutoSize = true;
             this.logLbl.Font = new System.Drawing.Font("Times", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.logLbl.Location = new System.Drawing.Point(753, 11);
+            this.logLbl.Location = new System.Drawing.Point(735, 10);
             this.logLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.logLbl.Name = "logLbl";
             this.logLbl.Size = new System.Drawing.Size(50, 19);
@@ -222,14 +222,15 @@ namespace RasaMotorsManagementSystem
             // 
             this.btnLgOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLgOut.BackColor = System.Drawing.Color.Maroon;
-            this.btnLgOut.FlatAppearance.BorderSize = 0;
+            this.btnLgOut.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnLgOut.FlatAppearance.BorderSize = 2;
             this.btnLgOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLgOut.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLgOut.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLgOut.Location = new System.Drawing.Point(963, 9);
+            this.btnLgOut.Location = new System.Drawing.Point(945, 8);
             this.btnLgOut.Margin = new System.Windows.Forms.Padding(2);
             this.btnLgOut.Name = "btnLgOut";
-            this.btnLgOut.Size = new System.Drawing.Size(86, 25);
+            this.btnLgOut.Size = new System.Drawing.Size(86, 32);
             this.btnLgOut.TabIndex = 24;
             this.btnLgOut.Text = "Log Out";
             this.btnLgOut.UseVisualStyleBackColor = false;
@@ -242,7 +243,7 @@ namespace RasaMotorsManagementSystem
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Palatino Linotype", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label10.Location = new System.Drawing.Point(734, 82);
+            this.label10.Location = new System.Drawing.Point(716, 81);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(339, 44);
@@ -256,7 +257,7 @@ namespace RasaMotorsManagementSystem
             this.panel7.Location = new System.Drawing.Point(0, 132);
             this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1393, 8);
+            this.panel7.Size = new System.Drawing.Size(1090, 8);
             this.panel7.TabIndex = 19;
             // 
             // label9
@@ -266,7 +267,7 @@ namespace RasaMotorsManagementSystem
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Palatino Linotype", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label9.Location = new System.Drawing.Point(596, 40);
+            this.label9.Location = new System.Drawing.Point(578, 39);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(480, 50);
@@ -283,7 +284,7 @@ namespace RasaMotorsManagementSystem
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripDropDownButton1});
-            this.toolStrip1.Location = new System.Drawing.Point(1010, 144);
+            this.toolStrip1.Location = new System.Drawing.Point(974, 148);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.ShowItemToolTips = false;
             this.toolStrip1.Size = new System.Drawing.Size(48, 39);
@@ -324,7 +325,7 @@ namespace RasaMotorsManagementSystem
             this.pnlMenu.Controls.Add(this.jobBtn);
             this.pnlMenu.Location = new System.Drawing.Point(0, -39);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(902, 994);
+            this.pnlMenu.Size = new System.Drawing.Size(902, 1064);
             this.pnlMenu.TabIndex = 17;
             // 
             // btnUserManagement
@@ -549,7 +550,7 @@ namespace RasaMotorsManagementSystem
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(66)))));
-            this.ClientSize = new System.Drawing.Size(1355, 817);
+            this.ClientSize = new System.Drawing.Size(1355, 887);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlMenu);
             this.Name = "Home";

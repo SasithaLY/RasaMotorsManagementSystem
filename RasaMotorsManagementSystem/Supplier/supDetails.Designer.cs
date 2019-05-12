@@ -36,7 +36,6 @@
             this.supplierView = new System.Windows.Forms.DataGridView();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.supSearch = new System.Windows.Forms.Label();
-            this.btnRepotr = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnOrder = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -125,25 +124,12 @@
             this.supSearch.TabIndex = 62;
             this.supSearch.Text = "Search:";
             // 
-            // btnRepotr
-            // 
-            this.btnRepotr.BackColor = System.Drawing.Color.Maroon;
-            this.btnRepotr.Font = new System.Drawing.Font("28 Days Later", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRepotr.ForeColor = System.Drawing.Color.White;
-            this.btnRepotr.Location = new System.Drawing.Point(999, 606);
-            this.btnRepotr.Name = "btnRepotr";
-            this.btnRepotr.Size = new System.Drawing.Size(125, 37);
-            this.btnRepotr.TabIndex = 67;
-            this.btnRepotr.Text = "Report";
-            this.btnRepotr.UseVisualStyleBackColor = false;
-            this.btnRepotr.Click += new System.EventHandler(this.btnRepotr_Click);
-            // 
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.Color.Maroon;
-            this.btnBack.Font = new System.Drawing.Font("28 Days Later", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Location = new System.Drawing.Point(853, 606);
+            this.btnBack.Location = new System.Drawing.Point(973, 586);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(125, 37);
             this.btnBack.TabIndex = 66;
@@ -154,9 +140,9 @@
             // btnOrder
             // 
             this.btnOrder.BackColor = System.Drawing.Color.Maroon;
-            this.btnOrder.Font = new System.Drawing.Font("28 Days Later", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrder.ForeColor = System.Drawing.Color.White;
-            this.btnOrder.Location = new System.Drawing.Point(709, 606);
+            this.btnOrder.Location = new System.Drawing.Point(829, 586);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Size = new System.Drawing.Size(125, 37);
             this.btnOrder.TabIndex = 65;
@@ -170,7 +156,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1136, 690);
-            this.Controls.Add(this.btnRepotr);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnOrder);
             this.Controls.Add(this.supplierView);
@@ -204,7 +189,6 @@
         private System.Windows.Forms.DataGridView supplierView;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label supSearch;
-        private System.Windows.Forms.Button btnRepotr;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnOrder;
     }

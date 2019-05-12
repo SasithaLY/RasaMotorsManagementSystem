@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(searchJob));
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.btnReport = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -47,7 +46,6 @@
             // mainPanel
             // 
             this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(66)))));
-            this.mainPanel.Controls.Add(this.btnReport);
             this.mainPanel.Controls.Add(this.btnSearch);
             this.mainPanel.Controls.Add(this.pictureBox1);
             this.mainPanel.Controls.Add(this.panel1);
@@ -62,21 +60,6 @@
             this.mainPanel.Size = new System.Drawing.Size(1351, 701);
             this.mainPanel.TabIndex = 5;
             this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
-            // 
-            // btnReport
-            // 
-            this.btnReport.BackColor = System.Drawing.Color.Maroon;
-            this.btnReport.FlatAppearance.BorderSize = 0;
-            this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnReport.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReport.ForeColor = System.Drawing.Color.White;
-            this.btnReport.Location = new System.Drawing.Point(63, 284);
-            this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(138, 41);
-            this.btnReport.TabIndex = 89;
-            this.btnReport.Text = "REPORT";
-            this.btnReport.UseVisualStyleBackColor = false;
-            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // btnSearch
             // 
@@ -195,7 +178,6 @@
         #endregion
 
         private System.Windows.Forms.Panel mainPanel;
-        private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
