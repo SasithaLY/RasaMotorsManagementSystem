@@ -30,7 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CusVehReportViewer));
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.CustomerVehicleDataSet = new RasaMotorsManagementSystem.CustomerVehicles.CustomerVehicleDataSet();
             this.pnlmidCusVehReport = new System.Windows.Forms.Panel();
             this.headCusVehReport = new System.Windows.Forms.Label();
             this.logoCusVehReport = new System.Windows.Forms.PictureBox();
@@ -40,13 +42,21 @@
             this.dtpCusVehTo = new System.Windows.Forms.DateTimePicker();
             this.dtpCusVehFrom = new System.Windows.Forms.DateTimePicker();
             this.reportViewerCusVeh = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.CustomerVehicleDataSet = new RasaMotorsManagementSystem.CustomerVehicles.CustomerVehicleDataSet();
-            this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DataTable1TableAdapter = new RasaMotorsManagementSystem.CustomerVehicles.CustomerVehicleDataSetTableAdapters.DataTable1TableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.logoCusVehReport)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CustomerVehicleDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CustomerVehicleDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logoCusVehReport)).BeginInit();
             this.SuspendLayout();
+            // 
+            // DataTable1BindingSource
+            // 
+            this.DataTable1BindingSource.DataMember = "DataTable1";
+            this.DataTable1BindingSource.DataSource = this.CustomerVehicleDataSet;
+            // 
+            // CustomerVehicleDataSet
+            // 
+            this.CustomerVehicleDataSet.DataSetName = "CustomerVehicleDataSet";
+            this.CustomerVehicleDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // pnlmidCusVehReport
             // 
@@ -142,26 +152,18 @@
             // 
             // reportViewerCusVeh
             // 
-            this.reportViewerCusVeh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            reportDataSource2.Name = "CustomerVehicleData";
-            reportDataSource2.Value = this.DataTable1BindingSource;
-            this.reportViewerCusVeh.LocalReport.DataSources.Add(reportDataSource2);
+            this.reportViewerCusVeh.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            reportDataSource1.Name = "CustomerVehicleData";
+            reportDataSource1.Value = this.DataTable1BindingSource;
+            this.reportViewerCusVeh.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewerCusVeh.LocalReport.ReportEmbeddedResource = "RasaMotorsManagementSystem.CustomerVehicles.CustomerVehicleReport.rdlc";
             this.reportViewerCusVeh.Location = new System.Drawing.Point(77, 254);
             this.reportViewerCusVeh.Name = "reportViewerCusVeh";
-            
+            this.reportViewerCusVeh.ServerReport.BearerToken = null;
             this.reportViewerCusVeh.Size = new System.Drawing.Size(1227, 376);
             this.reportViewerCusVeh.TabIndex = 144;
-            // 
-            // CustomerVehicleDataSet
-            // 
-            this.CustomerVehicleDataSet.DataSetName = "CustomerVehicleDataSet";
-            this.CustomerVehicleDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // DataTable1BindingSource
-            // 
-            this.DataTable1BindingSource.DataMember = "DataTable1";
-            this.DataTable1BindingSource.DataSource = this.CustomerVehicleDataSet;
             // 
             // DataTable1TableAdapter
             // 
@@ -186,9 +188,9 @@
             this.Text = "CusVehReportViewer";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.CusVehReportViewer_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.logoCusVehReport)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CustomerVehicleDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CustomerVehicleDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logoCusVehReport)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -79,6 +79,26 @@ namespace RasaMotorsManagementSystem.JobCard
 
         }
 
+        //Get the last Enterd JobID
+        public void getId()
+        {
+            comboJone.Items.Clear();
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT MAX(Id) AS 'jID' FROM jobPred";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
+            {
+                txtTest.Text = dr["jID"].ToString();
+            }
+
+            con.Close();
+        }
+
         private void assignJob_Load(object sender, EventArgs e)
         {
             fillcombo();
@@ -99,6 +119,7 @@ namespace RasaMotorsManagementSystem.JobCard
             foreach (DataRow dr in dt.Rows)
             {
                 txtCusName.Text = dr["cnme"].ToString();
+                txtVtyp.Text = dr["vtyp"].ToString();
             }
 
             con.Close();
@@ -221,12 +242,13 @@ namespace RasaMotorsManagementSystem.JobCard
                     bool success = obj.InsertJob(obj);
                     if (success == true)
                     {
+                        getId();
                         MessageBox.Show("Job Successfully Inserted!");
                         //clear();
                         ReceiptPrint rp = new ReceiptPrint();
-                        rp.jbId.Text =
+                        rp.jbId.Text = txtTest.Text.ToString();
                         rp.vhclNo.Text = cmbVno.Text.ToString();
-                        rp.vhclTyp.Text =
+                        rp.vhclTyp.Text = txtVtyp.Text.ToString();
                         rp.cusName.Text = txtCusName.Text.ToString();
                         rp.jOne.Text = comboJone.Text.ToString();
                         rp.jTwo.Text = comboJtwo.Text.ToString();
@@ -253,6 +275,19 @@ namespace RasaMotorsManagementSystem.JobCard
             }
         }
 
+        public void clear()
+        {
+            txtJOnePrc.Text = float.Parse("0").ToString();
+            txtJTwoPrc.Text = float.Parse("0").ToString();
+            txtJThreePrc.Text = float.Parse("0").ToString();
+            txtPdctPrc.Text = float.Parse("0").ToString();
+            cmbVno.Text = "";
+            comboJone.Text = "";
+            comboJtwo.Text = "";
+            comboJthree.Text = "";
+            txtCusName.Text = "";
+        }
+
         private void btnCrtjb_Click(object sender, EventArgs e)
         {
             new createJob().Show();
@@ -262,6 +297,18 @@ namespace RasaMotorsManagementSystem.JobCard
         private void cmbVno_KeyPress(object sender, KeyPressEventArgs e)
         {
            
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Nothing to Erase!");
+            }
         }
     }
 }

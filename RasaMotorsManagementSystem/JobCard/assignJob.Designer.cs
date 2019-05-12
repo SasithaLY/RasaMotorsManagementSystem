@@ -50,6 +50,9 @@
             this.txtJOnePrc = new System.Windows.Forms.TextBox();
             this.comboJone = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtTest = new System.Windows.Forms.TextBox();
+            this.txtVtyp = new System.Windows.Forms.TextBox();
+            this.btnClear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -297,12 +300,53 @@
             this.pictureBox1.TabIndex = 146;
             this.pictureBox1.TabStop = false;
             // 
+            // txtTest
+            // 
+            this.txtTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTest.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtTest.Location = new System.Drawing.Point(589, 359);
+            this.txtTest.Multiline = true;
+            this.txtTest.Name = "txtTest";
+            this.txtTest.Size = new System.Drawing.Size(14, 26);
+            this.txtTest.TabIndex = 150;
+            this.txtTest.Visible = false;
+            // 
+            // txtVtyp
+            // 
+            this.txtVtyp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVtyp.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtVtyp.Location = new System.Drawing.Point(609, 359);
+            this.txtVtyp.Multiline = true;
+            this.txtVtyp.Name = "txtVtyp";
+            this.txtVtyp.Size = new System.Drawing.Size(14, 26);
+            this.txtVtyp.TabIndex = 151;
+            this.txtVtyp.Visible = false;
+            // 
+            // btnClear
+            // 
+            this.btnClear.BackColor = System.Drawing.Color.Maroon;
+            this.btnClear.FlatAppearance.BorderSize = 0;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.ForeColor = System.Drawing.Color.White;
+            this.btnClear.Location = new System.Drawing.Point(931, 618);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(112, 34);
+            this.btnClear.TabIndex = 152;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Visible = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // assignJob
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(66)))));
             this.ClientSize = new System.Drawing.Size(1334, 688);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.txtVtyp);
+            this.Controls.Add(this.txtTest);
             this.Controls.Add(this.txtCusName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
@@ -325,7 +369,6 @@
             this.Controls.Add(this.txtJOnePrc);
             this.Controls.Add(this.comboJone);
             this.Name = "assignJob";
-            this.Text = "assignJob";
             this.Load += new System.EventHandler(this.assignJob_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -356,5 +399,8 @@
         private System.Windows.Forms.TextBox txtJTwoPrc;
         private System.Windows.Forms.TextBox txtJOnePrc;
         private System.Windows.Forms.ComboBox comboJone;
+        private System.Windows.Forms.TextBox txtTest;
+        private System.Windows.Forms.TextBox txtVtyp;
+        private System.Windows.Forms.Button btnClear;
     }
 }

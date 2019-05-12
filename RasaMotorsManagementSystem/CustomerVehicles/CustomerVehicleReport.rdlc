@@ -72,31 +72,31 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>1.29586in</Width>
+                  <Width>1.06554in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.29586in</Width>
+                  <Width>1.06554in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.29586in</Width>
+                  <Width>1.06554in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.25766in</Width>
+                  <Width>1.02734in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.25766in</Width>
+                  <Width>1.02734in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.25766in</Width>
+                  <Width>1.02734in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.25766in</Width>
+                  <Width>1.02734in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.25766in</Width>
+                  <Width>1.02734in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.25766in</Width>
+                  <Width>1.02734in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -677,9 +677,8 @@
             </TablixRowHierarchy>
             <DataSetName>CustomerVehicleData</DataSetName>
             <Top>0.28979in</Top>
-            <Left>0.2748in</Left>
-            <Height>0.53125in</Height>
-            <Width>11.43354in</Width>
+            <Height>0.53124in</Height>
+            <Width>9.36062in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -687,10 +686,10 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>4.80208in</Height>
+        <Height>4.45833in</Height>
         <Style />
       </Body>
-      <Width>11.9375in</Width>
+      <Width>10in</Width>
       <Page>
         <PageHeader>
           <Height>2.17771in</Height>
@@ -707,7 +706,7 @@
                       <Value>Customers &amp; Vehicles Report</Value>
                       <Style>
                         <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>48pt</FontSize>
+                        <FontSize>36pt</FontSize>
                         <FontWeight>Bold</FontWeight>
                         <TextDecoration>None</TextDecoration>
                       </Style>
@@ -718,9 +717,9 @@
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
               <Top>0.27084in</Top>
-              <Left>3.06646in</Left>
-              <Height>0.9375in</Height>
-              <Width>8.64187in</Width>
+              <Left>3.05653in</Left>
+              <Height>1.14583in</Height>
+              <Width>6.4265in</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -735,8 +734,8 @@
               <Source>Embedded</Source>
               <Value>RasaMotorsLogoblack</Value>
               <Sizing>FitProportional</Sizing>
-              <Top>0.13542in</Top>
-              <Left>0.2748in</Left>
+              <Top>0.27084in</Top>
+              <Left>0.13987in</Left>
               <Height>1.07292in</Height>
               <Width>2.53125in</Width>
               <ZIndex>1</ZIndex>
@@ -765,7 +764,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox22</rd:DefaultName>
               <Top>1.65688in</Top>
-              <Left>0.98562in</Left>
+              <Left>1.10069in</Left>
               <Height>0.25in</Height>
               <Width>5.24752in</Width>
               <ZIndex>2</ZIndex>
@@ -809,7 +808,7 @@
               </Paragraphs>
               <rd:DefaultName>ExecutionTime</rd:DefaultName>
               <Top>0.46323in</Top>
-              <Left>0.375in</Left>
+              <Left>0.49007in</Left>
               <Height>0.25in</Height>
               <Width>3.9066in</Width>
               <Style>
@@ -840,7 +839,7 @@
               </Paragraphs>
               <rd:DefaultName>PageNumber</rd:DefaultName>
               <Top>0.46323in</Top>
-              <Left>10.06081in</Left>
+              <Left>8.20178in</Left>
               <Height>0.25in</Height>
               <Width>1.40625in</Width>
               <ZIndex>1</ZIndex>
@@ -861,10 +860,12 @@
             </Border>
           </Style>
         </PageFooter>
-        <LeftMargin>1in</LeftMargin>
-        <RightMargin>1in</RightMargin>
-        <TopMargin>1in</TopMargin>
-        <BottomMargin>1in</BottomMargin>
+        <PageHeight>8.27in</PageHeight>
+        <PageWidth>11.69in</PageWidth>
+        <LeftMargin>0.25in</LeftMargin>
+        <RightMargin>0.25in</RightMargin>
+        <TopMargin>0.5in</TopMargin>
+        <BottomMargin>0.5in</BottomMargin>
         <Style />
       </Page>
     </ReportSection>

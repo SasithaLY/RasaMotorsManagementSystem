@@ -247,5 +247,16 @@ namespace RasaMotorsManagementSystem.Inventory
             cmbBoxSupplier.Items.Clear();
             fillCombo();
         }
+
+        private void btnDemo_Click(object sender, EventArgs e)
+        {
+            txtBoxItemName.Text = "Oil Filter";
+            txtBoxItemType.Text = "Filters";
+            txtBoxBuyPrice.Text = "200";
+            txtBoxSellPrice.Text = "300";
+            txtBoxQnt.Text = "50";
+            txtboxMinQty.Text = "5";
+            cmbBoxSupplier.Text = "Hasala Supply";
+        }
     }
 }

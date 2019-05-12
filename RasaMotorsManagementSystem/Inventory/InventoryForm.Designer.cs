@@ -379,6 +379,7 @@
             this.btnDemo.TabIndex = 140;
             this.btnDemo.Text = "DEMO";
             this.btnDemo.UseVisualStyleBackColor = false;
+            this.btnDemo.Click += new System.EventHandler(this.btnDemo_Click);
             // 
             // InventoryForm
             // 
