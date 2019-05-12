@@ -292,5 +292,26 @@ namespace RasaMotorsManagementSystem.Employees
                 lblSalaryError.Visible = false;
             }
         }
+
+        private void btnDemo_Click(object sender, EventArgs e)
+        {
+            firstname.Text = "Keerthana";
+            lastname.Text = "Albert";
+            contactno.Text = "0771776858";
+            homeContact.Text = "0652226678";
+            email.Text = "akeethu@gmail.com";
+            address.Text = "No 10,Rossairo Lane, Batticaloa";
+            nicnumber.Text = "966312094V";
+            gender.Text = "Female";
+            occupation.Text = "Manager";
+            combostatus.Text = "Active";
+            empSalary.Text = "75000";
+            workphone.Text = "0112222404";
+            emeName.Text = "Y Albert";
+            emeRelationship.Text = "Parent";
+            emeContactNo.Text = "0718292272";
+            emeAddress.Text = "Rossairo Lane,Batticaloa";
+            
+        }
     }
 }

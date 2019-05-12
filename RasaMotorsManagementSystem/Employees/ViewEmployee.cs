@@ -35,14 +35,23 @@ namespace RasaMotorsManagementSystem.Employees
         {
             string keyword = txt_Search.Text;
 
-            SqlConnection conn = new SqlConnection(conString);
 
-            SqlDataAdapter adapter = new SqlDataAdapter(" SELECT * FROM emp WHERE FirstName LIKE '%" + keyword + "%'  or LastName  LIKE '%" + keyword + "%' or ContactNo  LIKE '%" + keyword + "%'or HomeContactNo  LIKE '%" + keyword + "%' or Address  LIKE '%" + keyword + "%' or EmailID  LIKE '%" + keyword + "%' or NICNo  LIKE '%" + keyword + "%' or Gender  LIKE '%" + keyword + "%' or DateOfFirstAppointment  LIKE '%" + keyword + "%' or Occupation  LIKE '%" + keyword + "%' or Salary  LIKE '%" + keyword + "%' or Status  LIKE '%" + keyword + "%' or WorkPhone  LIKE '%" + keyword + "%' or Name  LIKE '%" + keyword + "%'  or Relationship  LIKE '%" + keyword + "%' or EmeContactNo  LIKE '%" + keyword + "%'   or EmeAddress  LIKE '%" + keyword + "%'", conn);
+            if (keyword == "Search by FirstName ,LastName, ContactNo")
+            {
+                DataTable dataTable = emp.Select();
+                datagridViewEmployee.DataSource = dataTable;
+            }
+            else
+            {
+                SqlConnection conn = new SqlConnection(conString);
 
-            DataTable dt = new DataTable();
-            adapter.Fill(dt);
+                SqlDataAdapter adapter = new SqlDataAdapter(" SELECT * FROM emp WHERE FirstName LIKE '%" + keyword + "%'  or LastName  LIKE '%" + keyword + "%' or ContactNo  LIKE '%" + keyword + "%'or HomeContactNo  LIKE '%" + keyword + "%' or Address  LIKE '%" + keyword + "%' or EmailID  LIKE '%" + keyword + "%' or NICNo  LIKE '%" + keyword + "%' or Gender  LIKE '%" + keyword + "%' or DateOfFirstAppointment  LIKE '%" + keyword + "%' or Occupation  LIKE '%" + keyword + "%' or Salary  LIKE '%" + keyword + "%' or Status  LIKE '%" + keyword + "%' or WorkPhone  LIKE '%" + keyword + "%' or Name  LIKE '%" + keyword + "%'  or Relationship  LIKE '%" + keyword + "%' or EmeContactNo  LIKE '%" + keyword + "%'   or EmeAddress  LIKE '%" + keyword + "%'", conn);
 
-            datagridViewEmployee.DataSource = dt;
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+
+                datagridViewEmployee.DataSource = dt;
+            }
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
@@ -92,6 +101,31 @@ namespace RasaMotorsManagementSystem.Employees
             emp1.emeAddress.Text = this.datagridViewEmployee.Rows[rowIndex].Cells[17].Value.ToString();
 
             emp1.ShowDialog();
+        }
+
+        private void buttonReport_Click(object sender, EventArgs e)
+        {
+            EmployeeReport employeeReport = new EmployeeReport();
+            employeeReport.Show();
+        }
+
+        private void txt_Search_Enter(object sender, EventArgs e)
+        {
+            if (txt_Search.Text == "Search by FirstName ,LastName, ContactNo")
+            {
+                txt_Search.Text = "";
+                txt_Search.ForeColor = Color.Black;
+            }
+        }
+
+        private void txt_Search_Leave(object sender, EventArgs e)
+        {
+            if (txt_Search.Text == "")
+            {
+                txt_Search.Text = "Search by FirstName ,LastName, ContactNo";
+                txt_Search.ForeColor = Color.Silver;
+            }
+
         }
     }
 }

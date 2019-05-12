@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,8 +48,40 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DropDownButtonLib, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dirkster.DropDownButtonLib.1.0.4.1\lib\net4\DropDownButtonLib.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,6 +94,55 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\Utils.cs" />
+    <Compile Include="CustomerVehicles\Classes\CustomerClass.cs" />
+    <Compile Include="CustomerVehicles\Classes\VehicleClass.cs" />
+    <Compile Include="CustomerVehicles\CustomerVehicleDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerVehicleDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerVehicles\CusVehReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerVehicles\CusVehReportViewer.Designer.cs">
+      <DependentUpon>CusVehReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerVehicles\frmAddNewCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerVehicles\frmAddNewCustomer.Designer.cs">
+      <DependentUpon>frmAddNewCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerVehicles\frmAddNewVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerVehicles\frmAddNewVehicle.Designer.cs">
+      <DependentUpon>frmAddNewVehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerVehicles\frmCustomerList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerVehicles\frmCustomerList.Designer.cs">
+      <DependentUpon>frmCustomerList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerVehicles\frmCusUpdateDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerVehicles\frmCusUpdateDelete.Designer.cs">
+      <DependentUpon>frmCusUpdateDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerVehicles\frmVehicleList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerVehicles\frmVehicleList.Designer.cs">
+      <DependentUpon>frmVehicleList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerVehicles\frmVehUpdateDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerVehicles\frmVehUpdateDelete.Designer.cs">
+      <DependentUpon>frmVehUpdateDelete.cs</DependentUpon>
+    </Compile>
     <Compile Include="Employees\employee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +150,17 @@
       <DependentUpon>employee.cs</DependentUpon>
     </Compile>
     <Compile Include="Employees\EmployeeClasses\EmployeeClass.cs" />
+    <Compile Include="Employees\EmployeeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmployeeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Employees\EmployeeReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees\EmployeeReport.Designer.cs">
+      <DependentUpon>EmployeeReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Employees\employeeUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,11 +173,75 @@
     <Compile Include="Employees\ViewEmployee.Designer.cs">
       <DependentUpon>ViewEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Finance\calculation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\calculation.Designer.cs">
+      <DependentUpon>calculation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\financeUpDel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\financeUpDel.Designer.cs">
+      <DependentUpon>financeUpDel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\financialView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\financialView.Designer.cs">
+      <DependentUpon>financialView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\profitData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>profitData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\reportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\reportViewer.Designer.cs">
+      <DependentUpon>reportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\serviceCenterClasses\netProfit.cs" />
+    <Compile Include="frmReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReports.Designer.cs">
+      <DependentUpon>frmReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\AllHistoryData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AllHistoryData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\DeleteHistoryData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DeleteHistoryData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\DeleteHistoryReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\DeleteHistoryReport.Designer.cs">
+      <DependentUpon>DeleteHistoryReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\HistoryReportAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\HistoryReportAll.Designer.cs">
+      <DependentUpon>HistoryReportAll.cs</DependentUpon>
     </Compile>
     <Compile Include="Inventory\inventoryClasses\Item.cs" />
     <Compile Include="Inventory\InventoryForm.cs">
@@ -79,11 +250,28 @@
     <Compile Include="Inventory\InventoryForm.Designer.cs">
       <DependentUpon>InventoryForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inventory\InventoryReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\InventoryReport.Designer.cs">
+      <DependentUpon>InventoryReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inventory\InventoryView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Inventory\InventoryView.Designer.cs">
       <DependentUpon>InventoryView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\Items.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Items.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\ItemsReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\ItemsReport.Designer.cs">
+      <DependentUpon>ItemsReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Inventory\ItemUpdateForm.cs">
       <SubType>Form</SubType>
@@ -120,26 +308,282 @@
     </Compile>
     <Compile Include="Payments\Report.Designer.cs">
       <DependentUpon>Report.cs</DependentUpon>
+    <Compile Include="Inventory\Restock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\Restock.Designer.cs">
+      <DependentUpon>Restock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\Returns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\Returns.Designer.cs">
+      <DependentUpon>Returns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\ReturnsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReturnsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\ReturnsReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\ReturnsReport.Designer.cs">
+      <DependentUpon>ReturnsReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\StockInDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockInDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\StockInReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\StockInReport.Designer.cs">
+      <DependentUpon>StockInReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\UpdatedHistoryReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\UpdatedHistoryReport.Designer.cs">
+      <DependentUpon>UpdatedHistoryReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\UpdateHistoryData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateHistoryData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="JobCard\assignJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobCard\assignJob.Designer.cs">
+      <DependentUpon>assignJob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobCard\createJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobCard\createJob.Designer.cs">
+      <DependentUpon>createJob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobCard\jobCardClasses\assignJobclass.cs" />
+    <Compile Include="JobCard\jobCardClasses\jobCard.cs" />
+    <Compile Include="JobCard\jobData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>jobData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="JobCard\JobReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobCard\JobReport.Designer.cs">
+      <DependentUpon>JobReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobCard\ReceiptPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobCard\ReceiptPrint.Designer.cs">
+      <DependentUpon>ReceiptPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobCard\searchJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobCard\searchJob.Designer.cs">
+      <DependentUpon>searchJob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobCard\updateStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobCard\updateStatus.Designer.cs">
+      <DependentUpon>updateStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\LoginClass.cs" />
+    <Compile Include="Login\userManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\userManagement.Designer.cs">
+      <DependentUpon>userManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Salary\EditDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Salary\EditDetails.Designer.cs">
+      <DependentUpon>EditDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Salary\EmpData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmpData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Salary\SalaryClasses\EditDe.cs" />
+    <Compile Include="Salary\SalaryClasses\ssalaryclass.cs" />
+    <Compile Include="Salary\Salaryform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Salary\Salaryform.Designer.cs">
+      <DependentUpon>Salaryform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Salary\salaryreport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Salary\salaryreport.Designer.cs">
+      <DependentUpon>salaryreport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Salary\SalaryView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Salary\SalaryView.Designer.cs">
+      <DependentUpon>SalaryView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Salary\update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Salary\update.Designer.cs">
+      <DependentUpon>update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceCenterManagementDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ServiceCenterManagementDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceCenterManagementDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ServiceCenterManagementDBDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceCenterManagementDBDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ServiceCenterManagementDBDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Supplier\orderAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplier\orderAdd.Designer.cs">
+      <DependentUpon>orderAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier\orderInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplier\orderInsert.Designer.cs">
+      <DependentUpon>orderInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier\ordersClass\orderClass.cs" />
+    <Compile Include="Supplier\reportViewSup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplier\reportViewSup.Designer.cs">
+      <DependentUpon>reportViewSup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier\supDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplier\supDetails.Designer.cs">
+      <DependentUpon>supDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier\supplieInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplier\supplieInsert.Designer.cs">
+      <DependentUpon>supplieInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier\supplierDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>supplierDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier\suppliersClass\supplierClass.cs" />
+    <Compile Include="Supplier\updateDeleteOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplier\updateDeleteOrder.Designer.cs">
+      <DependentUpon>updateDeleteOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier\updateDeleteSup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplier\updateDeleteSup.Designer.cs">
+      <DependentUpon>updateDeleteSup.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CustomerVehicles\CustomerVehicleReport.rdlc" />
+    <EmbeddedResource Include="CustomerVehicles\CusVehReportViewer.resx">
+      <DependentUpon>CusVehReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerVehicles\frmAddNewCustomer.resx">
+      <DependentUpon>frmAddNewCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerVehicles\frmAddNewVehicle.resx">
+      <DependentUpon>frmAddNewVehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerVehicles\frmCustomerList.resx">
+      <DependentUpon>frmCustomerList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerVehicles\frmCusUpdateDelete.resx">
+      <DependentUpon>frmCusUpdateDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerVehicles\frmVehicleList.resx">
+      <DependentUpon>frmVehicleList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerVehicles\frmVehUpdateDelete.resx">
+      <DependentUpon>frmVehUpdateDelete.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Employees\employee.resx">
       <DependentUpon>employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees\EmployeeReport.resx">
+      <DependentUpon>EmployeeReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employees\employeeUpdate.resx">
       <DependentUpon>employeeUpdate.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Employees\EmpReport.rdlc" />
     <EmbeddedResource Include="Employees\ViewEmployee.resx">
       <DependentUpon>ViewEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\calculation.resx">
+      <DependentUpon>calculation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\financeReport.rdlc" />
+    <EmbeddedResource Include="Finance\financeUpDel.resx">
+      <DependentUpon>financeUpDel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\financialView.resx">
+      <DependentUpon>financialView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\reportViewer.resx">
+      <DependentUpon>reportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReports.resx">
+      <DependentUpon>frmReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\AllHistoryReport.rdlc" />
+    <EmbeddedResource Include="Inventory\DeletedHistoryReport.rdlc" />
+    <EmbeddedResource Include="Inventory\DeleteHistoryReport.resx">
+      <DependentUpon>DeleteHistoryReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\HistoryReportAll.resx">
+      <DependentUpon>HistoryReportAll.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inventory\InventoryForm.resx">
       <DependentUpon>InventoryForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryReport.resx">
+      <DependentUpon>InventoryReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inventory\InventoryView.resx">
       <DependentUpon>InventoryView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\Items.rdlc" />
+    <EmbeddedResource Include="Inventory\ItemsReport.resx">
+      <DependentUpon>ItemsReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory\ItemUpdateForm.resx">
       <DependentUpon>ItemUpdateForm.cs</DependentUpon>
@@ -158,6 +602,46 @@
       <DependentUpon>Report.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Payments\Report1.rdlc" />
+    <EmbeddedResource Include="Inventory\Restock.resx">
+      <DependentUpon>Restock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\Returns.resx">
+      <DependentUpon>Returns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\ReturnsReport.rdlc" />
+    <EmbeddedResource Include="Inventory\ReturnsReport.resx">
+      <DependentUpon>ReturnsReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\StockIn.rdlc" />
+    <EmbeddedResource Include="Inventory\StockInReport.resx">
+      <DependentUpon>StockInReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\UpdatedHistoryReport.rdlc" />
+    <EmbeddedResource Include="Inventory\UpdatedHistoryReport.resx">
+      <DependentUpon>UpdatedHistoryReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobCard\assignJob.resx">
+      <DependentUpon>assignJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobCard\createJob.resx">
+      <DependentUpon>createJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobCard\JobReport.resx">
+      <DependentUpon>JobReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobCard\PredictJobReport.rdlc" />
+    <EmbeddedResource Include="JobCard\ReceiptPrint.resx">
+      <DependentUpon>ReceiptPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobCard\searchJob.resx">
+      <DependentUpon>searchJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobCard\updateStatus.resx">
+      <DependentUpon>updateStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\userManagement.resx">
+      <DependentUpon>userManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -179,6 +663,156 @@
     <None Include="Payments\PayDetails.xss">
       <DependentUpon>PayDetails.xsd</DependentUpon>
     </None>
+    <EmbeddedResource Include="Salary\EditDetails.resx">
+      <DependentUpon>EditDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Salary\Salaryform.resx">
+      <DependentUpon>Salaryform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Salary\salaryreport.rdlc" />
+    <EmbeddedResource Include="Salary\salaryreport.resx">
+      <DependentUpon>salaryreport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Salary\SalaryView.resx">
+      <DependentUpon>SalaryView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Salary\update.resx">
+      <DependentUpon>update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier\orderAdd.resx">
+      <DependentUpon>orderAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier\orderInsert.resx">
+      <DependentUpon>orderInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier\reportViewSup.resx">
+      <DependentUpon>reportViewSup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier\supDetails.resx">
+      <DependentUpon>supDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier\supplieInsert.resx">
+      <DependentUpon>supplieInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier\supplierReport.rdlc" />
+    <EmbeddedResource Include="Supplier\updateDeleteOrder.resx">
+      <DependentUpon>updateDeleteOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier\updateDeleteSup.resx">
+      <DependentUpon>updateDeleteSup.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="CustomerVehicles\CustomerVehicleDataSet.xsc">
+      <DependentUpon>CustomerVehicleDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CustomerVehicles\CustomerVehicleDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CustomerVehicleDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="CustomerVehicles\CustomerVehicleDataSet.xss">
+      <DependentUpon>CustomerVehicleDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Employees\EmployeeDataSet.xsc">
+      <DependentUpon>EmployeeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Employees\EmployeeDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EmployeeDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Employees\EmployeeDataSet.xss">
+      <DependentUpon>EmployeeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Finance\profitData.xsc">
+      <DependentUpon>profitData.xsd</DependentUpon>
+    </None>
+    <None Include="Finance\profitData.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>profitData.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Finance\profitData.xss">
+      <DependentUpon>profitData.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory\AllHistoryData.xsc">
+      <DependentUpon>AllHistoryData.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory\AllHistoryData.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AllHistoryData.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Inventory\AllHistoryData.xss">
+      <DependentUpon>AllHistoryData.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory\DeleteHistoryData.xsc">
+      <DependentUpon>DeleteHistoryData.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory\DeleteHistoryData.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DeleteHistoryData.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Inventory\DeleteHistoryData.xss">
+      <DependentUpon>DeleteHistoryData.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory\Items.xsc">
+      <DependentUpon>Items.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory\Items.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Items.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Inventory\Items.xss">
+      <DependentUpon>Items.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory\ReturnsDataSet.xsc">
+      <DependentUpon>ReturnsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory\ReturnsDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReturnsDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Inventory\ReturnsDataSet.xss">
+      <DependentUpon>ReturnsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory\StockInDataSet.xsc">
+      <DependentUpon>StockInDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory\StockInDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StockInDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Inventory\StockInDataSet.xss">
+      <DependentUpon>StockInDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory\UpdateHistoryData.xsc">
+      <DependentUpon>UpdateHistoryData.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory\UpdateHistoryData.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateHistoryData.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Inventory\UpdateHistoryData.xss">
+      <DependentUpon>UpdateHistoryData.xsd</DependentUpon>
+    </None>
+    <None Include="JobCard\jobData.xsc">
+      <DependentUpon>jobData.xsd</DependentUpon>
+    </None>
+    <None Include="JobCard\jobData.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>jobData.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="JobCard\jobData.xss">
+      <DependentUpon>jobData.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\ServiceCenterManagementDBDataSet2.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -188,11 +822,77 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Salary\EmpData.xsc">
+      <DependentUpon>EmpData.xsd</DependentUpon>
+    </None>
+    <None Include="Salary\EmpData.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EmpData.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Salary\EmpData.xss">
+      <DependentUpon>EmpData.xsd</DependentUpon>
+    </None>
+    <None Include="ServiceCenterManagementDBDataSet.xsc">
+      <DependentUpon>ServiceCenterManagementDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ServiceCenterManagementDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ServiceCenterManagementDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ServiceCenterManagementDBDataSet.xss">
+      <DependentUpon>ServiceCenterManagementDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ServiceCenterManagementDBDataSet1.xsc">
+      <DependentUpon>ServiceCenterManagementDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ServiceCenterManagementDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ServiceCenterManagementDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ServiceCenterManagementDBDataSet1.xss">
+      <DependentUpon>ServiceCenterManagementDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ServiceCenterManagementDBDataSet2.xsc">
+      <DependentUpon>ServiceCenterManagementDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ServiceCenterManagementDBDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ServiceCenterManagementDBDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ServiceCenterManagementDBDataSet2.xss">
+      <DependentUpon>ServiceCenterManagementDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Supplier\supplierDataSet.xsc">
+      <DependentUpon>supplierDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Supplier\supplierDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>supplierDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Supplier\supplierDataSet.xss">
+      <DependentUpon>supplierDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="CustomerVehicles\cutomerReadme.txt" />
     <Content Include="Employees\EmployeeReadme.txt" />
@@ -214,15 +914,34 @@
     <Content Include="Resources\job.png" />
     <Content Include="Resources\mercedes_amg_gts_cgi_4k-HD.jpg" />
     <Content Include="Resources\MINI.jpg" />
+    <None Include="Resources\notificationsIcon.png" />
     <Content Include="Resources\Payment.png" />
     <Content Include="Resources\Rasa Motors Logo black.png" />
     <Content Include="Resources\Rasa Motors Logo.png" />
+    <None Include="Resources\report.png" />
     <Content Include="Resources\sal 2.png" />
     <Content Include="Resources\salary.png" />
     <Content Include="Resources\Suppliers.png" />
     <Content Include="Resources\suv.jpeg" />
+    <None Include="Resources\userManagement.png" />
     <Content Include="Salary\SalaryReadme.txt" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Supplier\SupplierReadme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

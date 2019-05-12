@@ -86,6 +86,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnInsert = new System.Windows.Forms.Button();
             this.lblSalaryError = new System.Windows.Forms.Label();
+            this.btnDemo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -213,7 +214,7 @@
             this.personaldetails.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.personaldetails.Name = "personaldetails";
             this.personaldetails.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.personaldetails.Size = new System.Drawing.Size(1925, 39);
+            this.personaldetails.Size = new System.Drawing.Size(1840, 39);
             this.personaldetails.TabIndex = 26;
             this.personaldetails.Text = "Personal Details";
             this.personaldetails.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -422,7 +423,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 947);
             this.panel2.Margin = new System.Windows.Forms.Padding(5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1921, 38);
+            this.panel2.Size = new System.Drawing.Size(1836, 38);
             this.panel2.TabIndex = 168;
             // 
             // empSalary
@@ -458,7 +459,7 @@
             this.jobinformation.Location = new System.Drawing.Point(0, 615);
             this.jobinformation.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.jobinformation.Name = "jobinformation";
-            this.jobinformation.Size = new System.Drawing.Size(1925, 42);
+            this.jobinformation.Size = new System.Drawing.Size(1840, 42);
             this.jobinformation.TabIndex = 165;
             // 
             // jobinfo
@@ -470,7 +471,7 @@
             this.jobinfo.Location = new System.Drawing.Point(0, 0);
             this.jobinfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.jobinfo.Name = "jobinfo";
-            this.jobinfo.Size = new System.Drawing.Size(1925, 41);
+            this.jobinfo.Size = new System.Drawing.Size(1840, 41);
             this.jobinfo.TabIndex = 33;
             this.jobinfo.Text = "Job Information";
             this.jobinfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -539,7 +540,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 195);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1925, 40);
+            this.panel1.Size = new System.Drawing.Size(1840, 40);
             this.panel1.TabIndex = 160;
             // 
             // label10
@@ -761,6 +762,22 @@
             this.lblSalaryError.Text = "Invalid Input!";
             this.lblSalaryError.Visible = false;
             // 
+            // btnDemo
+            // 
+            this.btnDemo.BackColor = System.Drawing.Color.Maroon;
+            this.btnDemo.FlatAppearance.BorderSize = 0;
+            this.btnDemo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDemo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDemo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnDemo.Location = new System.Drawing.Point(1086, 1242);
+            this.btnDemo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDemo.Name = "btnDemo";
+            this.btnDemo.Size = new System.Drawing.Size(100, 48);
+            this.btnDemo.TabIndex = 211;
+            this.btnDemo.Text = "Demo";
+            this.btnDemo.UseVisualStyleBackColor = false;
+            this.btnDemo.Click += new System.EventHandler(this.btnDemo_Click);
+            // 
             // employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -769,6 +786,7 @@
             this.AutoScrollMargin = new System.Drawing.Size(0, 25);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(66)))));
             this.ClientSize = new System.Drawing.Size(1924, 1000);
+            this.Controls.Add(this.btnDemo);
             this.Controls.Add(this.lblSalaryError);
             this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.lblErrorEmeName);
@@ -899,5 +917,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnInsert;
         private System.Windows.Forms.Label lblSalaryError;
+        private System.Windows.Forms.Button btnDemo;
     }
 }

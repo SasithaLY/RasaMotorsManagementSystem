@@ -113,6 +113,16 @@ namespace RasaMotorsManagementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap notificationsIcon {
+            get {
+                object obj = ResourceManager.GetObject("notificationsIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Payment {
             get {
                 object obj = ResourceManager.GetObject("Payment", resourceCulture);
@@ -133,6 +143,16 @@ namespace RasaMotorsManagementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap report {
+            get {
+                object obj = ResourceManager.GetObject("report", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sal_2 {
             get {
                 object obj = ResourceManager.GetObject("sal 2", resourceCulture);
@@ -146,6 +166,16 @@ namespace RasaMotorsManagementSystem.Properties {
         internal static System.Drawing.Bitmap Suppliers {
             get {
                 object obj = ResourceManager.GetObject("Suppliers", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap userManagement {
+            get {
+                object obj = ResourceManager.GetObject("userManagement", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

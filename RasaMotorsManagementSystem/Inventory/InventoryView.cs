@@ -73,6 +73,7 @@ namespace RasaMotorsManagementSystem.Inventory
                 itemUpdate.checkInstance.txtBoxSellPrice.Text = this.dataGridItems.Rows[rowIndex].Cells[4].Value.ToString();
                 itemUpdate.checkInstance.txtBoxQnt.Text = this.dataGridItems.Rows[rowIndex].Cells[5].Value.ToString();
                 itemUpdate.checkInstance.cmbBoxSupplier.Text = this.dataGridItems.Rows[rowIndex].Cells[8].Value.ToString();
+                itemUpdate.checkInstance.txtboxMinQty.Text = this.dataGridItems.Rows[rowIndex].Cells[9].Value.ToString();
 
                 itemUpdate.checkInstance.Show();
             }
@@ -123,7 +124,7 @@ namespace RasaMotorsManagementSystem.Inventory
                 SqlConnection conn = new SqlConnection(connString);
 
                 SqlDataAdapter sda = new SqlDataAdapter("SELECT itemID as 'Item ID', itemName as 'Item Name', itemType as 'Item Type', buyingPrice as 'Buying Price', sellingPrice as 'Selling Price'," +
-                    " availableQty as 'Available Qty', soldQty as 'Sold Qty', addedDate as 'Added Date & Time', supplier as 'Supplier' FROM inventory " +
+                    " availableQty as 'Available Qty', soldQty as 'Sold Qty', addedDate as 'Added Date & Time', supplier as 'Supplier', minQty as 'Min Qty' FROM inventory " +
                     "WHERE itemName LIKE '%" + keyword + "%' or itemType LIKE '%" + keyword + "%' or supplier LIKE '%" + keyword + "%'", conn);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
@@ -145,6 +146,7 @@ namespace RasaMotorsManagementSystem.Inventory
             itemUpdate.checkInstance.txtBoxSellPrice.Text = this.dataGridItems.Rows[rowIndex].Cells[4].Value.ToString();
             itemUpdate.checkInstance.txtBoxQnt.Text = this.dataGridItems.Rows[rowIndex].Cells[5].Value.ToString();
             itemUpdate.checkInstance.cmbBoxSupplier.Text = this.dataGridItems.Rows[rowIndex].Cells[8].Value.ToString();
+            itemUpdate.checkInstance.txtboxMinQty.Text = this.dataGridItems.Rows[rowIndex].Cells[9].Value.ToString();
 
             itemUpdate.checkInstance.Show();
         }
@@ -183,5 +185,40 @@ namespace RasaMotorsManagementSystem.Inventory
             instance = null;
         }
 
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            InventoryReport inventoryReport = new InventoryReport();
+            inventoryReport.Show();
+        }
+
+        private void btnRestock_Click(object sender, EventArgs e)
+        {
+            
+            
+            if (rowIndex.Equals(null))
+            {
+                MessageBox.Show("Item Not Selected!");
+            }
+            else
+            {
+                Restock restock = new Restock();
+
+                restock.checkInstance.labelID.Text = this.dataGridItems.Rows[rowIndex].Cells[0].Value.ToString();
+                restock.checkInstance.labelItem.Text = this.dataGridItems.Rows[rowIndex].Cells[1].Value.ToString();
+           
+                restock.checkInstance.Show();
+            }
+        }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            Returns returns = new Returns();
+
+            returns.checkInstance.labelID.Text = this.dataGridItems.Rows[rowIndex].Cells[0].Value.ToString();
+            returns.checkInstance.labelItem.Text = this.dataGridItems.Rows[rowIndex].Cells[1].Value.ToString();
+
+            returns.checkInstance.Show();
+        }
     }
+    
 }
