@@ -35,7 +35,7 @@ namespace RasaMotorsManagementSystem.Salary
                 con.Open();
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "select * from emp";
+                cmd.CommandText = "select * from JobStatus";
                 cmd.ExecuteNonQuery();
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -57,7 +57,7 @@ namespace RasaMotorsManagementSystem.Salary
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT * FROM emp WHERE Occupation='" + comboStates.SelectedItem.ToString() + "'";
+            cmd.CommandText = "SELECT * FROM JobStatus WHERE Occupation='" + comboStates.SelectedItem.ToString() + "'";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -117,9 +117,8 @@ namespace RasaMotorsManagementSystem.Salary
         {
 
             //view button
-            this.Hide();
-            Salaryform f4 = new Salaryform();
-            f4.Show();
+            this.Close();
+           
         }
 
         private void txtBasic_TextChanged(object sender, EventArgs e)

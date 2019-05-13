@@ -72,7 +72,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportAllHistory);
             this.Name = "HistoryReportAll";
-            this.Text = "HistoryReportAll";
+            this.Text = "History Report All";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.HistoryReportAll_Load);
             ((System.ComponentModel.ISupportInitialize)(this.inventoryHistoryBindingSource)).EndInit();

@@ -436,7 +436,7 @@
             this.Controls.Add(this.lblItemId);
             this.Name = "ItemUpdateForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ItemUpdateForm";
+            this.Text = "Item Update Form";
             this.Activated += new System.EventHandler(this.ItemUpdateForm_Activated);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ItemUpdateForm_FormClosed);
             this.Load += new System.EventHandler(this.ItemUpdateForm_Load);

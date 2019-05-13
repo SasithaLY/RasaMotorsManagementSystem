@@ -245,7 +245,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "InventoryView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "InventoryView";
+            this.Text = "Inventory View";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Activated += new System.EventHandler(this.InventoryView_Activated);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.InventoryView_FormClosed);

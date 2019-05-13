@@ -26,7 +26,7 @@ namespace RasaMotorsManagementSystem.Salary.SalaryClasses
             try
             {
                 //sql query
-                string sql = "select * from edit";
+                string sql = "select * from EditDet";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 conn.Open();
@@ -55,7 +55,7 @@ namespace RasaMotorsManagementSystem.Salary.SalaryClasses
                 //if (c.OTHours >= 0 && c.Bonus >= 0)
                 {
                     //step 2.create sql query to insert data
-                    string sql = "INSERT INTO edit(JobState,BasicSalary,OTPayment,EtfEpf)VALUES(@JobState,@BasicSalary,@OTPayment,@EtfEpf)";
+                    string sql = "INSERT INTO EditDet(JobState,BasicSalary,OTPayment,EtfEpf)VALUES(@JobState,@BasicSalary,@OTPayment,@EtfEpf)";
                     //create sql command usinf sql,conn
                     SqlCommand cmd = new SqlCommand(sql, conn);
                     //create parameters to add data
@@ -105,7 +105,7 @@ namespace RasaMotorsManagementSystem.Salary.SalaryClasses
             try
             {
                 //sql to update data in our database
-                string sql = "UPDATE edit SET BasicSalary=@BasicSalary,OTPayment=@OTPayment,EtfEpf=@EtfEpf WHERE JobState=@JobState";
+                string sql = "UPDATE EditDet SET BasicSalary=@BasicSalary,OTPayment=@OTPayment,EtfEpf=@EtfEpf WHERE JobState=@JobState";
 
                 SqlCommand cmd = new SqlCommand(sql, conn);
 

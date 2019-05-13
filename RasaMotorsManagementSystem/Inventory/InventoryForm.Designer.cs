@@ -416,7 +416,7 @@
             this.Controls.Add(this.lblInventory);
             this.Name = "InventoryForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "InventoryForm";
+            this.Text = "Add Item";
             this.Activated += new System.EventHandler(this.InventoryForm_Activated);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.InventoryForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

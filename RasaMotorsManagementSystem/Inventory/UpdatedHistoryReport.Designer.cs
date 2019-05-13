@@ -30,13 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportUpdated = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.UpdateHistoryData = new RasaMotorsManagementSystem.Inventory.UpdateHistoryData();
             this.inventoryHistoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.UpdateHistoryData = new RasaMotorsManagementSystem.Inventory.UpdateHistoryData();
+            this.reportUpdated = new Microsoft.Reporting.WinForms.ReportViewer();
             this.inventoryHistoryTableAdapter = new RasaMotorsManagementSystem.Inventory.UpdateHistoryDataTableAdapters.inventoryHistoryTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.UpdateHistoryData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryHistoryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UpdateHistoryData)).BeginInit();
             this.SuspendLayout();
+            // 
+            // inventoryHistoryBindingSource
+            // 
+            this.inventoryHistoryBindingSource.DataMember = "inventoryHistory";
+            this.inventoryHistoryBindingSource.DataSource = this.UpdateHistoryData;
+            // 
+            // UpdateHistoryData
+            // 
+            this.UpdateHistoryData.DataSetName = "UpdateHistoryData";
+            this.UpdateHistoryData.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportUpdated
             // 
@@ -51,16 +61,6 @@
             this.reportUpdated.Size = new System.Drawing.Size(800, 450);
             this.reportUpdated.TabIndex = 0;
             // 
-            // UpdateHistoryData
-            // 
-            this.UpdateHistoryData.DataSetName = "UpdateHistoryData";
-            this.UpdateHistoryData.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // inventoryHistoryBindingSource
-            // 
-            this.inventoryHistoryBindingSource.DataMember = "inventoryHistory";
-            this.inventoryHistoryBindingSource.DataSource = this.UpdateHistoryData;
-            // 
             // inventoryHistoryTableAdapter
             // 
             this.inventoryHistoryTableAdapter.ClearBeforeFill = true;
@@ -72,11 +72,11 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportUpdated);
             this.Name = "UpdatedHistoryReport";
-            this.Text = "UpdatedHistoryReport";
+            this.Text = "Updated History Report";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.UpdatedHistoryReport_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.UpdateHistoryData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryHistoryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UpdateHistoryData)).EndInit();
             this.ResumeLayout(false);
 
         }

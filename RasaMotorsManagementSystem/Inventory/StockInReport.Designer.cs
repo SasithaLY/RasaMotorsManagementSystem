@@ -57,6 +57,7 @@
             this.reportViewerStockIn.LocalReport.ReportEmbeddedResource = "RasaMotorsManagementSystem.Inventory.StockIn.rdlc";
             this.reportViewerStockIn.Location = new System.Drawing.Point(0, 0);
             this.reportViewerStockIn.Name = "reportViewerStockIn";
+            this.reportViewerStockIn.ServerReport.BearerToken = null;
             this.reportViewerStockIn.Size = new System.Drawing.Size(800, 450);
             this.reportViewerStockIn.TabIndex = 0;
             // 
@@ -71,7 +72,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewerStockIn);
             this.Name = "StockInReport";
-            this.Text = "StockInReport";
+            this.Text = "Stock In Report";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.StockInReport_Load);
             ((System.ComponentModel.ISupportInitialize)(this.restockBindingSource)).EndInit();

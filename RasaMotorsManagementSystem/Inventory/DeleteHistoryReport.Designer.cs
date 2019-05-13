@@ -29,21 +29,31 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportDeleteHistory = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.DeleteHistoryData = new RasaMotorsManagementSystem.Inventory.DeleteHistoryData();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.inventoryHistoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DeleteHistoryData = new RasaMotorsManagementSystem.Inventory.DeleteHistoryData();
+            this.reportDeleteHistory = new Microsoft.Reporting.WinForms.ReportViewer();
             this.inventoryHistoryTableAdapter = new RasaMotorsManagementSystem.Inventory.DeleteHistoryDataTableAdapters.inventoryHistoryTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.DeleteHistoryData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryHistoryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DeleteHistoryData)).BeginInit();
             this.SuspendLayout();
+            // 
+            // inventoryHistoryBindingSource
+            // 
+            this.inventoryHistoryBindingSource.DataMember = "inventoryHistory";
+            this.inventoryHistoryBindingSource.DataSource = this.DeleteHistoryData;
+            // 
+            // DeleteHistoryData
+            // 
+            this.DeleteHistoryData.DataSetName = "DeleteHistoryData";
+            this.DeleteHistoryData.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportDeleteHistory
             // 
             this.reportDeleteHistory.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource2.Name = "DeletedHistoryDataSet";
-            reportDataSource2.Value = this.inventoryHistoryBindingSource;
-            this.reportDeleteHistory.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource1.Name = "DeletedHistoryDataSet";
+            reportDataSource1.Value = this.inventoryHistoryBindingSource;
+            this.reportDeleteHistory.LocalReport.DataSources.Add(reportDataSource1);
             this.reportDeleteHistory.LocalReport.ReportEmbeddedResource = "RasaMotorsManagementSystem.Inventory.DeletedHistoryReport.rdlc";
             this.reportDeleteHistory.Location = new System.Drawing.Point(0, 0);
             this.reportDeleteHistory.Name = "reportDeleteHistory";
@@ -51,16 +61,6 @@
             this.reportDeleteHistory.Size = new System.Drawing.Size(800, 450);
             this.reportDeleteHistory.TabIndex = 0;
             this.reportDeleteHistory.Load += new System.EventHandler(this.reportViewer1_Load);
-            // 
-            // DeleteHistoryData
-            // 
-            this.DeleteHistoryData.DataSetName = "DeleteHistoryData";
-            this.DeleteHistoryData.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // inventoryHistoryBindingSource
-            // 
-            this.inventoryHistoryBindingSource.DataMember = "inventoryHistory";
-            this.inventoryHistoryBindingSource.DataSource = this.DeleteHistoryData;
             // 
             // inventoryHistoryTableAdapter
             // 
@@ -73,11 +73,11 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportDeleteHistory);
             this.Name = "DeleteHistoryReport";
-            this.Text = "DeleteHistoryReport";
+            this.Text = "Delete History Report";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.DeleteHistoryReport_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DeleteHistoryData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryHistoryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DeleteHistoryData)).EndInit();
             this.ResumeLayout(false);
 
         }

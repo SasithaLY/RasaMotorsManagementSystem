@@ -30,13 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewerItems = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.Items = new RasaMotorsManagementSystem.Inventory.Items();
             this.inventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Items = new RasaMotorsManagementSystem.Inventory.Items();
+            this.reportViewerItems = new Microsoft.Reporting.WinForms.ReportViewer();
             this.inventoryTableAdapter = new RasaMotorsManagementSystem.Inventory.ItemsTableAdapters.inventoryTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.Items)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Items)).BeginInit();
             this.SuspendLayout();
+            // 
+            // inventoryBindingSource
+            // 
+            this.inventoryBindingSource.DataMember = "inventory";
+            this.inventoryBindingSource.DataSource = this.Items;
+            // 
+            // Items
+            // 
+            this.Items.DataSetName = "Items";
+            this.Items.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewerItems
             // 
@@ -47,18 +57,9 @@
             this.reportViewerItems.LocalReport.ReportEmbeddedResource = "RasaMotorsManagementSystem.Inventory.Items.rdlc";
             this.reportViewerItems.Location = new System.Drawing.Point(0, 0);
             this.reportViewerItems.Name = "reportViewerItems";
+            this.reportViewerItems.ServerReport.BearerToken = null;
             this.reportViewerItems.Size = new System.Drawing.Size(800, 450);
             this.reportViewerItems.TabIndex = 0;
-            // 
-            // Items
-            // 
-            this.Items.DataSetName = "Items";
-            this.Items.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // inventoryBindingSource
-            // 
-            this.inventoryBindingSource.DataMember = "inventory";
-            this.inventoryBindingSource.DataSource = this.Items;
             // 
             // inventoryTableAdapter
             // 
@@ -71,11 +72,11 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewerItems);
             this.Name = "ItemsReport";
-            this.Text = "ItemsReport";
+            this.Text = "Items Report";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ItemsReport_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.Items)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Items)).EndInit();
             this.ResumeLayout(false);
 
         }

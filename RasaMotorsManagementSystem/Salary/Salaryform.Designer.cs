@@ -57,6 +57,7 @@
             this.lblID = new System.Windows.Forms.Label();
             this.txtOT = new System.Windows.Forms.TextBox();
             this.TxtBonus = new System.Windows.Forms.TextBox();
+            this.txtOccupation = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderOT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -409,12 +410,29 @@
             this.TxtBonus.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TxtBonus.TextChanged += new System.EventHandler(this.TxtBonus_TextChanged);
             // 
+            // txtOccupation
+            // 
+            this.txtOccupation.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtOccupation.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtOccupation.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtOccupation.ForeColor = System.Drawing.Color.Black;
+            this.txtOccupation.Location = new System.Drawing.Point(467, 151);
+            this.txtOccupation.Margin = new System.Windows.Forms.Padding(0);
+            this.txtOccupation.Multiline = true;
+            this.txtOccupation.Name = "txtOccupation";
+            this.txtOccupation.ReadOnly = true;
+            this.txtOccupation.Size = new System.Drawing.Size(37, 22);
+            this.txtOccupation.TabIndex = 119;
+            this.txtOccupation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtOccupation.Visible = false;
+            // 
             // Salaryform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(66)))));
             this.ClientSize = new System.Drawing.Size(690, 457);
+            this.Controls.Add(this.txtOccupation);
             this.Controls.Add(this.labbon);
             this.Controls.Add(this.Edit_details);
             this.Controls.Add(this.btnGreport);
@@ -483,5 +501,6 @@
         public System.Windows.Forms.TextBox txtOT;
         public System.Windows.Forms.TextBox TxtBonus;
         private System.Windows.Forms.Timer timer1;
+        public System.Windows.Forms.TextBox txtOccupation;
     }
 }

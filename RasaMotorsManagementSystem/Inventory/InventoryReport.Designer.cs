@@ -261,7 +261,7 @@
             this.Controls.Add(this.dtpInventoryFrom);
             this.Name = "InventoryReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "InventoryReport";
+            this.Text = "Inventory Report";
             this.Load += new System.EventHandler(this.InventoryReport_Load);
             ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Items)).EndInit();
